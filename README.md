@@ -1,7 +1,7 @@
 # QGIS Server PerfSuite
 
 <p align="center">
-  <img src="https://github.com/Oslandia/QGIS-Server-PerfSuite/blob/master/docs/arch.png" width="450" title="Arch image">
+  <img src="https://github.com/Oslandia/QGIS-Server-PerfSuite/blob/master/docs/arch.png" width="550" title="Arch image">
 </p>
 
 ## Infrastructure deployment
