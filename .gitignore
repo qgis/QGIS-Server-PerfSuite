@@ -1,0 +1,3 @@
+ansible/vagrant/.vagrant/
+venv
+playbook.retry
