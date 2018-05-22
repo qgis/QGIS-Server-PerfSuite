@@ -1,0 +1,30 @@
+- name: Install prerequisites
+  apt:
+    name: "{{item}}"
+    update_cache: yes
+  with_items:
+    - apt-transport-https
+    - dirmngr
+
+- name: Add Docker GPG key
+  apt_key:
+    url: https://download.docker.com/linux/debian/gpg
+
+- name: Add Docker APT repository
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/debian {{ansible_distribution_release}} stable
+
+- name: Install Docker
+  apt:
+    name: docker-ce
+
+- name: Copy Dockerfiles
+  copy:
+    dest: "/home/{{ user }}/"
+    src: "{{ playbook_dir }}/../docker"
+    owner: "{{ user }}"
+    group: "{{ group }}"
+  become: true
+
+- name: Build containers
+  command: sh /home/{{ user }}/docker/build.sh

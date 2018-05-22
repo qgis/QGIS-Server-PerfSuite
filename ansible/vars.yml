@@ -1,0 +1,8 @@
+user: "graffiti"
+group: "graffiti"
+
+locale: "en_US.UTF-8"
+timezone: "Etc/UTC"
+
+# python2 -c 'import crypt; print crypt.crypt("graffiti1*", "$1$sqliedun$")'
+user_password: "$1$sqliedun$YDbiVhWDhCk9kKy3xp9OR0"
