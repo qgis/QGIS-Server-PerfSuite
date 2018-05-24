@@ -10,6 +10,8 @@ RUN wget http://37.187.164.233/qgis-server-perfsuite/dump_open_data.backup
 # Configure postgres
 RUN pg_createcluster 10 main --start
 
+RUN echo "pg_ctl_options = '-t 600'" > /etc/postgresql/10/main/pg_ctl.conf
+
 USER postgres
 RUN /etc/init.d/postgresql start && \
     psql --command "CREATE USER root WITH SUPERUSER PASSWORD 'root';" && \
