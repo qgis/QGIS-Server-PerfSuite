@@ -37,6 +37,7 @@ WORKDIR /root
 RUN git clone https://github.com/qgis/QGIS
 RUN cd QGIS && git checkout release-2_18 && mkdir build
 RUN cd QGIS/build && cmake -DWITH_SERVER=ON .. && make -j4 && make install && ldconfig
+RUN rm -rf /root/QGIS
 
 ADD cmd.sh /root/cmd.sh
 

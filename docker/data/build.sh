@@ -1,3 +1,4 @@
 #! /bin/sh
 
-docker build . -t qgisserver-perfsuite/data
+BASEDIR=$(dirname "$0")
+docker build ${BASEDIR} -t qgisserver-perfsuite/data

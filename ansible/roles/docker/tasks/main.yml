@@ -26,5 +26,72 @@
     group: "{{ group }}"
   become: true
 
-- name: Build containers
-  command: sh /home/{{ user }}/docker/build.sh
+#
+# vagrant only
+#
+- name: Install parted for partprobe (vagrant only)
+  apt:
+    name: parted
+  when:
+    vagrant
+
+- name: Create partition (vagrant only)
+  shell: /bin/echo -e "n\np\n3\n20764672\n\nw" | fdisk /dev/sda || true
+  when:
+    vagrant
+
+- name: Re-read partition table (vagrant only)
+  command: partprobe
+  when:
+    vagrant
+
+- name: Format new partition (vagrant only)
+  command: mkfs -t ext4 /dev/sda3
+  when:
+    vagrant
+
+- name: Mount new partition (vagrant only)
+  mount:
+    path: /mnt
+    src: /dev/sda3
+    fstype: ext4
+    state: mounted
+  when:
+    vagrant
+
+- name: Stop docker service (vagrant only)
+  service:
+    name: docker
+    state: stopped
+  when:
+    vagrant
+
+- name: Move docker directory (vagrant only)
+  command: mv /var/lib/docker /mnt
+  when:
+    vagrant
+
+- name: Symlink to new docker directory (vagrant only)
+  command: ln -s /mnt/docker /var/lib/docker
+  when:
+    vagrant
+
+- name: Start docker service (vagrant only)
+  service:
+    name: docker
+    state: started
+  when:
+    vagrant
+
+#
+# vagrant only end
+#
+
+- name: Build image for QGIS Server 2.14
+  command: sh /home/{{ user }}/docker/2.14/build.sh
+
+- name: Build image for QGIS Server 2.18
+  command: sh /home/{{ user }}/docker/2.18/build.sh
+
+- name: Build image for Postgis data
+  command: sh /home/{{ user }}/docker/data/build.sh

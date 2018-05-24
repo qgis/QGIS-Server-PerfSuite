@@ -10,6 +10,7 @@ To locally deploy the performance testsuite platform on a Vagrant machine:
 
 ```
 $ cd ansible/vagrant
+$ vagrant plugin install vagrant-disksize
 $ sh vagrant.sh up
 ```
 
