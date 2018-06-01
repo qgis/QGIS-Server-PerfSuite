@@ -1,0 +1,33 @@
+- name: Install virtualenv and git
+  apt:
+    name: "{{item}}"
+    update_cache: yes
+  with_items:
+    - virtualenv
+    - git
+
+- name: Clone graffiti
+  git:
+    repo: https://github.com/pblottiere/graffiti
+    dest: /home/{{ user }}/graffiti
+  become: true
+
+- name: Prepare venv directory
+  command: mkdir -p /home/{{ user }}/graffiti/venv
+
+- name: Build venv
+  command: virtualenv -p /usr/bin/python3 /home/{{ user }}/graffiti/venv
+
+- name: Pip install in venv
+  pip:
+    virtualenv: /home/{{ user }}/graffiti/venv
+    requirements: /home/{{ user }}/graffiti/requirements.txt
+    virtualenv_command: virtualenv-3
+
+- name: Copy graffiti scenarios
+  copy:
+    src: "{{ playbook_dir }}/../scenarios"
+    dest: "/home/{{ user }}/"
+    owner: "{{ user }}"
+    group: "{{ group }}"
+  become: true

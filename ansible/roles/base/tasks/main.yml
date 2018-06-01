@@ -15,3 +15,8 @@
     update_password: always
     shell: /bin/bash
     state: present
+
+- name: Install psql
+  apt:
+    name: postgresql-client
+  update_cache: yes

@@ -16,7 +16,16 @@
 
 - name: Install Docker
   apt:
-    name: docker-ce
+    name: "{{ item }}"
+  with_items:
+    - docker-ce
+    - docker-compose
+
+- name: Adding user '{{ user }}' to group docker
+  user:
+    name: '{{ user }}'
+    groups: docker
+    append: yes
 
 - name: Copy Dockerfiles
   copy:

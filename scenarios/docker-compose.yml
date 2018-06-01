@@ -1,0 +1,24 @@
+version: '2'
+services:
+  qgis-2.14:
+    container_name: qgisserver-perfsuite-2.14
+    image: qgisserver-perfsuite/2.14
+    volumes:
+      - static-data:/tmp/data
+    links:
+      - data
+  qgis-2.18:
+    container_name: qgisserver-perfsuite-2.18
+    image: qgisserver-perfsuite/2.18
+    volumes:
+      - static-data:/tmp/data
+    links:
+      - data
+  data:
+    container_name: qgisserver-perfsuite-data
+    image: qgisserver-perfsuite/data
+    volumes:
+      - static-data:/data
+
+volumes:
+  static-data:

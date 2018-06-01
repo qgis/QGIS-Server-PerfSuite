@@ -1,0 +1,20 @@
+IMDIR: /tmp/graffiti/imgs/
+HTML: /tmp/graffiti/report.html
+SVG: True
+REQUESTS:
+  - NAME: getcapabilities
+    TYPE: GetCapabilities
+    TITLE: GetCapabilities
+    SHORT_DESCRIPTION: "GetCapabilities requests"
+    LONG_DESCRIPTION: /home/graffiti/scenarios/getcapabilities.txt
+    LOGFILE: /tmp/graffiti/getcapabilities.log
+    ITERATIONS: 5
+    HOSTS:
+      - NAME: "2.14"
+        HOST: http://{{ URL_2_14 }}/qgisserver_2_14
+        PAYLOAD_MAP: /tmp/data/data_perf.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "2.18"
+        HOST: http://{{ URL_2_18 }}/qgisserver_2_18
+        PAYLOAD_MAP: /tmp/data/data_perf.qgs
+        PAYLOAD_VERSION: 1.3.0

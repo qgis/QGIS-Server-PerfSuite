@@ -6,6 +6,10 @@ RUN apt-get update && apt-get install -y \
 # Download data
 WORKDIR /data
 RUN wget http://37.187.164.233/qgis-server-perfsuite/dump_open_data.backup
+RUN wget http://37.187.164.233/qgis-server-perfsuite/eu_dem_v11.tif
+RUN wget http://37.187.164.233/qgis-server-perfsuite/eu_dem_v11.tif.ovr
+RUN wget http://37.187.164.233/qgis-server-perfsuite/opendata_disclaimer.md
+RUN wget http://37.187.164.233/qgis-server-perfsuite/data_perf.qgs
 
 # Configure postgres
 RUN pg_createcluster 10 main --start
