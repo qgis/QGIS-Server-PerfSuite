@@ -17,8 +17,8 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |v|
     v.memory = 4096
     v.cpus = 4
-    v.name = "perfsuite"
+    v.name = "qgisserver-perfsuite"
   end
 
-  config.vm.network :forwarded_port, guest: 80, host: 8090
+  config.vm.network :forwarded_port, guest: 80, host: 8095
 end
