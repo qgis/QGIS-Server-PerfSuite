@@ -6,7 +6,7 @@ REQUESTS:
     TYPE: GetCapabilities
     TITLE: GetCapabilities
     SHORT_DESCRIPTION: "GetCapabilities requests"
-    LONG_DESCRIPTION: /home/graffiti/scenarios/getcapabilities.txt
+    LONG_DESCRIPTION: getcapabilities.txt
     LOGFILE: /tmp/graffiti/getcapabilities.log
     ITERATIONS: 5
     HOSTS:
@@ -22,7 +22,7 @@ REQUESTS:
     TYPE: GetMap
     TITLE: GetMap
     SHORT_DESCRIPTION: "GetMap requests"
-    LONG_DESCRIPTION: /home/graffiti/scenarios/getmap.txt
+    LONG_DESCRIPTION: getmap.txt
     LOGFILE: /tmp/graffiti/getmap.log
     ITERATIONS: 5
     HOSTS:
