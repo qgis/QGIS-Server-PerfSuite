@@ -19,7 +19,7 @@
 - name: Install psql
   apt:
     name: "{{ item }}"
+    update_cache: yes
   with_items:
     - postgresql-client
     - curl
-  update_cache: yes
