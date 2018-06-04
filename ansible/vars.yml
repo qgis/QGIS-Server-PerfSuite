@@ -6,5 +6,7 @@ group: "graffiti"
 locale: "en_US.UTF-8"
 timezone: "Etc/UTC"
 
+data_url: http://37.187.164.233/qgis-server-perfsuite/
+
 # python2 -c 'import crypt; print crypt.crypt("graffiti1*", "$1$sqliedun$")'
 user_password: "$1$sqliedun$YDbiVhWDhCk9kKy3xp9OR0"

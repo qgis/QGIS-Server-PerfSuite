@@ -4,14 +4,6 @@
 PG_USER=root
 PG_PASSWORD=root
 PG_DB=data
-OUTDIR=/tmp/graffiti/
-CONFDIR=$OUTDIR/conf/
-SCENARIOS=$CONFDIR/scenarios.yml
-
-# prepare out dir
-rm -rf $OUTDIR
-mkdir -p $CONFDIR
-cp *.txt $CONFDIR/
 
 # start servers
 cd ~/scenarios
@@ -30,18 +22,18 @@ do
 done
 
 # access shared directory a 1st time
-docker exec -it qgisserver-perfsuite-2.14 ls /tmp/data > /dev/null
-docker exec -it qgisserver-perfsuite-2.18 ls /tmp/data > /dev/null
+docker exec -it qgisserver-perfsuite-2.14 ls /data > /dev/null
+docker exec -it qgisserver-perfsuite-2.18 ls /data > /dev/null
 
 # prepare scenario configuration file with ips of containers
-cp scenarios.yml $SCENARIOS
-sed -i "s/{{ URL_2_14 }}/$DOCKER_IP_2_14/g" $SCENARIOS
-sed -i "s/{{ URL_2_18 }}/$DOCKER_IP_2_18/g" $SCENARIOS
+cp scenarios.sample.yml scenarios.yml
+sed -i "s/{{ URL_2_14 }}/$DOCKER_IP_2_14/g" scenarios.yml
+sed -i "s/{{ URL_2_18 }}/$DOCKER_IP_2_18/g" scenarios.yml
 
 # run graffiti
 cd ~/graffiti
 . venv/bin/activate
-./graffiti.py --cfg $SCENARIOS
+./graffiti.py --cfg ~/scenarios/scenarios.yml
 
 # clear containers
 cd ~/scenarios
