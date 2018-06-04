@@ -29,7 +29,8 @@ RUN apt-get install -y \
   libqscintilla2-dev \
   libfcgi-dev \
   nginx \
-  spawn-fcgi
+  spawn-fcgi \
+  postgresql-client
 
 WORKDIR /root
 
@@ -42,6 +43,8 @@ ADD cmd.sh /root/cmd.sh
 
 EXPOSE 80
 ADD nginx.conf /etc/nginx/sites-available/default
+
+COPY pg_service.conf /root/.pg_service.conf
 
 WORKDIR /
 CMD ["sh", "/root/cmd.sh"]
