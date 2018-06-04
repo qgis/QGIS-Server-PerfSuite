@@ -1,10 +1,17 @@
 #! /bin/bash
 
 # env vars
-SCENARIOS=/tmp/graffiti_scenarios.yml
 PG_USER=root
 PG_PASSWORD=root
 PG_DB=data
+OUTDIR=/tmp/graffiti/
+CONFDIR=$OUTDIR/conf/
+SCENARIOS=$CONFDIR/scenarios.yml
+
+# prepare out dir
+rm -rf $OUTDIR
+mkdir -p $CONFDIR
+cp *.txt $CONFDIR/
 
 # start servers
 cd ~/scenarios
