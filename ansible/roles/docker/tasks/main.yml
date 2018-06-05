@@ -102,5 +102,11 @@
 - name: Build image for QGIS Server 2.18
   command: sh /home/{{ user }}/docker/2.18/build.sh
 
+- name: Build image for QGIS Server 3.0
+  command: sh /home/{{ user }}/docker/3.0/build.sh
+
+- name: Build image for QGIS Server master
+  command: sh /home/{{ user }}/docker/master/build.sh
+
 - name: Build image for Postgis data
   command: sh /home/{{ user }}/docker/data/build.sh

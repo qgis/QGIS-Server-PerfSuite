@@ -18,6 +18,14 @@ REQUESTS:
         HOST: http://{{ URL_2_18 }}/qgisserver_2_18
         PAYLOAD_MAP: /data/data_perf.qgs
         PAYLOAD_VERSION: 1.3.0
+      - NAME: "3.0"
+        HOST: http://{{ URL_3_0 }}/qgisserver_3_0
+        PAYLOAD_MAP: /data/data_perf.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "Master"
+        HOST: http://{{ URL_MASTER }}/qgisserver_master
+        PAYLOAD_MAP: /data/data_perf.qgs
+        PAYLOAD_VERSION: 1.3.0
   - NAME: getmap_0
     TYPE: GetMap
     TITLE: "GetMap Requests"
@@ -37,6 +45,26 @@ REQUESTS:
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "2.18"
         HOST: http://{{ URL_2_18 }}/qgisserver_2_18
+        PAYLOAD_MAP: /data/data_perf.qgs
+        PAYLOAD_VERSION: 1.3.0
+        PAYLOAD_WIDTH: 400
+        PAYLOAD_HEIGHT: 400
+        PAYLOAD_SRS: "EPSG:4326"
+        PAYLOAD_LAYERS: polygons,lines,points
+        PAYLOAD_FORMAT: png
+        PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
+      - NAME: "3.0"
+        HOST: http://{{ URL_3_0 }}/qgisserver_3_0
+        PAYLOAD_MAP: /data/data_perf.qgs
+        PAYLOAD_VERSION: 1.3.0
+        PAYLOAD_WIDTH: 400
+        PAYLOAD_HEIGHT: 400
+        PAYLOAD_SRS: "EPSG:4326"
+        PAYLOAD_LAYERS: polygons,lines,points
+        PAYLOAD_FORMAT: png
+        PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
+      - NAME: "Master"
+        HOST: http://{{ URL_MASTER }}/qgisserver_master
         PAYLOAD_MAP: /data/data_perf.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
