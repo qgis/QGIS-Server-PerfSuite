@@ -1,0 +1,1 @@
+<center><img width=300px src="./log/getmap_points.png"/></center>
