@@ -1,1 +1,16 @@
+This test is for the <i>GetMap</i> request with 4 different layers.
+
+<br/><br/>
+Layers description:
+
+<ul>
+  <li> 1 Polygon layer named <i>hydro_bassin</i> (6 features) with the <i>Single symbol</i> renderer and with <i>Single labels</i>
+  <li> 1 Polygon layer named <i>vw_clc2006</i> (~ 3 000 features) with the <i>Categorized</i> renderer and without labels
+  <li> 1 Polygon layer named <i>hydro_lake</i> (~ 800 features) with the <i>Single symbol</i> renderer and without labels
+  <li> 1 Polygon layer named <i>landuse_corine_lc_2006</i> (~ 3 000 features) with the <i>Categorized</i> renderer and without labels
+</ul>
+
+<br/>
+The resulting image is:
+
 <center><img width=300px src="./log/getmap_polygons.png"/></center>

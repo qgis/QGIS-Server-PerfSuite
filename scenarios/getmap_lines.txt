@@ -1,1 +1,14 @@
+This test is for the <i>GetMap</i> request with 2 different layers.
+
+<br/><br/>
+Layers description:
+
+<ul>
+  <li> 1 MultiLineString layer named <i>hydro_course.geomsimple</i> (~ 4 500 features)
+  <li> 1 Line layer named <i>hydro_segment</i> (~ 14 000 features) with the <i>Categorized</i> renderer and without labels
+</ul>
+
+<br/>
+The resulting image is:
+
 <center><img width=300px src="./log/getmap_lines.png"/></center>

@@ -1,1 +1,13 @@
+This test is for the <i>GetMap</i> request with 1 layer.
+
+<br/><br/>
+Layer description:
+
+<ul>
+  <li> 1 Raster layer named <i>eu_dem_v11</i> (5324x3374)
+</ul>
+
+<br/>
+The resulting image is:
+
 <center><img width=300px src="./log/getmap_raster.png"/></center>
