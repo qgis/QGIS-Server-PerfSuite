@@ -5,8 +5,20 @@ PG_USER=root
 PG_PASSWORD=root
 PG_DB=data
 
+ROOT=$PWD
+if [[ $# -eq 1 ]]
+then
+    ROOT=$1
+fi
+
+# download data
+if [ ! -d "$ROOT/data" ]
+then
+  sh download.sh
+fi
+
 # start servers
-cd ~/scenarios
+cd $ROOT
 docker-compose up -d
 
 # get ip for containers
@@ -43,11 +55,22 @@ sed -i "s/{{ URL_MASTER }}/$DOCKER_IP_MASTER/g" scenarios.yml
 sed -i "s/{{ URL_MASTER_PARALLEL_RENDERING }}/$DOCKER_IP_MASTER_PARALLEL_RENDERING/g" scenarios.yml
 
 # run graffiti
-cd ~/graffiti
+if [ ! -d "$ROOT/graffiti" ]
+then
+  git clone https://github.com/pblottiere/graffiti
+  cd graffiti
+  mkdir venv
+  virtualenv -p /usr/bin/python3 ./venv
+  source ./venv/bin/activate
+  pip install -e .
+  deactivate
+fi
+
+cd $ROOT/graffiti
 . venv/bin/activate
-./graffiti.py --cfg ~/scenarios/scenarios.yml
+./graffiti.py --cfg $ROOT/scenarios.yml
 
 # clear containers
-cd ~/scenarios
+cd $ROOT
 docker-compose stop
 docker-compose rm -f
