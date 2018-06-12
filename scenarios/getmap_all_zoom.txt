@@ -1,6 +1,5 @@
 <p>The aim of this test is to measure the response time of the server for the <b>GetMap</b> request with vector and raster layers. The extent is based on the least extended layer.</p>
 
-<br/><br/>
 <p>Dataset description:</p>
 
 <ul>
@@ -14,7 +13,6 @@
   <li> 1 Raster layer named <i>eu_dem_v11</i> (5324x3374)
 </ul>
 
-<br/>
 <p>Resulting images are:</p>
 
 <div class="row" align="center">
