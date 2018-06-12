@@ -1,7 +1,6 @@
-This test is for the <i>GetMap</i> request with 4 different layers.
+<p>The aim of this test is to measure the response time of the server for the <b>GetMap</b> request with vector layers based on polygons geometries.</p>
 
-<br/><br/>
-Layers description:
+<p>Dataset:</p>
 
 <ul>
   <li> 1 Polygon layer named <i>hydro_bassin</i> (6 features) with the <i>Single symbol</i> renderer and with <i>Single labels</i>
@@ -10,7 +9,31 @@ Layers description:
   <li> 1 Polygon layer named <i>landuse_corine_lc_2006</i> (~ 3 000 features) with the <i>Categorized</i> renderer and without labels
 </ul>
 
-<br/>
-The resulting image is:
+<p>Resulting images:</p>
 
-<center><img width=300px src="./log/getmap_polygons.png"/></center>
+<div class="row" align="center">
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_polygons_2.14.png" alt="" style="width:50%">
+      <figcaption>QGIS Server 2.14</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_polygons_2.18.png" alt="" style="width:50%" >
+      <figcaption>QGIS Server 2.18</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_polygons_3.0.png" alt="" style="width:50%" >
+      <figcaption>QGIS Server 3.0</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_polygons_master.png" alt="" style="width:50%" >
+      <figcaption>QGIS Server Master</figcaption>
+    </figure>
+  </div>
+</div>

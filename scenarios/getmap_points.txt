@@ -1,13 +1,36 @@
-This test is for the <i>GetMap</i> request with 4 identical layers to test the parallel rendering at the same time.
+<p>The aim of this test is to measure the response time of the server for the <b>GetMap</b> request with vector layers based on points geometries. Moreover, the parallel rendering option is also tested.</p>
 
-<br/><br/>
-Layer description:
+<p>Dataset:</p>
 
 <ul>
-  <li> 4 Point layer named <i>adress_ban</i> (~ 450 000 features) with the <i>Single symbol</i> renderer and without labels
+  <li> 1 Point layer named <i>adress_ban</i> (~ 450 000 features) with the <i>Single symbol</i> renderer and without labels
 </ul>
 
-<br/>
-The resulting image is:
+<p>Resulting images:</p>
 
-<center><img width=300px src="./log/getmap_points.png"/></center>
+<div class="row" align="center">
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_points_2.14_1_core.png" alt="" style="width:50%">
+      <figcaption>QGIS Server 2.14</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_points_2.18_1_core.png" alt="" style="width:50%" >
+      <figcaption>QGIS Server 2.18</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_points_3.0_1_core.png" alt="" style="width:50%" >
+      <figcaption>QGIS Server 3.0</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_points_master_1_core.png" alt="" style="width:50%" >
+      <figcaption>QGIS Server Master</figcaption>
+    </figure>
+  </div>
+</div>

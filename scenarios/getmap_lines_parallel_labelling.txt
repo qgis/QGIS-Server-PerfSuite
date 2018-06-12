@@ -1,0 +1,36 @@
+<p>The aim of this test is to measure the response time of the server for the <b>GetMap</b> request with vector layers based on lines geometries and parallel labelling. Moreover, the influence of PAL candidates is also studied.</p>
+
+<p>Dataset:</p>
+
+<ul>
+  <li> 1 Line layer named <i>hydro_segment</i> (~ 14 000 features) with the <i>Categorized</i> renderer and parallel labelling
+</ul>
+
+<p>Resulting images are:</p>
+
+<div class="row" align="center">
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_lines_parallel_labelling_2.14_default_configuration.png" alt="" style="width:50%">
+      <figcaption>QGIS Server 2.14</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_lines_parallel_labelling_2.18_default_configuration.png" alt="" style="width:50%" >
+      <figcaption>QGIS Server 2.18</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_lines_parallel_labelling_3.0_default_configuration.png" alt="" style="width:50%" >
+      <figcaption>QGIS Server 3.0</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_lines_parallel_labelling_master_default_configuration.png" alt="" style="width:50%" >
+      <figcaption>QGIS Server Master</figcaption>
+    </figure>
+  </div>
+</div>

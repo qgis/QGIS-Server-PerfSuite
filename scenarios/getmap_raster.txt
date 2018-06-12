@@ -1,13 +1,36 @@
-This test is for the <i>GetMap</i> request with 1 layer.
+<p>The aim of this test is to measure the response time of the server for the <b>GetMap</b> request with a raster layer.</p>
 
-<br/><br/>
-Layer description:
+<p>Dataset:</p>
 
 <ul>
   <li> 1 Raster layer named <i>eu_dem_v11</i> (5324x3374)
 </ul>
 
-<br/>
-The resulting image is:
+<p>Resulting images:</p>
 
-<center><img width=300px src="./log/getmap_raster.png"/></center>
+<div class="row" align="center">
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_raster_2.14.png" alt="" style="width:50%">
+      <figcaption>QGIS Server 2.14</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_raster_2.18.png" alt="" style="width:50%" >
+      <figcaption>QGIS Server 2.18</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_raster_3.0.png" alt="" style="width:50%" >
+      <figcaption>QGIS Server 3.0</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_raster_master.png" alt="" style="width:50%" >
+      <figcaption>QGIS Server Master</figcaption>
+    </figure>
+  </div>
+</div>
