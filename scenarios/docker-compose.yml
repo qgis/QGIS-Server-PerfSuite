@@ -4,21 +4,21 @@ services:
     container_name: qgisserver-perfsuite-2.14
     image: qgisserver-perfsuite/2.14
     volumes:
-      - /data:/data
+      - ./data:/data
     links:
       - data
   qgis-2.18:
     container_name: qgisserver-perfsuite-2.18
     image: qgisserver-perfsuite/2.18
     volumes:
-      - /data:/data
+      - ./data:/data
     links:
       - data
   qgis-3.0:
     container_name: qgisserver-perfsuite-3.0
     image: qgisserver-perfsuite/3.0
     volumes:
-      - /data:/data
+      - ./data:/data
     links:
       - data
     environment:
@@ -27,7 +27,7 @@ services:
     container_name: qgisserver-perfsuite-3.0-parallel-rendering
     image: qgisserver-perfsuite/3.0
     volumes:
-      - /data:/data
+      - ./data:/data
     links:
       - data
     environment:
@@ -37,7 +37,7 @@ services:
     container_name: qgisserver-perfsuite-master
     image: qgisserver-perfsuite/master
     volumes:
-      - /data:/data
+      - ./data:/data
     links:
       - data
     environment:
@@ -46,7 +46,7 @@ services:
     container_name: qgisserver-perfsuite-master-parallel-rendering
     image: qgisserver-perfsuite/master
     volumes:
-      - /data:/data
+      - ./data:/data
     links:
       - data
     environment:
