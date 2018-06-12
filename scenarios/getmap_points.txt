@@ -1,10 +1,10 @@
-This test is for the <i>GetMap</i> request with 1 layer.
+This test is for the <i>GetMap</i> request with 4 identical layers to test the parallel rendering at the same time.
 
 <br/><br/>
 Layer description:
 
 <ul>
-  <li> 1 Point layer named <i>adress_ban</i> (~ 450 000 features) with the <i>Single symbol</i> renderer and without labels
+  <li> 4 Point layer named <i>adress_ban</i> (~ 450 000 features) with the <i>Single symbol</i> renderer and without labels
 </ul>
 
 <br/>
