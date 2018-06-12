@@ -1,7 +1,7 @@
-This test is for the <i>GetMap</i> request with 8 different layers. The extent is based on the most extended layer.
+<p>The aim of this test is to measure the response time of the server for the <b>GetMap</b> request with vector and raster layers. The extent is based on the most extended layer.</p>
 
 <br/><br/>
-Layers description:
+<p>Dataset description:</p>
 
 <ul>
   <li> 1 Point layer named <i>adress_ban</i> (~ 450 000 features) with the <i>Single symbol</i> renderer and without labels
@@ -15,6 +15,31 @@ Layers description:
 </ul>
 
 <br/>
-The resulting image is:
+<p>Resulting images are:</p>
 
-<center><img width=300px src="./log/getmap_all.png"/></center>
+<div class="row" align="center">
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_all_2.14.png" alt="" style="width:50%">
+      <figcaption>QGIS Server 2.14</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_all_2.18.png" alt="" style="width:50%" >
+      <figcaption>QGIS Server Server 2.18</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_all_3.0.png" alt="" style="width:50%" >
+      <figcaption>QGIS Server 3.0</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_all_master.png" alt="" style="width:50%" >
+      <figcaption>QGIS Server Master</figcaption>
+    </figure>
+  </div>
+</div>
