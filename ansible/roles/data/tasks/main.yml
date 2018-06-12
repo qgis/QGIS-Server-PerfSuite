@@ -1,7 +1,15 @@
 - name: Create data directory
   file:
-    path: /data
+    path: /home/{{ user }}/scenarios/data
     state: directory
+    owner: "{{ user }}"
+    group: "{{ group }}"
+    mode: 0775
+
+- name: Copy utility script to download data
+  file:
+    src: download.sh
+    dest: /home/{{ user }}/scenarios/data
     owner: "{{ user }}"
     group: "{{ group }}"
     mode: 0775
@@ -9,7 +17,7 @@
 - name: Download data
   get_url:
     url: "{{ data_url }}/{{ item }}"
-    dest: /data/
+    dest: /home/{{ user }}/scenarios/data
   with_items:
     - eu_dem_v11.tif
     - eu_dem_v11.tif.ovr

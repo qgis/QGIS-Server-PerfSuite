@@ -5,6 +5,6 @@
     - vars.yml
   roles:
     - base
-    - data
     - docker
     - graffiti
+    - data
