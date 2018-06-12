@@ -313,6 +313,73 @@ REQUESTS:
         PAYLOAD_LAYERS: lines
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
+  - NAME: getmap_lines_parallel_labelling
+    TYPE: GetMap
+    TITLE: "GetMap with lines and parallel labelling"
+    DESCRIPTION: getmap_lines_parallel_labelling.txt
+    LOG: True
+    ITERATIONS: 50
+    HOSTS:
+      - NAME: "2.14 (default configuration)"
+        HOST: http://{{ URL_2_14 }}/qgisserver_2_14
+        PAYLOAD_MAP: data_perf_parallel_labelling.qgs
+        PAYLOAD_VERSION: 1.3.0
+        PAYLOAD_WIDTH: 400
+        PAYLOAD_HEIGHT: 400
+        PAYLOAD_SRS: "EPSG:4326"
+        PAYLOAD_LAYERS: lines
+        PAYLOAD_FORMAT: png
+        PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
+      - NAME: "2.18 (default configuration)"
+        HOST: http://{{ URL_2_18 }}/qgisserver_2_18
+        PAYLOAD_MAP: data_perf_parallel_labelling.qgs
+        PAYLOAD_VERSION: 1.3.0
+        PAYLOAD_WIDTH: 400
+        PAYLOAD_HEIGHT: 400
+        PAYLOAD_SRS: "EPSG:4326"
+        PAYLOAD_LAYERS: lines
+        PAYLOAD_FORMAT: png
+        PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
+      - NAME: "3.0 (default configuration)"
+        HOST: http://{{ URL_3_0 }}/qgisserver_3_0
+        PAYLOAD_MAP: data_perf_parallel_labelling.qgs
+        PAYLOAD_VERSION: 1.3.0
+        PAYLOAD_WIDTH: 400
+        PAYLOAD_HEIGHT: 400
+        PAYLOAD_SRS: "EPSG:4326"
+        PAYLOAD_LAYERS: lines
+        PAYLOAD_FORMAT: png
+        PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
+      - NAME: "3.0 (8 candidates)"
+        HOST: http://{{ URL_3_0 }}/qgisserver_3_0
+        PAYLOAD_MAP: data_perf_parallel_labelling_8_candidates.qgs
+        PAYLOAD_VERSION: 1.3.0
+        PAYLOAD_WIDTH: 400
+        PAYLOAD_HEIGHT: 400
+        PAYLOAD_SRS: "EPSG:4326"
+        PAYLOAD_LAYERS: lines
+        PAYLOAD_FORMAT: png
+        PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
+      - NAME: "Master (default configuration)"
+        HOST: http://{{ URL_MASTER }}/qgisserver_master
+        PAYLOAD_MAP: data_perf_parallel_labelling.qgs
+        PAYLOAD_VERSION: 1.3.0
+        PAYLOAD_WIDTH: 400
+        PAYLOAD_HEIGHT: 400
+        PAYLOAD_SRS: "EPSG:4326"
+        PAYLOAD_LAYERS: lines
+        PAYLOAD_FORMAT: png
+        PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
+      - NAME: "Master (8 candidates)"
+        HOST: http://{{ URL_MASTER }}/qgisserver_master
+        PAYLOAD_MAP: data_perf_parallel_labelling_8_candidates.qgs
+        PAYLOAD_VERSION: 1.3.0
+        PAYLOAD_WIDTH: 400
+        PAYLOAD_HEIGHT: 400
+        PAYLOAD_SRS: "EPSG:4326"
+        PAYLOAD_LAYERS: lines
+        PAYLOAD_FORMAT: png
+        PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
   - NAME: getmap_raster
     TYPE: GetMap
     TITLE: "GetMap with raster"

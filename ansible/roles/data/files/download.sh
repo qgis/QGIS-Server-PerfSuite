@@ -10,3 +10,5 @@ wget $URL/opendata_disclaimer.md -P ./data
 wget $URL/data_perf.qgs -P ./data
 wget $URL/data_perf_view.qgs -P ./data
 wget $URL/data_perf_view_trust.qgs -P ./data
+wget $URL/data_perf_parallel_labelling.qgs -P ./data
+wget $URL/data_perf_parallel_labelling_8_candidates.qgs -P ./data

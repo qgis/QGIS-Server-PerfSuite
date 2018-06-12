@@ -25,3 +25,5 @@
     - data_perf.qgs
     - data_perf_view.qgs
     - data_perf_view_trust.qgs
+    - data_perf_parallel_labelling.qgs
+    - data_perf_parallel_labelling_8_candidates.qgs
