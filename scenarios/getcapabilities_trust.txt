@@ -1,0 +1,11 @@
+This test is for the <i>GetCapabilities</i> request whith a materialized Postgres view as a layer.
+
+<br/>
+The underlying aim is to measure the influence of the <i>trust</i> option on the reponse time for the first request.
+
+<br/><br/>
+Layer description:
+
+<ul>
+  <li> 1 Point layer named <i>adress_ban_view</i> (Postgres view with ~ 450 000 features) with the <i>Single symbol</i> renderer and without labels
+</ul>

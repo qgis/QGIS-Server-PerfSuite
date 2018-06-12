@@ -17,7 +17,8 @@ RUN /etc/init.d/postgresql start && \
     psql --command "CREATE USER root WITH SUPERUSER PASSWORD 'root';" && \
     createdb -O root data && \
     psql --command "CREATE EXTENSION postgis;" -d data && \
-    pg_restore -d data /data/dump_open_data.backup || true
+    pg_restore -d data /data/dump_open_data.backup || true && \
+    psql -d data --command "CREATE VIEW public.adress_ban_view AS select * FROM ref.adress_ban;"
 
 RUN echo "host all  all    0.0.0.0/0  md5" >> /etc/postgresql/10/main/pg_hba.conf
 RUN echo "listen_addresses='*'" >> /etc/postgresql/10/main/postgresql.conf

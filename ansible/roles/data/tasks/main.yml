@@ -15,3 +15,5 @@
     - eu_dem_v11.tif.ovr
     - opendata_disclaimer.md
     - data_perf.qgs
+    - data_perf_view.qgs
+    - data_perf_view_trust.qgs
