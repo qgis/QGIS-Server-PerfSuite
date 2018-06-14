@@ -11,8 +11,8 @@
     url: "{{ data_url }}/{{ item }}"
     dest: /home/{{ user }}/scenarios/data
   with_items:
-    - eu_dem_v11.tif
-    - eu_dem_v11.tif.ovr
+    - eu_dem_v11_hillshade.tif
+    - eu_dem_v11_hillshade.tif.ovr
     - opendata_disclaimer.md
     - data_perf.qgs
     - data_perf_view.qgs
