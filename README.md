@@ -1,25 +1,27 @@
 # QGIS Server PerfSuite
 
-The aim of this project is to provide a simple and convenient way to deploy an
-infrastructure to test [QGIS Server](https://github.com/qgis/QGIS) performance.
-For now, there are:
-- Dockerfiles to build/execute QGIS Server 2.14, 2.18, 3.0 and Master
-- Dockerfile with Postgis and some data
-- Ansible scripts for a remote deployment
-- Some tests to generate a HTML report with [Graffiti](https://github.com/pblottiere/graffiti)
-- Everything you need to add your own QGIS Server version and your own tests!
+The goal of this project is to provide a simple and convenient way to deploy an infrastructure for
+assessing the performance of [QGIS Server](https://github.com/qgis/QGIS).
+
+The repo includes:
+
+- Dockerfiles for building and executing QGIS Server 2.14, 2.18, 3.0 and Master
+- A Dockerfile for PostGIS and test data
+- Ansible scripts for remote deployment
+- some tests to generate a HTML report with [Graffiti](https://github.com/pblottiere/graffiti)
+- everything needed for running your own test scenarios with you own QGIS Server version!
 
 <p align="center">
   <img src="https://github.com/Oslandia/QGIS-Server-PerfSuite/blob/master/docs/arch.png" width="550" title="Arch image">
 </p>
 
 Moreover, considering that `docker-compose` is used to run the tests, QGIS
-Server may be configured thanks to environment variables (to activate the
+Server may be configured through environment variables (to activate the
 parallel rendering for example).
 
-Note that if you just want to measure performance of a QGIS Server currently
-running on a server with your own data, you just need to use [Graffiti](https://github.com/pblottiere/graffiti) without
-this infrastructure.
+Note that if you just want to measure the performance of an already-running QGIS Server you
+just need to use [Graffiti](https://github.com/pblottiere/graffiti) without
+the whole infrastructure.
 
 ## Clone
 
@@ -34,8 +36,7 @@ ansible  docker  docs  README.md  scenarios
 
 Description of the content:
 - ansible: directory with Ansible scripts for a remote deployment
-- docker: directory with Dockerfiles for QGIS Server and Postgis (with data)
-- docs: rather empty for now...
+- docker: directory with Dockerfiles for QGIS Server and PostGIS (with data)
 - README.md: the current file
 - scenarios: `docker-compose.yml` and configuration files for Graffiti
 
@@ -43,8 +44,8 @@ Description of the content:
 
 #### Local deployment with Dockerfiles only
 
-If you just want to execute graffiti and its tests on your machine, you just
-need to build Docker images first (for QGIS Server and Postgis data):
+If you just want to execute Graffiti and its tests on your machine, you just
+need to build Docker images first (for QGIS Server and PostGIS + data):
 
 ```
 $ cd docker
@@ -57,9 +58,7 @@ To deploy this project on a remote server, you have to:
 - configure your SSH to have a root connection without password (ssh key)
 - create an alias in your `~/.ssh/config` for the host `qgis-perfsuite` (for
   the `root` user)
-- execute everything in the virtualenv (see below)
-
-In other words:
+- execute the Ansible playbook for the virtualenv (see below)
 
 ```
 $ cd ansible
@@ -86,7 +85,7 @@ $ source venv/bin/activate
 ## Running tests
 
 Once deployed (locally or remotely), you just have to execute the next script
-to run graffiti:
+to run Graffiti:
 
 ```
 $ cd scenarios
@@ -99,9 +98,8 @@ Note that the data used for testing is in the `scenarios/data` subdirectory.
 
 ## Write your own tests
 
-The tool used to run and generate the report is
-[graffiti](https://pblottiere/graffiti), so you should take a look to its
-documentation first.
+The tool used to run and generate the report is [Graffiti](https://github.com/pblottiere/graffiti),
+so you should take a look at its documentation first.
 
 #### Modify the current scenario
 
@@ -130,10 +128,10 @@ to test the parallel rendering:
       - QGIS_SERVER_MAX_THREADS=8
 ```
 
-#### Add a test with custom project and custom data
+#### Add a test with a custom project and custom data
 
-If you want to run some tests with a custom `.qgs` project, you have to
-copy/paste your project in `scenarios/data` subdirectory. Moreover, if your
-data is based on GeoTIIF, shapefile, ... files, you also have to copy/paste
-these files in `scenarios/data`. This way, Docker containers can use these
-them!
+If you want to run some tests with a custom `.qgs` project, you need to
+add your project to the `scenarios/data` subdirectory. Moreover, if your
+data is based on GeoTIIF, Shapefile, ... files, you also need to copy the
+date files to `scenarios/data`. In this way the Docker containers will
+be able to use them!
