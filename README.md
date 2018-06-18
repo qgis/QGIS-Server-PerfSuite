@@ -23,6 +23,10 @@ Note that if you just want to measure the performance of an already-running QGIS
 just need to use [Graffiti](https://github.com/pblottiere/graffiti) without
 the whole infrastructure.
 
+<p align="center">
+  <img src="https://github.com/Oslandia/QGIS-Server-PerfSuite/blob/master/docs/report.png" width="550" title="Report">
+</p>
+
 ## Clone
 
 To clone the project:
