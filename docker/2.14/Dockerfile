@@ -10,7 +10,6 @@ RUN apt-get install -y \
   git \
   cmake \
   g++ \
-  xvfb \
   bison \
   flex \
   libgdal-dev \
@@ -28,7 +27,6 @@ RUN apt-get install -y \
   libgsl-dev \
   libqscintilla2-dev \
   libfcgi-dev \
-  nginx \
   spawn-fcgi \
   postgresql-client
 
@@ -40,9 +38,6 @@ RUN cd QGIS/build && cmake -DWITH_SERVER=ON .. && make -j4 && make install && ld
 RUN rm -rf /root/QGIS
 
 ADD cmd.sh /root/cmd.sh
-
-EXPOSE 80
-ADD nginx.conf /etc/nginx/sites-available/default
 
 COPY pg_service.conf /root/.pg_service.conf
 

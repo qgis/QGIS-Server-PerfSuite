@@ -1,15 +1,31 @@
 version: '2'
 services:
+  nginx:
+    container_name: qgisserver-perfsuite-nginx
+    image: qgisserver-perfsuite/nginx
+    ports:
+    - 8080:80
+    networks:
+    - qgis
+    depends_on:
+      - qgis-2.14
+      - qgis-2.18
+      - qgis-3.0
+      - qgis-master
   qgis-2.14:
     container_name: qgisserver-perfsuite-2.14
     image: qgisserver-perfsuite/2.14
     volumes:
       - ./data:/data
+    networks:
+      - qgis
     links:
       - data
   qgis-2.18:
     container_name: qgisserver-perfsuite-2.18
     image: qgisserver-perfsuite/2.18
+    networks:
+      - qgis
     volumes:
       - ./data:/data
     links:
@@ -17,6 +33,8 @@ services:
   qgis-3.0:
     container_name: qgisserver-perfsuite-3.0
     image: qgisserver-perfsuite/3.0
+    networks:
+      - qgis
     volumes:
       - ./data:/data
     links:
@@ -26,6 +44,8 @@ services:
   qgis-3.0-parallel-rendering:
     container_name: qgisserver-perfsuite-3.0-parallel-rendering
     image: qgisserver-perfsuite/3.0
+    networks:
+      - qgis
     volumes:
       - ./data:/data
     links:
@@ -36,6 +56,8 @@ services:
   qgis-master:
     container_name: qgisserver-perfsuite-master
     image: qgisserver-perfsuite/master
+    networks:
+      - qgis
     volumes:
       - ./data:/data
     links:
@@ -45,6 +67,8 @@ services:
   qgis-master-parallel-rendering:
     container_name: qgisserver-perfsuite-master-parallel-rendering
     image: qgisserver-perfsuite/master
+    networks:
+      - qgis
     volumes:
       - ./data:/data
     links:
@@ -55,3 +79,6 @@ services:
   data:
     container_name: qgisserver-perfsuite-data
     image: qgisserver-perfsuite/data
+
+networks:
+  qgis: {}
