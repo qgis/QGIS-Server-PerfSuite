@@ -3,4 +3,3 @@ venv
 playbook.retry
 scenarios/data
 scenarios/graffiti
-scenarios/scenarios.yml
