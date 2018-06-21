@@ -1,12 +1,12 @@
 OUTDIR: /tmp/graffiti/
 HTML: report.html
-DESCRIPTION: description.html
+DESCRIPTION: html/description.html
 PRECISION: 1
 REQUESTS:
   - NAME: getcapabilities
     TYPE: GetCapabilities
     TITLE: "Default configuration"
-    DESCRIPTION: getcapabilities.html
+    DESCRIPTION: html/getcapabilities.html
     LOG: True
     ITERATIONS: 20
     HOSTS:
@@ -29,7 +29,7 @@ REQUESTS:
   - NAME: getcapabilities_trust
     TYPE: GetCapabilities
     TITLE: "Postgres view and trust option"
-    DESCRIPTION: getcapabilities_trust.html
+    DESCRIPTION: html/getcapabilities_trust.html
     LOG: True
     ITERATIONS: 5
     HOSTS:
@@ -60,7 +60,7 @@ REQUESTS:
   - NAME: getmap_all
     TYPE: GetMap
     TITLE: "Vector and raster"
-    DESCRIPTION: getmap_all.html
+    DESCRIPTION: html/getmap_all.html
     LOG: True
     ITERATIONS: 20
     HOSTS:
@@ -107,7 +107,7 @@ REQUESTS:
   - NAME: getmap_all_zoom
     TYPE: GetMap
     TITLE: "Vector and raster (zoom)"
-    DESCRIPTION: getmap_all_zoom.html
+    DESCRIPTION: html/getmap_all_zoom.html
     LOG: True
     ITERATIONS: 20
     HOSTS:
@@ -154,7 +154,7 @@ REQUESTS:
   - NAME: getmap_points
     TYPE: GetMap
     TITLE: "Points and parallel rendering"
-    DESCRIPTION: getmap_points.html
+    DESCRIPTION: html/getmap_points.html
     LOG: True
     ITERATIONS: 20
     HOSTS:
@@ -221,7 +221,7 @@ REQUESTS:
   - NAME: getmap_polygons
     TYPE: GetMap
     TITLE: "Polygons"
-    DESCRIPTION: getmap_polygons.html
+    DESCRIPTION: html/getmap_polygons.html
     LOG: True
     ITERATIONS: 20
     HOSTS:
@@ -268,7 +268,7 @@ REQUESTS:
   - NAME: getmap_lines
     TYPE: GetMap
     TITLE: "Lines"
-    DESCRIPTION: getmap_lines.html
+    DESCRIPTION: html/getmap_lines.html
     LOG: True
     ITERATIONS: 20
     HOSTS:
@@ -315,7 +315,7 @@ REQUESTS:
   - NAME: getmap_lines_parallel_labelling
     TYPE: GetMap
     TITLE: "Lines, parallel labelling and PAL candidates"
-    DESCRIPTION: getmap_lines_parallel_labelling.html
+    DESCRIPTION: html/getmap_lines_parallel_labelling.html
     LOG: True
     ITERATIONS: 20
     HOSTS:
@@ -382,7 +382,7 @@ REQUESTS:
   - NAME: getmap_raster
     TYPE: GetMap
     TITLE: "Raster"
-    DESCRIPTION: getmap_raster.html
+    DESCRIPTION: html/getmap_raster.html
     LOG: True
     ITERATIONS: 20
     HOSTS:
