@@ -6,7 +6,7 @@ PG_PASSWORD=root
 PG_DB=data
 
 ROOT=$PWD
-if [[ $# -eq 1 ]]
+if [ $# -eq 1 ]
 then
     ROOT=$1
 fi
@@ -46,7 +46,7 @@ then
   cd graffiti
   mkdir venv
   virtualenv -p /usr/bin/python3 ./venv
-  source ./venv/bin/activate
+  . venv/bin/activate
   pip install -e .
   deactivate
 fi
