@@ -1,3 +1,10 @@
+- name: Copy ci shell script
+  copy:
+    dest: "/home/{{ user }}/perfsuite"
+    src: ci.sh
+    owner: "{{ user }}"
+    group: "{{ group }}"
+
 - name: Update crontab to periodically run graffiti
   cron:
     name: perfsuite ci
@@ -5,4 +12,4 @@
     minute: "0"
     hour: "0"
     job: >
-      cd /home/{{ user }}/perfsuite/scenarios && sh run.sh
+      cd /home/{{ user }}/perfsuite/ && sh ci.sh > /tmp/perfsuite-ci.log 2>&1
