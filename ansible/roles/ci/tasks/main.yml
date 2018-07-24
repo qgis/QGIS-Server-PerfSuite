@@ -1,0 +1,8 @@
+- name: Update crontab to periodically run graffiti
+  cron:
+    name: perfsuite ci
+    user: "{{ user }}"
+    minute: "0"
+    hour: "0"
+    job: >
+      cd /home/{{ user }}/perfsuite/scenarios && sh run.sh
