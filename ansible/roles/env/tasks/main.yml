@@ -1,0 +1,17 @@
+- name: Set hostname
+  hostname:
+    name: perfsuite
+
+- name: Create group {{ group }}
+  group:
+    name: "{{ group }}"
+    state: present
+
+- name: Create user {{ user }}
+  user:
+    name: "{{ user }}"
+    group: "{{ group }}"
+    password: "{{ user_password }}"
+    update_password: always
+    shell: /bin/bash
+    state: present
