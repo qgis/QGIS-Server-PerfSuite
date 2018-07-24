@@ -29,11 +29,10 @@
 
 - name: Copy Dockerfiles
   copy:
-    dest: "/home/{{ user }}/"
+    dest: "/home/{{ user }}/perfsuite/"
     src: "{{ playbook_dir }}/../docker"
     owner: "{{ user }}"
     group: "{{ group }}"
-  become: true
 
 #
 # vagrant only
@@ -97,16 +96,16 @@
 #
 
 - name: Build image for QGIS Server 2.14
-  command: sh /home/{{ user }}/docker/2.14/build.sh
+  command: sh /home/{{ user }}/perfsuite/docker/2.14/build.sh
 
 - name: Build image for QGIS Server 2.18
-  command: sh /home/{{ user }}/docker/2.18/build.sh
+  command: sh /home/{{ user }}/perfsuite/docker/2.18/build.sh
 
 - name: Build image for QGIS Server 3.0
-  command: sh /home/{{ user }}/docker/3.0/build.sh
+  command: sh /home/{{ user }}/perfsuite/docker/3.0/build.sh
 
 - name: Build image for QGIS Server master
-  command: sh /home/{{ user }}/docker/master/build.sh
+  command: sh /home/{{ user }}/perfsuite/docker/master/build.sh
 
 - name: Build image for Postgis data
-  command: sh /home/{{ user }}/docker/data/build.sh
+  command: sh /home/{{ user }}/perfsuite/docker/data/build.sh

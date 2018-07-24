@@ -1,6 +1,6 @@
 - name: Create data directory
   file:
-    path: /home/{{ user }}/scenarios/data
+    path: /home/{{ user }}/perfsuite/scenarios/data
     state: directory
     owner: "{{ user }}"
     group: "{{ group }}"
@@ -9,7 +9,7 @@
 - name: Download data
   get_url:
     url: "{{ data_url }}/{{ item }}"
-    dest: /home/{{ user }}/scenarios/data
+    dest: /home/{{ user }}/perfsuite/scenarios/data
   with_items:
     - eu_dem_v11_hillshade.tif
     - eu_dem_v11_hillshade.tif.ovr
