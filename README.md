@@ -51,6 +51,8 @@ Description of the content:
 If you just want to execute Graffiti and its tests on your machine, you just
 need to build Docker images first (for QGIS Server and PostGIS + data):
 
+**Warning** this will clone QGIS repository and compile QGIS, which takes a lot of disk space and compile time. 
+
 ```
 $ cd docker
 $ sh build.sh
