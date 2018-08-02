@@ -1,6 +1,6 @@
 ansible/vagrant/.vagrant/
 venv
 playbook.retry
-scenarios/data
+
 scenarios/graffiti
 qgis4.sh
