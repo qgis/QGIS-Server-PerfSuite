@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
 
 # Download data
 WORKDIR /data
-RUN wget --reject="index.html*" --no-parent --cut-dirs=1 -nH -r http://37.187.164.233/qgis-server-perfsuite/gpkg
+RUN wget --reject="index.html*" --no-parent --cut-dirs=2 -nH -r http://37.187.164.233/qgis-server-perfsuite/data/gpkg
 
 # Configure postgres
 RUN pg_createcluster 10 main --start
