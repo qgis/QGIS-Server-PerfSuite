@@ -8,7 +8,7 @@ REQUESTS:
     TITLE: "Default configuration"
     DESCRIPTION: html/getcapabilities.html
     LOG: True
-    ITERATIONS: 20
+    ITERATIONS: 10
     HOSTS:
       - NAME: "2.14"
         HOST: http://localhost:8088/qgisserver_2_14
@@ -71,7 +71,7 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,polygons,lines,points
+        PAYLOAD_LAYERS: eu_dem_v11,polygons,hydro_segment,points
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 43.3,1.0,43.9,1.9
       - NAME: "2.18"
@@ -81,7 +81,7 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,polygons,lines,points
+        PAYLOAD_LAYERS: eu_dem_v11,polygons,hydro_segment,points
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 43.3,1.0,43.9,1.9
       - NAME: "3.0"
@@ -91,7 +91,7 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,polygons,lines,points
+        PAYLOAD_LAYERS: eu_dem_v11,polygons,hydro_segment,points
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 43.3,1.0,43.9,1.9
       - NAME: "Master"
@@ -101,7 +101,7 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,polygons,lines,points
+        PAYLOAD_LAYERS: eu_dem_v11,polygons,hydro_segment,points
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 43.3,1.0,43.9,1.9
   - NAME: getmap_points
@@ -212,9 +212,10 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: lines
+        PAYLOAD_LAYERS: hydro_cours_eau.geoml93
         PAYLOAD_FORMAT: png
-        PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
+        PAYLOAD_DPI: 96
+        PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "2.18"
         HOST: http://localhost:8088/qgisserver_2_18
         PAYLOAD_MAP: /data/qgs/postgres/qgis2.qgs
@@ -222,9 +223,10 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: lines
+        PAYLOAD_LAYERS: hydro_cours_eau.geoml93
         PAYLOAD_FORMAT: png
-        PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
+        PAYLOAD_DPI: 96
+        PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "3.0"
         HOST: http://localhost:8088/qgisserver_3_0
         PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
@@ -232,9 +234,10 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: lines
+        PAYLOAD_LAYERS: hydro_cours_eau.geoml93
         PAYLOAD_FORMAT: png
-        PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
+        PAYLOAD_DPI: 96
+        PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "Master"
         HOST: http://localhost:8088/qgisserver_master
         PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
@@ -242,9 +245,10 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: lines
+        PAYLOAD_LAYERS: hydro_cours_eau.geoml93
         PAYLOAD_FORMAT: png
-        PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
+        PAYLOAD_DPI: 96
+        PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
   - NAME: getmap_lines_parallel_labelling
     TYPE: GetMap
     TITLE: "Lines, parallel labelling and PAL candidates"
@@ -259,7 +263,7 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: lines
+        PAYLOAD_LAYERS: hydro_segment
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
       - NAME: "2.18 (default configuration)"
@@ -269,7 +273,7 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: lines
+        PAYLOAD_LAYERS: hydro_segment
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
       - NAME: "3.0 (default configuration)"
@@ -279,7 +283,7 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: lines
+        PAYLOAD_LAYERS: hydro_segment
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
       - NAME: "3.0 (8 candidates)"
@@ -289,7 +293,7 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: lines
+        PAYLOAD_LAYERS: hydro_segment
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
       - NAME: "Master (default configuration)"
@@ -299,7 +303,7 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: lines
+        PAYLOAD_LAYERS: hydro_segment
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
       - NAME: "Master (8 candidates)"
@@ -309,7 +313,7 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: lines
+        PAYLOAD_LAYERS: hydro_segment
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
   - NAME: getmap_raster
