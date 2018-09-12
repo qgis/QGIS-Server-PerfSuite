@@ -104,6 +104,9 @@
 - name: Build image for QGIS Server 3.0
   command: sh /home/{{ user }}/perfsuite/docker/3.0/build.sh
 
+- name: Build image for QGIS Server 3.2
+  command: sh /home/{{ user }}/perfsuite/docker/3.2/build.sh
+
 - name: Build image for QGIS Server master
   command: sh /home/{{ user }}/perfsuite/docker/master/build.sh
 
