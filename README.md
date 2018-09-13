@@ -5,7 +5,7 @@ assessing the performance of [QGIS Server](https://github.com/qgis/QGIS).
 
 The repo includes:
 
-- Dockerfiles for building and executing QGIS Server 2.14, 2.18, 3.0 and Master
+- Dockerfiles for building and executing QGIS Server 2.14, 2.18, 3.0, 3.2 and Master
 - A Dockerfile for PostGIS and test data
 - Ansible scripts for remote deployment
 - some tests to generate a HTML report with [Graffiti](https://github.com/pblottiere/graffiti)
@@ -51,7 +51,7 @@ Description of the content:
 If you just want to execute Graffiti and its tests on your machine, you just
 need to build Docker images first (for QGIS Server and PostGIS + data):
 
-**Warning** this will clone QGIS repository and compile QGIS, which takes a lot of disk space and compile time. 
+**Warning** this will clone QGIS repository and compile QGIS, which takes a lot of disk space and compile time.
 
 ```
 $ cd docker

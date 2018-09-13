@@ -95,20 +95,20 @@
 # vagrant only end
 #
 
-- name: Build image for QGIS Server 2.14
-  command: sh /home/{{ user }}/perfsuite/docker/2.14/build.sh
-
-- name: Build image for QGIS Server 2.18
-  command: sh /home/{{ user }}/perfsuite/docker/2.18/build.sh
-
-- name: Build image for QGIS Server 3.0
-  command: sh /home/{{ user }}/perfsuite/docker/3.0/build.sh
-
-- name: Build image for QGIS Server 3.2
-  command: sh /home/{{ user }}/perfsuite/docker/3.2/build.sh
-
-- name: Build image for QGIS Server master
-  command: sh /home/{{ user }}/perfsuite/docker/master/build.sh
-
-- name: Build image for Postgis data
-  command: sh /home/{{ user }}/perfsuite/docker/data/build.sh
+    # - name: Build image for QGIS Server 2.14
+    #   command: sh /home/{{ user }}/perfsuite/docker/2.14/build.sh
+    #
+    # - name: Build image for QGIS Server 2.18
+    #   command: sh /home/{{ user }}/perfsuite/docker/2.18/build.sh
+    #
+    # - name: Build image for QGIS Server 3.0
+    #   command: sh /home/{{ user }}/perfsuite/docker/3.0/build.sh
+    #
+    # - name: Build image for QGIS Server 3.2
+    #   command: sh /home/{{ user }}/perfsuite/docker/3.2/build.sh
+    #
+    # - name: Build image for QGIS Server master
+    #   command: sh /home/{{ user }}/perfsuite/docker/master/build.sh
+    #
+    # - name: Build image for Postgis data
+    #   command: sh /home/{{ user }}/perfsuite/docker/data/build.sh

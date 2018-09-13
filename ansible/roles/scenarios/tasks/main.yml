@@ -1,0 +1,14 @@
+- name: Install virtualenv and git
+  apt:
+    name: "{{item}}"
+    update_cache: yes
+  with_items:
+    - virtualenv
+    - git
+
+- name: Copy graffiti scenarios
+  copy:
+    src: "{{ playbook_dir }}/../scenarios"
+    dest: "/home/{{ user }}/perfsuite/"
+    owner: "{{ user }}"
+    group: "{{ group }}"
