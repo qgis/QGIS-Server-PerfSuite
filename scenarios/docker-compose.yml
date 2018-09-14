@@ -64,6 +64,17 @@ services:
       - ./data:/data
     environment:
       - QGIS_SERVER_PARALLEL_RENDERING=0
+  qgis-3.2-parallel-rendering:
+    container_name: qgisserver-perfsuite-3.2-parallel-rendering
+    image: qgisserver-perfsuite/3.2
+    networks:
+      - qgis
+      - data
+    volumes:
+      - ./data:/data
+    environment:
+      - QGIS_SERVER_PARALLEL_RENDERING=1
+      - QGIS_SERVER_MAX_THREADS=4
   qgis-master:
     container_name: qgisserver-perfsuite-master
     image: qgisserver-perfsuite/master
