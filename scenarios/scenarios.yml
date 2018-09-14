@@ -74,7 +74,7 @@ REQUESTS:
     TITLE: "Parallel Rendering"
     DESCRIPTION: html/getmap_parallel_rendering.html
     LOG: True
-    ITERATIONS: 5
+    ITERATIONS: 20
     HOSTS:
       - NAME: "2.14 (1 core)"
         HOST: http://localhost:8088/qgisserver_2_14
