@@ -48,7 +48,7 @@ then
   mkdir venv
   virtualenv -p /usr/bin/python3 ./venv
   . venv/bin/activate
-  pip install -e .
+  pip install -r requirements.txt
   deactivate
 fi
 

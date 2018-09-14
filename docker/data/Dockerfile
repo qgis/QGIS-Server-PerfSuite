@@ -30,6 +30,7 @@ RUN /etc/init.d/postgresql start && \
     ogr2ogr -f PostgreSQL "PG:dbname=data" gpkg/hydro_segment.gpkg -nln ref.hydro_segment && \
     ogr2ogr -f PostgreSQL "PG:dbname=data" gpkg/landuse_corine_lc_2006.gpkg -nln ref.landuse_corine_lc_2006 && \
     ogr2ogr -f PostgreSQL "PG:dbname=data" gpkg/vw_clc2006.gpkg -nln ref.vw_clc2006 && \
+    ogr2ogr -f PostgreSQL "PG:dbname=data" gpkg/parcelles.gpkg -nln ref.parcelles && \
     psql -d data --command "CREATE VIEW public.adress_ban_view AS select * FROM ref.adress_ban;"
 
 RUN echo "host all  all    0.0.0.0/0  md5" >> /etc/postgresql/10/main/pg_hba.conf

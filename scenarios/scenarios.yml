@@ -197,9 +197,9 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: polygons
+        PAYLOAD_LAYERS: parcelles
         PAYLOAD_FORMAT: png
-        PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
+        PAYLOAD_BBOX: 43.27,3.77,44.70,8.29
       - NAME: "2.18"
         HOST: http://localhost:8088/qgisserver_2_18
         PAYLOAD_MAP: /data/qgs/postgres/qgis2.qgs
@@ -207,9 +207,9 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: polygons
+        PAYLOAD_LAYERS: parcelles
         PAYLOAD_FORMAT: png
-        PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
+        PAYLOAD_BBOX: 43.27,3.77,44.70,8.29
       - NAME: "3.0"
         HOST: http://localhost:8088/qgisserver_3_0
         PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
@@ -217,9 +217,9 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: polygons
+        PAYLOAD_LAYERS: parcelles
         PAYLOAD_FORMAT: png
-        PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
+        PAYLOAD_BBOX: 43.27,3.77,44.70,8.29
       - NAME: "3.2"
         HOST: http://localhost:8088/qgisserver_3_2
         PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
@@ -227,9 +227,9 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: polygons
+        PAYLOAD_LAYERS: parcelles
         PAYLOAD_FORMAT: png
-        PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
+        PAYLOAD_BBOX: 43.27,3.77,44.70,8.29
       - NAME: "Master"
         HOST: http://localhost:8088/qgisserver_master
         PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
@@ -237,9 +237,9 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: polygons
+        PAYLOAD_LAYERS: parcelles
         PAYLOAD_FORMAT: png
-        PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
+        PAYLOAD_BBOX: 43.27,3.77,44.70,8.29
   - NAME: getmap_lines
     TYPE: GetMap
     TITLE: "Lines"
