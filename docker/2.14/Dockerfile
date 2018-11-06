@@ -2,7 +2,6 @@ FROM debian:stretch
 MAINTAINER Paul Blottiere <blottiere.paul@gmail.com>
 RUN  export DEBIAN_FRONTEND=noninteractive
 ENV  DEBIAN_FRONTEND noninteractive
-RUN  dpkg-divert --local --rename --add /sbin/initctl
 
 RUN apt-get update
 RUN apt-get upgrade -y
