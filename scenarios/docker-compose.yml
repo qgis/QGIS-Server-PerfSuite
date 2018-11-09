@@ -12,9 +12,10 @@ services:
     depends_on:
       - qgis-2.14
       - qgis-2.18
-      - qgis-3.0
       - qgis-3.2
-      - qgis-3.0-parallel-rendering
+      - qgis-3.2-parallel-rendering
+      - qgis-3.4
+      - qgis-3.4-parallel-rendering
       - qgis-master
       - qgis-master-parallel-rendering
   qgis-2.14:
@@ -33,27 +34,6 @@ services:
       - data
     volumes:
       - ./data:/data
-  qgis-3.0:
-    container_name: qgisserver-perfsuite-3.0
-    image: qgisserver-perfsuite/3.0
-    networks:
-      - qgis
-      - data
-    volumes:
-      - ./data:/data
-    environment:
-      - QGIS_SERVER_PARALLEL_RENDERING=0
-  qgis-3.0-parallel-rendering:
-    container_name: qgisserver-perfsuite-3.0-parallel-rendering
-    image: qgisserver-perfsuite/3.0
-    networks:
-      - qgis
-      - data
-    volumes:
-      - ./data:/data
-    environment:
-      - QGIS_SERVER_PARALLEL_RENDERING=1
-      - QGIS_SERVER_MAX_THREADS=4
   qgis-3.2:
     container_name: qgisserver-perfsuite-3.2
     image: qgisserver-perfsuite/3.2
@@ -67,6 +47,27 @@ services:
   qgis-3.2-parallel-rendering:
     container_name: qgisserver-perfsuite-3.2-parallel-rendering
     image: qgisserver-perfsuite/3.2
+    networks:
+      - qgis
+      - data
+    volumes:
+      - ./data:/data
+    environment:
+      - QGIS_SERVER_PARALLEL_RENDERING=1
+      - QGIS_SERVER_MAX_THREADS=4
+  qgis-3.4:
+    container_name: qgisserver-perfsuite-3.4
+    image: qgisserver-perfsuite/3.4
+    networks:
+      - qgis
+      - data
+    volumes:
+      - ./data:/data
+    environment:
+      - QGIS_SERVER_PARALLEL_RENDERING=0
+  qgis-3.4-parallel-rendering:
+    container_name: qgisserver-perfsuite-3.4-parallel-rendering
+    image: qgisserver-perfsuite/3.4
     networks:
       - qgis
       - data

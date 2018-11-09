@@ -78,12 +78,13 @@ RUN apt-get install -y \
   qttools5-dev \
   qttools5-dev-tools \
   spawn-fcgi \
-  postgresql-client
+  postgresql-client \
+  libqt5serialport5-dev
 
 WORKDIR /root
 
 RUN git clone https://github.com/qgis/QGIS
-RUN cd QGIS && git checkout release-3_2 && mkdir build
+RUN cd QGIS && git checkout release-3_4 && mkdir build
 RUN cd QGIS/build && cmake -DCMAKE_BUILD_TYPE=Release -DWITH_SERVER=ON .. && make -j4 && make install && ldconfig
 RUN rm -rf /root/QGIS
 
