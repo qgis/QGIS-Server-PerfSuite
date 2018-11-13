@@ -40,6 +40,7 @@ RUN apt-get install -y \
   libsqlite3-dev \
   libsqlite3-mod-spatialite \
   libzip-dev \
+  libexiv2-dev \
   lighttpd \
   locales \
   pkg-config \
