@@ -83,7 +83,7 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,polygons,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
+        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "2.18 (1 core)"
@@ -93,7 +93,7 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,polygons,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
+        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "3.2 (1 core)"
@@ -103,7 +103,7 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,polygons,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
+        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "3.2 (4 cores)"
@@ -113,7 +113,7 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,polygons,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
+        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "3.4 (1 core)"
@@ -123,7 +123,7 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,polygons,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
+        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "3.4 (4 cores)"
@@ -133,7 +133,7 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,polygons,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
+        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "Master (1 core)"
@@ -143,7 +143,7 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,polygons,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
+        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "Master (4 cores)"
@@ -153,7 +153,7 @@ REQUESTS:
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,polygons,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
+        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
   - NAME: getmap_all
