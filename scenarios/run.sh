@@ -25,10 +25,20 @@ docker-compose up -d
 DOCKER_IP_DATA=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' qgisserver-perfsuite-data)
 
 # wait for postgres to be ready
+var=0
 until PGPASSWORD=$PG_PASSWORD psql -h $DOCKER_IP_DATA -U $PG_USER -d $PG_DB -c '\q'
 do
-  >&2 echo "Data container is unavailable - sleeping"
+  >&2 echo "Data container is unavailable - sleeping ($var)"
   sleep 10
+
+  var=`expr $var + 1`
+  if [ "$var" -eq "10" ]
+  then
+    cd $ROOT
+    docker-compose stop
+    docker-compose rm -f
+    exit 1
+  fi
 done
 
 # access shared directory a 1st time
