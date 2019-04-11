@@ -7,7 +7,6 @@ The repo includes:
 
 - Dockerfiles for building and executing QGIS Server 2.14, 2.18, 3.2, 3.4 and Master
 - A Dockerfile for PostGIS and test data
-- Ansible scripts for remote deployment
 - some tests to generate a HTML report with [Graffiti](https://github.com/pblottiere/graffiti)
 - everything needed for running your own test scenarios with you own QGIS Server version!
 
@@ -35,58 +34,13 @@ To clone the project:
 $ git clone https://Oslandia/QGIS-Server-Perfsuite
 $ cd QGIS-Server-Perfsuite
 $ ls
-ansible  docker  docs  README.md  scenarios
+docker  docs  README.md  scenarios
 ```
 
 Description of the content:
-- ansible: directory with Ansible scripts for a remote deployment
 - docker: directory with Dockerfiles for QGIS Server and PostGIS (with data)
 - README.md: the current file
 - scenarios: `docker-compose.yml` and configuration files for Graffiti
-
-## Deployment
-
-#### Local deployment with Dockerfiles only
-
-If you just want to execute Graffiti and its tests on your machine, you just
-need to build Docker images first (for QGIS Server and PostGIS + data):
-
-**Warning** this will clone QGIS repository and compile QGIS, which takes a lot of disk space and compile time.
-
-```
-$ cd docker
-$ sh build.sh
-```
-
-#### Remote deployment with Ansible
-
-To deploy this project on a remote server, you have to:
-- configure your SSH to have a root connection without password (ssh key)
-- create an alias in your `~/.ssh/config` for the host `qgis-perfsuite` (for
-  the `root` user)
-- execute the Ansible playbook for the virtualenv (see below)
-
-```
-$ cd ansible
-$ virtualenv -p /usr/bin/python2 venv
-$ source venv/bin/activate
-(venv)$ pip install -r requirements.txt
-(venv)$ ansible-playbook -i hosts playbook.yml
-```
-
-#### Local deployment on a Vagrant machine with Ansible
-
-It's not necessarily a good idea to use a Vagrant machine to run the underlying
-tests, but it may be convenient for testing:
-
-```
-$ cd ansible
-$ virtualenv -p /usr/bin/python2 venv
-$ source venv/bin/activate
-(venv)$ cd vagrant
-(venv)$ vagrant plugin install vagrant-disksize
-(venv)$ sh vagrant.sh up
-```
 
 ## Running tests
 
