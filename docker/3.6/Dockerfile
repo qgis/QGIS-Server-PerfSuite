@@ -3,9 +3,9 @@ MAINTAINER Paul Blottiere <blottiere.paul@gmail.com>
 RUN  export DEBIAN_FRONTEND=noninteractive
 ENV  DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get install -y \
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y \
   locales \
   bison \
   build-essential \

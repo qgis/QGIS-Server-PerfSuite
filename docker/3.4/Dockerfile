@@ -3,9 +3,9 @@ MAINTAINER Paul Blottiere <blottiere.paul@gmail.com>
 RUN  export DEBIAN_FRONTEND=noninteractive
 ENV  DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get install -y \
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y \
   locales \
   bison \
   build-essential \
@@ -98,7 +98,7 @@ COPY pg_service.conf /root/.pg_service.conf
 
 RUN git clone https://github.com/qgis/QGIS
 RUN cd QGIS && git checkout release-3_4 && mkdir build
-RUN cd QGIS/build && cmake -DCMAKE_BUILD_TYPE=Release -DWITH_SERVER=ON .. 
+RUN cd QGIS/build && cmake -DCMAKE_BUILD_TYPE=Release -DWITH_SERVER=ON ..
 
 WORKDIR /
 CMD ["sh", "/root/cmd.sh"]
