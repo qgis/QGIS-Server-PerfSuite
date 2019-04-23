@@ -1,5 +1,6 @@
 OUTDIR: /tmp/graffiti/
 HTML: report.html
+TITLE: QGIS Server Performance Report
 DATABASE: perfsuite.db
 DESCRIPTION: html/description.html
 PRECISION: 1
