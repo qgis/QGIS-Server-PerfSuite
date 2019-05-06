@@ -4,6 +4,11 @@ TITLE: QGIS Server Performance Report
 LOGO: qgis.png
 DATABASE: perfsuite.db
 DESCRIPTION: html/description.html
+DB_HOST: localhost
+DB_PORT: 55432
+DB_NAME: data
+DB_USER: root
+DB_PASSWORD: root
 PRECISION: 1
 REQUESTS:
   - NAME: getcapabilities
@@ -11,6 +16,7 @@ REQUESTS:
     TITLE: "Default configuration"
     DESCRIPTION: html/getcapabilities.html
     LOG: True
+    PROVIDER: POSTGRES
     ITERATIONS: 10
     HOSTS:
       - NAME: "2.18"
@@ -34,6 +40,7 @@ REQUESTS:
     TITLE: "Postgres view and trust option"
     DESCRIPTION: html/getcapabilities_trust.html
     LOG: True
+    PROVIDER: POSTGRES
     ITERATIONS: 5
     HOSTS:
       - NAME: "2.18"
@@ -69,6 +76,7 @@ REQUESTS:
     TITLE: "Parallel Rendering"
     DESCRIPTION: html/getmap_parallel_rendering.html
     LOG: True
+    PROVIDER: POSTGRES
     ITERATIONS: 20
     HOSTS:
       - NAME: "2.18 (1 core)"
@@ -146,6 +154,7 @@ REQUESTS:
     TITLE: "Vector and raster"
     DESCRIPTION: html/getmap_all.html
     LOG: True
+    PROVIDER: POSTGRES
     ITERATIONS: 20
     HOSTS:
       - NAME: "2.18"
@@ -193,6 +202,7 @@ REQUESTS:
     TITLE: "Points"
     DESCRIPTION: html/getmap_points.html
     LOG: True
+    PROVIDER: POSTGRES
     ITERATIONS: 20
     HOSTS:
       - NAME: "2.18"
@@ -240,6 +250,7 @@ REQUESTS:
     TITLE: "Polygons"
     DESCRIPTION: html/getmap_polygons.html
     LOG: True
+    PROVIDER: POSTGRES
     ITERATIONS: 20
     HOSTS:
       - NAME: "2.18"
@@ -287,6 +298,7 @@ REQUESTS:
     TITLE: "Lines"
     DESCRIPTION: html/getmap_lines.html
     LOG: True
+    PROVIDER: POSTGRES
     ITERATIONS: 20
     HOSTS:
       - NAME: "2.18"
@@ -338,6 +350,7 @@ REQUESTS:
     TITLE: "Lines, parallel labelling and PAL candidates"
     DESCRIPTION: html/getmap_lines_parallel_labelling.html
     LOG: True
+    PROVIDER: POSTGRES
     ITERATIONS: 20
     HOSTS:
       - NAME: "2.18 (default configuration)"
@@ -415,6 +428,7 @@ REQUESTS:
     TITLE: "Raster"
     DESCRIPTION: html/getmap_raster.html
     LOG: True
+    PROVIDER: POSTGRES
     ITERATIONS: 20
     HOSTS:
       - NAME: "2.18"

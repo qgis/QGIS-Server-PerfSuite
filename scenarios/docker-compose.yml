@@ -91,6 +91,8 @@ services:
   data:
     container_name: qgisserver-perfsuite-data
     image: qgisserver-perfsuite/data
+    ports:
+      - 55432:5432
     networks:
       - data
 
