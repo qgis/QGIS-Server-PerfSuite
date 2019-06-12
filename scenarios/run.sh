@@ -64,7 +64,7 @@ fi
 
 cd $ROOT/graffiti
 . venv/bin/activate
-./graffiti.py --cfg $ROOT/scenarios.yml
+./graffiti.py --cfg $ROOT/scenarios.yml --style $ROOT/style.yml
 
 # clear containers
 cd $ROOT
