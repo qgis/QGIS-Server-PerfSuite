@@ -2,6 +2,8 @@
 
 <p>The aim of this report is to compare QGIS Server performances according to several versions (2.18, 3.4, 3.6 and master branch). Moreover, some configurations are tested too like parallel rendering, trust option, PAL candidates, ... This way, we're able to keep an eye on regressions and improvements!</p>
 
-<p>For now, only <i>GetCapabilities</i> and <i>GetMap</i> requests are tested. Regarding the underlying data, a Postgis database is used (with several kinds of geometries, as described in each tests) as well as GeoTIFF images.</p>
+<p>For now, only <i>GetCapabilities</i> and <i>GetMap</i> requests are tested. Regarding the underlying data, a Postgis database is used (with several kinds of geometries, as described in each tests) as well as GeoTIFF rasters.</p>
+
+<p>The <i>"(Database)"</i> flag in the legend shows the time spent to retrieve data from PostgreSQL as a reference.</p>
 
 <p>This report is automatically generated thanks to <a href="https://github.com/qgis/QGIS-Server-Perfsuite">QGIS-Server-Perfsuite</a> and <a href="https://github.com/pblottiere/graffiti">Graffiti</a>.</p>
