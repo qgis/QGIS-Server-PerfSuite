@@ -29,6 +29,8 @@ HOSTS:
     #
     - NAME: "3.4"
       COLOR: "#7884CB"
+    - NAME: "3.4 with trust"
+      COLOR: "#001FCC"
     - NAME: "3.4 (database)"
       COLOR: "#7884CB"
       SHOW_DOTS: FALSE
@@ -67,6 +69,8 @@ HOSTS:
     #
     - NAME: "3.6"
       COLOR: "#4CB5AB"
+    - NAME: "3.6 with trust"
+      COLOR: "#5EE0D4"
     - NAME: "3.6 (database)"
       COLOR: "#4CB5AB"
       SHOW_DOTS: FALSE
@@ -105,6 +109,8 @@ HOSTS:
     #
     - NAME: "Master"
       COLOR: "#FFD350"
+    - NAME: "Master with trust"
+      COLOR: "#FFA600"
     - NAME: "Master (database)"
       COLOR: "#FFD350"
       SHOW_DOTS: FALSE
