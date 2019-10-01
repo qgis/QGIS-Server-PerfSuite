@@ -22,7 +22,6 @@ RUN apt-get install -y \
   libgdal-dev \
   libgeos-dev \
   libgsl-dev \
-  libosgearth-dev \
   libpq-dev \
   libproj-dev \
   libqca-qt5-2-dev \
@@ -98,7 +97,7 @@ COPY pg_service.conf /root/.pg_service.conf
 
 RUN git clone https://github.com/qgis/QGIS
 RUN cd QGIS && git checkout release-3_2 && mkdir build
-RUN cd QGIS/build && cmake -DCMAKE_BUILD_TYPE=Release -DWITH_SERVER=ON .. 
+RUN cd QGIS/build && cmake -DCMAKE_BUILD_TYPE=Release -DWITH_SERVER=ON ..
 
 WORKDIR /
 CMD ["sh", "/root/cmd.sh"]

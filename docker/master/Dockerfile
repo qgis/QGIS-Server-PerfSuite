@@ -22,7 +22,6 @@ RUN apt-get update \
   libgdal-dev \
   libgeos-dev \
   libgsl-dev \
-  libosgearth-dev \
   libpq-dev \
   libproj-dev \
   libqca-qt5-2-dev \
