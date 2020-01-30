@@ -80,7 +80,8 @@ RUN apt-get update \
   qttools5-dev-tools \
   spawn-fcgi \
   postgresql-client \
-  libexiv2-dev
+  libexiv2-dev \
+  libegl-dev
 RUN locale-gen en_US.UTF-8 en_us && \
   dpkg-reconfigure locales && \
   dpkg-reconfigure locales && \
