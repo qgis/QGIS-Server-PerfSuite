@@ -43,10 +43,10 @@ done
 
 # access shared directory a 1st time
 docker exec -it qgisserver-perfsuite-2.18 ls /data > /dev/null
-docker exec -it qgisserver-perfsuite-3.4 ls /data > /dev/null
-docker exec -it qgisserver-perfsuite-3.4-parallel-rendering ls /data > /dev/null
-docker exec -it qgisserver-perfsuite-3.6 ls /data > /dev/null
-docker exec -it qgisserver-perfsuite-3.6-parallel-rendering ls /data > /dev/null
+docker exec -it qgisserver-perfsuite-3.10 ls /data > /dev/null
+docker exec -it qgisserver-perfsuite-3.10-parallel-rendering ls /data > /dev/null
+docker exec -it qgisserver-perfsuite-3.14 ls /data > /dev/null
+docker exec -it qgisserver-perfsuite-3.14-parallel-rendering ls /data > /dev/null
 docker exec -it qgisserver-perfsuite-master ls /data > /dev/null
 docker exec -it qgisserver-perfsuite-master-parallel-rendering ls /data > /dev/null
 
