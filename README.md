@@ -5,13 +5,13 @@ assessing the performance of [QGIS Server](https://github.com/qgis/QGIS).
 
 The repo includes:
 
-- Dockerfiles for building and executing QGIS Server 2.14, 2.18, 3.2, 3.4 and Master
+- Dockerfiles for building and executing QGIS Server 2.18, 3.10, 3.14 and Master
 - A Dockerfile for PostGIS and test data
 - some tests to generate a HTML report with [Graffiti](https://github.com/pblottiere/graffiti)
 - everything needed for running your own test scenarios with you own QGIS Server version!
 
 <p align="center">
-  <img src="https://github.com/Oslandia/QGIS-Server-PerfSuite/blob/master/docs/arch.png" width="550" title="Arch image">
+  <img src="https://github.com/qgis/QGIS-Server-PerfSuite/blob/master/docs/arch.png" width="550" title="Arch image">
 </p>
 
 Moreover, considering that `docker-compose` is used to run the tests, QGIS
@@ -23,7 +23,7 @@ just need to use [Graffiti](https://github.com/pblottiere/graffiti) without
 the whole infrastructure.
 
 <p align="center">
-  <img src="https://github.com/Oslandia/QGIS-Server-PerfSuite/blob/master/docs/report.png" width="550" title="Report">
+  <img src="https://github.com/qgis/QGIS-Server-PerfSuite/blob/master/docs/report.png" width="550" title="Report">
 </p>
 
 ## Clone
@@ -31,7 +31,7 @@ the whole infrastructure.
 To clone the project:
 
 ```
-$ git clone https://Oslandia/QGIS-Server-Perfsuite
+$ git clone https://qgis/QGIS-Server-Perfsuite
 $ cd QGIS-Server-Perfsuite
 $ ls
 docker  docs  README.md  scenarios
@@ -72,13 +72,13 @@ without adding/updating a QGIS Server instance, you may:
 
 If you just want to add a QGIS Server instance with some specific configuration
 based on environment variables, you can take a look at the `docker-compose.yml`
-file. For example, if you want to add a QGIS Server 3.4 instance with 8 cores
+file. For example, if you want to add a QGIS Server 3.14 instance with 8 cores
 to test the parallel rendering:
 
 ```
-  qgis-3.4-parallel-rendering-8-cores:
-    container_name: qgisserver-perfsuite-3.4-parallel-rendering-8-cores
-    image: qgisserver-perfsuite/3.4
+  qgis-3.14-parallel-rendering-8-cores:
+    container_name: qgisserver-perfsuite-3.14-parallel-rendering-8-cores
+    image: qgisserver-perfsuite/3.14
     volumes:
       - ./data:/data
     links:
@@ -92,6 +92,6 @@ to test the parallel rendering:
 
 If you want to run some tests with a custom `.qgs` project, you need to
 add your project to the `scenarios/data` subdirectory. Moreover, if your
-data is based on GeoTIIF, Shapefile, ... files, you also need to copy the
+data is based on GeoTIFF, Shapefile, ... files, you also need to copy the
 date files to `scenarios/data`. In this way the Docker containers will
 be able to use them!
