@@ -80,8 +80,7 @@ RUN apt-get update \
   qttools5-dev-tools \
   spawn-fcgi \
   postgresql-client \
-  libexiv2-dev \
-  libegl-dev
+  libexiv2-dev
 RUN locale-gen en_US.UTF-8 en_us && \
   dpkg-reconfigure locales && \
   dpkg-reconfigure locales && \
@@ -98,7 +97,7 @@ ADD qgis.sh /root/qgis.sh
 COPY pg_service.conf /root/.pg_service.conf
 
 RUN git clone https://github.com/qgis/QGIS
-RUN cd QGIS && git checkout release-3_6 && mkdir build
+RUN cd QGIS && git checkout release-3_10 && mkdir build
 RUN cd QGIS/build && cmake -DCMAKE_BUILD_TYPE=Release -DWITH_SERVER=ON ..
 
 WORKDIR /
