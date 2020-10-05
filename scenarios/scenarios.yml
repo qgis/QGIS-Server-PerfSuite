@@ -428,7 +428,6 @@ REQUESTS:
     TITLE: "Raster"
     DESCRIPTION: html/getmap_raster.html
     LOG: True
-    PROVIDER: POSTGRES
     ITERATIONS: 20
     HOSTS:
       - NAME: "2.18"
