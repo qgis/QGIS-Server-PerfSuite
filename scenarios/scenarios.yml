@@ -1,7 +1,7 @@
-OUTDIR: /tmp/graffiti/
+OUTDIR: /tmp/graffiti
 HTML: report.html
 TITLE: QGIS Server Performance Report
-LOGO: qgis.png
+THEME: qgis
 DATABASE: perfsuite.db
 DESCRIPTION: html/description.html
 DB_HOST: localhost
