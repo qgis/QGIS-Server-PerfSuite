@@ -1,0 +1,36 @@
+<p>The aim of this test is to measure the response time of the server for the <b>GetMap</b> request with vector layers based on lines geometries for PostGIS, Spatialite, Shapefile and Geopackage data sources. The <i>DPI</i> parameter is 96 (default value).</p>
+
+<p>Dataset:</p>
+
+<ul>
+  <li> 1 Line layer named <i>hydro_cours_eau.geoml93</i> (~ 125 000 features) with the <i>Single Symbol</i> renderer and without labels
+</ul>
+
+<p>Resulting images:</p>
+
+<div class="row" align="center">
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_lines_formats_postgis.png" alt="" style="width:50%" >
+      <figcaption>PostGIS</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_lines_formats_spatialite.png" alt="" style="width:50%" >
+      <figcaption>Spatialite</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_lines_formats_shapefile.png" alt="" style="width:50%" >
+      <figcaption>Shapefile</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_lines_formats_geopackage.png" alt="" style="width:50%" >
+      <figcaption>Geopackage</figcaption>
+    </figure>
+  </div>
+</div>
