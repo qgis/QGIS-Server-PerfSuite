@@ -9,6 +9,7 @@ rm -f data/data/gpkg/*.gpkg
 rm -f data/data/raster/*.tif
 rm -f data/data/raster/*.ovr
 
+docker rmi $NAME
 docker build ${BASEDIR} -t $NAME
 
 docker create -ti --name data $NAME bash
