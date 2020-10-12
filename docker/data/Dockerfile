@@ -2,11 +2,42 @@ FROM oslandia/postgres-postgis
 
 RUN apt-get update && apt-get install -y \
   wget \
-  gdal-bin
+  gdal-bin \
+  bzip2
 
 # Download data
 WORKDIR /data
-RUN wget --reject="index.html*" --no-parent --cut-dirs=2 -nH -r http://37.187.164.233/qgis-server-perfsuite/data/gpkg
+COPY data .
+
+WORKDIR /data/data/gpkg
+RUN bzip2 -d *
+
+WORKDIR /data/data/raster
+RUN bzip2 -d *
+
+WORKDIR /data/data/
+
+# extract shapefile from gpkg
+RUN mkdir -p shp && \
+    ogr2ogr -f 'ESRI Shapefile' shp/adress_ban.shp gpkg/adress_ban.gpkg && \
+    ogr2ogr -f 'ESRI Shapefile' shp/hydro_cours_eau_geoml93.shp gpkg/hydro_cours_eau_geoml93.gpkg && \
+    ogr2ogr -f 'ESRI Shapefile' shp/hydro_course_geomsimple.shp gpkg/hydro_course_geomsimple.gpkg && \
+    ogr2ogr -f 'ESRI Shapefile' shp/hydro_lake.shp gpkg/hydro_lake.gpkg && \
+    ogr2ogr -f 'ESRI Shapefile' shp/hydro_segment.shp gpkg/hydro_segment.gpkg && \
+    ogr2ogr -f 'ESRI Shapefile' shp/landuse_corine_lc_2006.shp gpkg/landuse_corine_lc_2006.gpkg && \
+    ogr2ogr -f 'ESRI Shapefile' shp/vw_clc2006.shp gpkg/vw_clc2006.gpkg && \
+    ogr2ogr -f 'ESRI Shapefile' shp/parcelles.shp gpkg/parcelles.gpkg
+
+# store data in spatialite
+RUN mkdir -p sqlite && \
+    ogr2ogr -f SQLite -dsco SPATIALITE=yes sqlite/data.sqlite gpkg/adress_ban.gpkg -nln adress_ban && \
+    ogr2ogr -update -f SQLite -dsco SPATIALITE=yes sqlite/data.sqlite gpkg/hydro_cours_eau_geoml93.gpkg -nln hydro_cours_eau_geoml93 && \
+    ogr2ogr -update -f SQLite -dsco SPATIALITE=yes sqlite/data.sqlite gpkg/hydro_course_geomsimple.gpkg -nln hydro_course_geomsimple && \
+    ogr2ogr -update -f SQLite -dsco SPATIALITE=yes sqlite/data.sqlite gpkg/hydro_lake.gpkg -nln hydro_lake && \
+    ogr2ogr -update -f SQLite -dsco SPATIALITE=yes sqlite/data.sqlite gpkg/hydro_segment.gpkg -nln hydro_segment && \
+    ogr2ogr -update -f SQLite -dsco SPATIALITE=yes sqlite/data.sqlite gpkg/landuse_corine_lc_2006.gpkg -nln landuse_corine_lc_2006 && \
+    ogr2ogr -update -f SQLite -dsco SPATIALITE=yes sqlite/data.sqlite gpkg/vw_clc2006.gpkg -nln vw_clc2006 && \
+    ogr2ogr -update -f SQLite -dsco SPATIALITE=yes sqlite/data.sqlite gpkg/parcelles.gpkg -nln parcelles
 
 # Configure postgres
 RUN pg_createcluster 10 main --start
@@ -19,6 +50,7 @@ RUN echo "host all  all    0.0.0.0/0  md5" >> /etc/postgresql/10/main/pg_hba.con
 RUN echo "listen_addresses='*'" >> /etc/postgresql/10/main/postgresql.conf
 RUN echo "shared_preload_libraries = 'pg_stat_statements'" >> /etc/postgresql/10/main/postgresql.conf
 
+# store gpkg into postgis
 RUN /etc/init.d/postgresql start && \
     psql --command "CREATE USER root WITH SUPERUSER PASSWORD 'root';" && \
     createdb -O root data && \
@@ -26,11 +58,7 @@ RUN /etc/init.d/postgresql start && \
     psql --command "CREATE EXTENSION pg_stat_statements;" -d data && \
     psql --command "CREATE SCHEMA ref;" -d data && \
     ogr2ogr -f PostgreSQL "PG:dbname=data" gpkg/adress_ban.gpkg -nln ref.adress_ban && \
-    ogr2ogr -f PostgreSQL "PG:dbname=data" gpkg/hydro_bassin.gpkg -nln ref.hydro_bassin && \
     ogr2ogr -f PostgreSQL "PG:dbname=data" gpkg/hydro_cours_eau_geoml93.gpkg -nln ref.hydro_cours_eau.geoml93 && \
-    ogr2ogr -f PostgreSQL "PG:dbname=data" gpkg/hydro_cours_eau_geomroute.gpkg -nln ref.hydro_cours_eau.geomroute && \
-    ogr2ogr -f PostgreSQL "PG:dbname=data" gpkg/hydro_cours_eau_geomsimple.gpkg -nln ref.hydro_cours_eau.geomsimple && \
-    ogr2ogr -f PostgreSQL "PG:dbname=data" gpkg/hydro_course_geoml93.gpkg -nln ref.hydro_course.geoml93 && \
     ogr2ogr -f PostgreSQL "PG:dbname=data" gpkg/hydro_course_geomsimple.gpkg -nln ref.hydro_course.geomsimple && \
     ogr2ogr -f PostgreSQL "PG:dbname=data" gpkg/hydro_lake.gpkg -nln ref.hydro_lake && \
     ogr2ogr -f PostgreSQL "PG:dbname=data" gpkg/hydro_segment.gpkg -nln ref.hydro_segment && \

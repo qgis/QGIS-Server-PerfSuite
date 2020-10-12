@@ -11,12 +11,6 @@ then
     ROOT=$1
 fi
 
-# download data
-if [ ! -d "$ROOT/data" ]
-then
-  sh download.sh
-fi
-
 # start servers
 cd $ROOT
 docker-compose up -d

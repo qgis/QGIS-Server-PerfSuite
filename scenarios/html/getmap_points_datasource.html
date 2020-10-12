@@ -1,0 +1,36 @@
+<p>The aim of this test is to measure the response time of the server for the <b>GetMap</b> request with vector layers based on points geometries for PostGIS, Spatialite, Shapefile and Geopackage data sources.</p>
+
+<p>Dataset:</p>
+
+<ul>
+  <li> 1 Point layer named <i>adress_ban</i> (~ 450 000 features) with the <i>Single symbol</i> renderer and without labels
+</ul>
+
+<p>Resulting images:</p>
+
+<div class="row" align="center">
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_points_formats_postgis.png" alt="" style="width:50%" >
+      <figcaption>PostGIS</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_points_formats_spatialite.png" alt="" style="width:50%" >
+      <figcaption>Spatialite</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_points_formats_shapefile.png" alt="" style="width:50%" >
+      <figcaption>Shapefile</figcaption>
+    </figure>
+  </div>
+  <div class="column" style="width:24%">
+    <figure>
+      <img src="./log/getmap_points_formats_geopackage.png" alt="" style="width:50%" >
+      <figcaption>Geopackage</figcaption>
+    </figure>
+  </div>
+</div>
