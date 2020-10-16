@@ -4,7 +4,7 @@ from graffiti.graffiti.request import Request
 from graffiti.graffiti.config import Config
 from graffiti.graffiti.database import Database
 
-TOLERANCE = 1  # percentage
+TOLERANCE = 5  # percentage
 
 cfg = Config('scenarios.yml', 'style.yml')
 database = Database(cfg.database)
