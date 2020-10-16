@@ -1,17 +1,18 @@
 import sys
 
-from graffiti.request import Request
-from graffiti.config import Config
-from graffiti.database import Database
+from graffiti.graffiti.request import Request
+from graffiti.graffiti.config import Config
+from graffiti.graffiti.database import Database
 
-TOLERANCE = 5  # percentage
+TOLERANCE = 1  # percentage
 
-cfg = Config('../scenarios.yml', 'style.yml')
+cfg = Config('scenarios.yml', 'style.yml')
 database = Database(cfg.database)
 
 regression = 0
 
 for r in cfg.requests:
+    r.provider = None
     req = Request.build(r)
     means = database.means(req, limit=30, min=0.05)
 
