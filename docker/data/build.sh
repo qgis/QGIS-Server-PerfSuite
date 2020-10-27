@@ -6,6 +6,8 @@ NAME="qgisserver-perfsuite/data"
 rm -rf data/data/sqlite
 rm -rf data/data/shp
 rm -f data/data/gpkg/*.gpkg
+rm -f data/data/gpkg/*-shm
+rm -f data/data/gpkg/*-wal
 rm -f data/data/raster/*.tif
 rm -f data/data/raster/*.ovr
 
