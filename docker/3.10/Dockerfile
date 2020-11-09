@@ -72,7 +72,6 @@ RUN apt-get update \
   python3-termcolor \
   python3-tz \
   python3-yaml \
-  qt5-default \
   qt5keychain-dev \
   qtbase5-dev \
   qtpositioning5-dev \
