@@ -9,7 +9,7 @@ TOLERANCE = 5  # percentage
 cfg = Config('scenarios.yml', 'style.yml')
 database = Database(cfg.database)
 
-regression = 0
+regressions = 0
 
 for r in cfg.requests:
     r.provider = None
