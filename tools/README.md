@@ -2,16 +2,23 @@
 
 Add tools to create qgs projects from a template and for various data sources.
 
+```` bash
+$ cd tools
+$ virtualenv venv
+$ source venv/bin/activate
+(venv)$ pip install -r requirements.txt
+````
+
 #### Shapefile
 
 Run the `template.py` script to create a shapefile based qgs project and create
 the corresponding shapefiles in the `data` subdirectory:
 
 ```` bash
-$ rm -rf shp/
-$ mkdir shp
-$ ./template.py --shp ./shp
-$ ls shp/
+(venv)$ rm -rf shp/
+(venv)$ mkdir shp
+(venv)$ ./template.py --shp ./shp
+(venv)$ ls shp/
 data  shapefile.qgs
 ````
 
@@ -28,10 +35,10 @@ Run the `template.py` script to create a gopackage based qgs project and create
 the database:
 
 ```` bash
-$ rm -rf gpkg/
-$ mkdir gpkg
-$ ./template.py --gpkg ./gpkg
-$ ls gpkg/
+(venv)$ rm -rf gpkg/
+(venv)$ mkdir gpkg
+(venv)$ ./template.py --gpkg ./gpkg
+(venv)$ ls gpkg/
 database.gpkg  geopackage.qgs
 ````
 
@@ -62,12 +69,12 @@ Run the `template.py` script to create a postgis based qgs project and fill the
 database:
 
 ```` bash
-$ rm -rf postgis/
-$ mkdir postgis
-$ ./template.py --postgis ./postgis
-$ ls postgis/
+(venv)$ rm -rf postgis/
+(venv)$ mkdir postgis
+(venv)$ ./template.py --postgis ./postgis
+(venv)$ ls postgis/
 postgis.qgs
-$ psql perfsuite -c "\dt"
+(venv)$ psql perfsuite -c "\dt"
                List of relations
  Schema |      Name       | Type  |   Owner
 --------+-----------------+-------+------------
