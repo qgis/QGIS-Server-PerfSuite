@@ -35,8 +35,10 @@ def generate(outdir, datasource):
         path = service.find()
         with open(path) as f:
             data = service.parse(f)
-            s = data['perfsuite']
-            url = "postgres://{}:{}@{}:{}/{}".format(s.user, s.password, s.host, s.port, s.dbname)
+            s = data["perfsuite"]
+            url = "postgres://{}:{}@{}:{}/{}".format(
+                s.user, s.password, s.host, s.port, s.dbname
+            )
         outfile = os.path.join(outdir, "postgis.qgs")
 
     p0 = Point(0, 0)
