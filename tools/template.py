@@ -7,18 +7,21 @@ import pandas
 import argparse
 import geopandas
 from enum import Enum
+from pgtoolkit import service
+from sqlalchemy import create_engine
 from shapely.geometry import Point, Polygon
 
 
 class Datasource(Enum):
     GPKG = 1
     SHP = 2
-    BLUE = 3
+    POSTGIS = 3
 
 
 def generate(outdir, datasource):
     n = 0
 
+    url = None
     outfile = None
     datadir = None
     if datasource == Datasource.GPKG:
@@ -29,7 +32,12 @@ def generate(outdir, datasource):
         if not os.path.isdir(datadir):
             os.mkdir(datadir)
     else:
-        return
+        path = service.find()
+        with open(path) as f:
+            data = service.parse(f)
+            s = data['perfsuite']
+            url = "postgres://{}:{}@{}:{}/{}".format(s.user, s.password, s.host, s.port, s.dbname)
+        outfile = os.path.join(outdir, "postgis.qgs")
 
     p0 = Point(0, 0)
     p1 = Point(1, 0)
@@ -62,6 +70,8 @@ def generate(outdir, datasource):
                 if "<provider" in line and "</provider" in line:
                     if datasource == Datasource.SHP or datasource == Datasource.GPKG:
                         line = "      <provider>ogr</provider>\n"
+                    if datasource == Datasource.POSTGIS:
+                        line = "      <provider>postgres</provider>\n"
 
                 if not geom:
                     out.write(line)
@@ -90,6 +100,14 @@ def generate(outdir, datasource):
                         line = "      <datasource>./database.gpkg|layername={}</datasource>\n".format(
                             layername
                         )
+                    elif datasource == Datasource.POSTGIS:
+                        engine = create_engine(url)
+                        layername = "layer_{}".format(n)
+                        pdf.to_postgis(name=layername, con=engine)
+
+                        line = "      <datasource>service='perfsuite' type=Polygon table=\"{}\"</datasource>\n".format(
+                            layername
+                        )
 
                     n += 1
                     geom = None
@@ -107,6 +125,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "--gpkg", help="Output directory with a project based on geopackage", type=str
     )
+    parser.add_argument(
+        "--postgis", help="Output directory with a project based on postgis", type=str
+    )
     args = parser.parse_args()
 
     if args.shp:
@@ -117,3 +138,6 @@ if __name__ == "__main__":
 
     if args.gpkg:
         generate(args.gpkg, Datasource.GPKG)
+
+    if args.postgis:
+        generate(args.postgis, Datasource.POSTGIS)
