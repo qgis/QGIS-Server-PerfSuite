@@ -9,7 +9,7 @@ import geopandas
 from enum import Enum
 from pgtoolkit import service
 from sqlalchemy import create_engine
-from shapely.geometry import Point, Polygon
+from shapely.geometry import Point, Polygon, LineString
 
 
 class Datasource(Enum):
@@ -83,6 +83,11 @@ def generate(outdir, datasource):
                     if geom == "polygon":
                         poly = Polygon([[p.x, p.y] for p in [p0, p1, p2]])
                         d = {"geometry": [poly]}
+                    elif geom == "point":
+                        d = {"geometry": [p0]}
+                    elif geom == "line":
+                        line = LineString([p0, p1])
+                        d = {"geometry": [line]}
 
                     pdf = geopandas.GeoDataFrame(d)
 
