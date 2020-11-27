@@ -5,15 +5,22 @@ Add tools to create qgs projects from a template and for various data sources.
 #### Shapefile
 
 Run the `template.py` script to create a shapefile based qgs project and create
-the corresponding shapefiles:
+the corresponding shapefiles in the `data` subdirectory:
 
 ```` bash
 $ rm -rf shp/
 $ mkdir shp
-$ python template.py --shp ./shp
+$ ./template.py --shp ./shp
+$ ls shp/
+data  shapefile.qgs
 ````
 
-The `shapefile.qgs` project may be opened with QGIS Desktop.
+The `shapefile.qgs` project may be opened with QGIS Desktop but the maximum
+number of open file descriptors needs to be increased:
+
+```` bash
+$ ulimit -n 4096
+````
 
 #### Geopackage
 
@@ -23,7 +30,9 @@ the database:
 ```` bash
 $ rm -rf gpkg/
 $ mkdir gpkg
-$ python template.py --gpkg ./gpkg
+$ ./template.py --gpkg ./gpkg
+$ ls gpkg/
+database.gpkg  geopackage.qgs
 ````
 
 The `geopackage.qgs` project may be opened with QGIS Desktop.
@@ -55,7 +64,7 @@ database:
 ```` bash
 $ rm -rf postgis/
 $ mkdir postgis
-$ python template.py --postgis ./postgis
+$ ./template.py --postgis ./postgis
 $ ls postgis/
 postgis.qgs
 $ psql perfsuite -c "\dt"
