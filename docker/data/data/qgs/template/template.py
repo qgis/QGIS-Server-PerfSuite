@@ -18,10 +18,9 @@ class Datasource(Enum):
     POSTGIS = 3
 
 
-def generate(outdir, datasource):
+def generate(outdir, datasource, perfsuite=False):
     n = 0
 
-    url = None
     outfile = None
     datadir = None
     if datasource == Datasource.GPKG:
@@ -32,13 +31,18 @@ def generate(outdir, datasource):
         if not os.path.isdir(datadir):
             os.mkdir(datadir)
     else:
-        path = service.find()
-        with open(path) as f:
-            data = service.parse(f)
-            s = data["perfsuite"]
-            url = "postgres://{}:{}@{}:{}/{}".format(
-                s.user, s.password, s.host, s.port, s.dbname
-            )
+        if perfsuite:
+            url = "postgres://postgres:@/data?host=/var/run/postgresql"
+            service = "data_perf"
+        else:
+            service = "perfsuite"
+            path = service.find()
+            with open(path) as f:
+                data = service.parse(f)
+                s = data["perfsuite"]
+                url = "postgres://{}:{}@{}:{}/{}".format(
+                    s.user, s.password, s.host, s.port, s.dbname
+                )
         outfile = os.path.join(outdir, "postgis.qgs")
 
     p0 = Point(0, 0)
@@ -92,16 +96,13 @@ def generate(outdir, datasource):
                     pdf = geopandas.GeoDataFrame(d)
 
                     if datasource == Datasource.SHP:
-                        shp = os.path.join(
-                            datadir, "shapefile_{}.shp".format(n))
+                        shp = os.path.join(datadir, "shapefile_{}.shp".format(n))
                         if os.path.isfile(shp):
                             os.remove(shp)
                         pdf.to_file(shp)
 
-                        shp = os.path.join(
-                            "data", "shapefile_{}.shp".format(n))
-                        line = "      <datasource>./{}</datasource>\n".format(
-                            shp)
+                        shp = os.path.join("data", "shapefile_{}.shp".format(n))
+                        line = "      <datasource>./{}</datasource>\n".format(shp)
                     elif datasource == Datasource.GPKG:
                         layername = "layer_{}".format(n)
                         gpkg = os.path.join(outdir, "database.gpkg")
@@ -115,8 +116,8 @@ def generate(outdir, datasource):
                         layername = "layer_{}".format(n)
                         pdf.to_postgis(name=layername, con=engine)
 
-                        line = "      <datasource>service='perfsuite' type=Polygon table=\"{}\" (geometry)</datasource>\n".format(
-                            layername
+                        line = "      <datasource>service='{}' type={} table=\"{}\" (geometry)</datasource>\n".format(
+                            service, geom, layername
                         )
 
                     n += 1
@@ -138,6 +139,11 @@ if __name__ == "__main__":
     parser.add_argument(
         "--postgis", help="Output directory with a project based on postgis", type=str
     )
+    parser.add_argument(
+        "--pf",
+        help="Store the PostGIS data in the perfsuite database.",
+        action="store_true",
+    )
     args = parser.parse_args()
 
     if args.shp:
@@ -150,4 +156,4 @@ if __name__ == "__main__":
         generate(args.gpkg, Datasource.GPKG)
 
     if args.postgis:
-        generate(args.postgis, Datasource.POSTGIS)
+        generate(args.postgis, Datasource.POSTGIS, args.pf)
