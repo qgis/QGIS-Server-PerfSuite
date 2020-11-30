@@ -92,13 +92,16 @@ def generate(outdir, datasource):
                     pdf = geopandas.GeoDataFrame(d)
 
                     if datasource == Datasource.SHP:
-                        shp = os.path.join(datadir, "shapefile_{}.shp".format(n))
+                        shp = os.path.join(
+                            datadir, "shapefile_{}.shp".format(n))
                         if os.path.isfile(shp):
                             os.remove(shp)
                         pdf.to_file(shp)
 
-                        shp = os.path.join("data", "shapefile_{}.shp".format(n))
-                        line = "      <datasource>./{}</datasource>\n".format(shp)
+                        shp = os.path.join(
+                            "data", "shapefile_{}.shp".format(n))
+                        line = "      <datasource>./{}</datasource>\n".format(
+                            shp)
                     elif datasource == Datasource.GPKG:
                         layername = "layer_{}".format(n)
                         gpkg = os.path.join(outdir, "database.gpkg")
@@ -112,7 +115,7 @@ def generate(outdir, datasource):
                         layername = "layer_{}".format(n)
                         pdf.to_postgis(name=layername, con=engine)
 
-                        line = "      <datasource>service='perfsuite' type=Polygon table=\"{}\"</datasource>\n".format(
+                        line = "      <datasource>service='perfsuite' type=Polygon table=\"{}\" (geometry)</datasource>\n".format(
                             layername
                         )
 
