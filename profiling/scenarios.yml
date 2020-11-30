@@ -1,0 +1,76 @@
+OUTDIR: /tmp/graffiti
+HTML: report.html
+TITLE: QGIS Server Performance Report
+THEME: qgis
+DESCRIPTION: html/description.html
+PRECISION: 1
+REQUESTS:
+  - NAME: getcapabilities_shp
+    TYPE: GetCapabilities
+    TITLE: "Large project with empty layers based on shapefiles"
+    DESCRIPTION: html/large_project_empty_layers.html
+    LOG: True
+    ITERATIONS: 5
+    HOSTS:
+      - NAME: "2.18"
+        HOST: http://localhost:8088/qgisserver_2_18
+        PAYLOAD_MAP: /data/qgs/template/big_projects/shp/shapefile.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "3.10"
+        HOST: http://localhost:8088/qgisserver_3_10
+        PAYLOAD_MAP: /data/qgs/template/big_projects/shp/shapefile.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "3.14"
+        HOST: http://localhost:8088/qgisserver_3_14
+        PAYLOAD_MAP: /data/qgs/template/big_projects/shp/shapefile.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "Master"
+        HOST: http://localhost:8088/qgisserver_master
+        PAYLOAD_MAP: /data/qgs/template/big_projects/shp/shapefile.qgs
+        PAYLOAD_VERSION: 1.3.0
+  - NAME: getcapabilities_gpkg
+    TYPE: GetCapabilities
+    TITLE: "Large project with empty layers based on geopackage"
+    DESCRIPTION: html/large_project_empty_layers.html
+    LOG: True
+    ITERATIONS: 5
+    HOSTS:
+      - NAME: "2.18"
+        HOST: http://localhost:8088/qgisserver_2_18
+        PAYLOAD_MAP: /data/qgs/template/big_projects/gpkg/geopackage.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "3.10"
+        HOST: http://localhost:8088/qgisserver_3_10
+        PAYLOAD_MAP: /data/qgs/template/big_projects/gpkg/geopackage.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "3.14"
+        HOST: http://localhost:8088/qgisserver_3_14
+        PAYLOAD_MAP: /data/qgs/template/big_projects/gpkg/geopackage.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "Master"
+        HOST: http://localhost:8088/qgisserver_master
+        PAYLOAD_MAP: /data/qgs/template/big_projects/gpkg/geopackage.qgs
+        PAYLOAD_VERSION: 1.3.0
+  - NAME: getcapabilities_postgis
+    TYPE: GetCapabilities
+    TITLE: "Large project with empty layers based on PostGIS"
+    DESCRIPTION: html/large_project_empty_layers.html
+    LOG: True
+    ITERATIONS: 5
+    HOSTS:
+      - NAME: "2.18"
+        HOST: http://localhost:8088/qgisserver_2_18
+        PAYLOAD_MAP: /data/qgs/template/big_projects/postgis/postgis.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "3.10"
+        HOST: http://localhost:8088/qgisserver_3_10
+        PAYLOAD_MAP: /data/qgs/template/big_projects/postgis/postgis.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "3.14"
+        HOST: http://localhost:8088/qgisserver_3_14
+        PAYLOAD_MAP: /data/qgs/template/big_projects/postgis/postgis.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "Master"
+        HOST: http://localhost:8088/qgisserver_master
+        PAYLOAD_MAP: /data/qgs/template/big_projects/postgis/postgis.qgs
+        PAYLOAD_VERSION: 1.3.0

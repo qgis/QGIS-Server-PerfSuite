@@ -1,0 +1,21 @@
+HOSTS:
+    #
+    # 2.18
+    #
+    - NAME: "2.18"
+      COLOR: "#F77B71"
+    #
+    # 3.10
+    #
+    - NAME: "3.10"
+      COLOR: "#7884CB"
+    #
+    # 3.14
+    #
+    - NAME: "3.14"
+      COLOR: "#4CB5AB"
+    #
+    # Master
+    #
+    - NAME: "Master"
+      COLOR: "#FFD350"
