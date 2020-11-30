@@ -116,7 +116,8 @@ def generate(outdir, datasource, perfsuite=False):
                         layername = "layer_{}".format(n)
                         pdf.to_postgis(name=layername, con=engine)
 
-                        line = "      <datasource>service='{}' type={} table=\"{}\" (geometry)</datasource>\n".format(service, geom, layername
+                        line = "      <datasource>service='{}' type={} table=\"{}\" (geometry)</datasource>\n".format(
+                            service, geom, layername
                         )
 
                     n += 1
@@ -139,7 +140,9 @@ if __name__ == "__main__":
         "--postgis", help="Output directory with a project based on postgis", type=str
     )
     parser.add_argument(
-        "--pf", help="Store the PostGIS data in the perfsuite database.", action="store_true"
+        "--pf",
+        help="Store the PostGIS data in the perfsuite database.",
+        action="store_true",
     )
     args = parser.parse_args()
 
