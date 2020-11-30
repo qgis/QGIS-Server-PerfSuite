@@ -32,3 +32,4 @@ docker/data/data/data/raster/eu_dem_v11_hillshade.tif
 docker/data/data/data/raster/eu_dem_v11_hillshade.tif.ovr
 docker/data/data/data/shp/
 docker/data/data/data/sqlite/
+docker/data/data/qgs/template/big_projects/

@@ -10,6 +10,9 @@ rm -f data/data/gpkg/*-shm
 rm -f data/data/gpkg/*-wal
 rm -f data/data/raster/*.tif
 rm -f data/data/raster/*.ovr
+rm -rf data/qgs/template/shp
+rm -rf data/qgs/template/gpkg
+rm -rf data/qgs/template/postgis
 
 docker rmi $NAME
 docker build ${BASEDIR} -t $NAME
@@ -17,6 +20,11 @@ docker build ${BASEDIR} -t $NAME
 docker create -ti --name data $NAME bash
 docker cp data:/data/data/shp $(pwd)/data/data/
 docker cp data:/data/data/sqlite $(pwd)/data/data/
+
+mkdir -p $(pwd)/data/qgs/template/big_projects/
+docker cp data:/data/qgs/template/shp $(pwd)/data/qgs/template/big_projects/
+docker cp data:/data/qgs/template/gpkg $(pwd)/data/qgs/template/big_projects/
+docker cp data:/data/qgs/template/postgis $(pwd)/data/qgs/template/big_projects/
 
 docker cp data:/data/data/gpkg/adress_ban.gpkg $(pwd)/data/data/gpkg/
 docker cp data:/data/data/gpkg/hydro_lake.gpkg $(pwd)/data/data/gpkg/

@@ -3,11 +3,14 @@ FROM oslandia/postgres-postgis
 RUN apt-get update && apt-get install -y \
   wget \
   gdal-bin \
+  python3 \
+  virtualenv \
   bzip2
 
 # Download data
 WORKDIR /data
 COPY data .
+RUN chown postgres:postgres /data/qgs/template
 
 WORKDIR /data/data/gpkg
 RUN bzip2 -d *
@@ -46,6 +49,23 @@ RUN echo "pg_ctl_options = '-t 600'" > /etc/postgresql/10/main/pg_ctl.conf
 
 USER postgres
 
+# prepare the project generator env
+WORKDIR /data/qgs/template
+RUN virtualenv -p /usr/bin/python3 venv && \
+    . venv/bin/activate && \
+    pip install -r requirements.txt
+
+# generate a large project based on shapefiles from the template
+RUN . venv/bin/activate && \
+    mkdir shp && \
+    ./template.py --shp shp
+
+# generate a large project based on geopackages from the template
+RUN . venv/bin/activate && \
+    mkdir gpkg && \
+    ./template.py --gpkg gpkg
+
+WORKDIR /data/data/
 RUN echo "host all  all    0.0.0.0/0  md5" >> /etc/postgresql/10/main/pg_hba.conf
 RUN echo "listen_addresses='*'" >> /etc/postgresql/10/main/postgresql.conf
 RUN echo "shared_preload_libraries = 'pg_stat_statements'" >> /etc/postgresql/10/main/postgresql.conf
@@ -65,7 +85,11 @@ RUN /etc/init.d/postgresql start && \
     ogr2ogr -f PostgreSQL "PG:dbname=data" gpkg/landuse_corine_lc_2006.gpkg -nln ref.landuse_corine_lc_2006 && \
     ogr2ogr -f PostgreSQL "PG:dbname=data" gpkg/vw_clc2006.gpkg -nln ref.vw_clc2006 && \
     ogr2ogr -f PostgreSQL "PG:dbname=data" gpkg/parcelles.gpkg -nln ref.parcelles && \
-    psql -d data --command "CREATE VIEW public.adress_ban_view AS select * FROM ref.adress_ban;"
+    psql -d data --command "CREATE VIEW public.adress_ban_view AS select * FROM ref.adress_ban;" && \
+    cd ../qgs/template && \
+    mkdir -p postgis && \
+    . venv/bin/activate && \
+    ./template.py --postgis postgis --pf
 
 EXPOSE 5432
 CMD ["/usr/lib/postgresql/10/bin/postgres", "-D", "/var/lib/postgresql/10/main", "-c", "config_file=/etc/postgresql/10/main/postgresql.conf"]
