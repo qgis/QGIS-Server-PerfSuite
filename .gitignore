@@ -3,6 +3,7 @@ venv
 playbook.retry
 scenarios/data
 scenarios/graffiti
+profiling/graffiti
 qgis4.sh
 docker/data/data/data/gpkg/adress_ban.gpkg
 docker/data/data/data/gpkg/adress_ban.gpkg-shm
