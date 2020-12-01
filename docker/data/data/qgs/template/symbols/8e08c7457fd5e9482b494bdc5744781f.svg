@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.2"
+   width="100%"
+   height="100%"
+   viewBox="-10 -10 20 20"
+   id="svg5578">
+  <title
+     id="title5582">Höhenfixpunkt 3, character D</title>
+  <defs
+     id="defs5588" />
+  <path
+     d="m 14.491526,10 a 4.5762711,4.5762711 0 1 1 -9.1525425,0 4.5762711,4.5762711 0 1 1 9.1525425,0 z"
+     transform="translate(-9.9152542,-10)"
+     id="path5592"
+     style="fill:#ffffff;fill-opacity:1;stroke-width:0" />
+
+<g        
+id="text3859"
+style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:param(fill) #FF0000;fill-opacity:1;stroke:none;">
+
+  <path
+     d="m -5.025,0 c 0,2.775 2.25,5.025 5.025,5.025 2.775,0 5.025,-2.25 5.025,-5.025 0,-2.775 -2.25,-5.025 -5.025,-5.025 -2.775,0 -5.025,2.25 -5.025,5.025 z m 1.05,0 c 0,-2.2125 1.7625,-3.975 3.975,-3.975 2.2125,0 3.975,1.7625 3.975,3.975 C 3.975,2.2125 2.2125,3.975 0,3.975 -2.2125,3.975 -3.975,2.2125 -3.975,0 z m 1.35,0 c 0,1.4625 1.1625,2.625 2.625,2.625 1.4625,0 2.625,-1.1625 2.625,-2.625 0,-1.4625 -1.1625,-2.625 -2.625,-2.625 -1.4625,0 -2.625,1.1625 -2.625,2.625 z"
+     id="path5584" />
+
+</g>
+
+</svg>

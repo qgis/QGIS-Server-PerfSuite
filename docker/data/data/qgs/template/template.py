@@ -9,6 +9,7 @@ import geopandas
 from enum import Enum
 from pgtoolkit import service
 from sqlalchemy import create_engine
+from distutils.dir_util import copy_tree
 from shapely.geometry import Point, Polygon, LineString
 
 
@@ -51,6 +52,11 @@ def generate(outdir, datasource, perfsuite=False):
 
     geom = None
     layers = False
+
+    # copy svgs
+    cwd = os.path.dirname(os.path.abspath(__file__))
+    svgs = os.path.join(cwd, "symbols")
+    copy_tree(svgs, os.path.join(outdir, "symbols"))
 
     with open("template.qgs", "r") as inp:
         with open(outfile, "w") as out:

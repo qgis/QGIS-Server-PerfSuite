@@ -10,9 +10,7 @@ rm -f data/data/gpkg/*-shm
 rm -f data/data/gpkg/*-wal
 rm -f data/data/raster/*.tif
 rm -f data/data/raster/*.ovr
-rm -rf data/qgs/template/shp
-rm -rf data/qgs/template/gpkg
-rm -rf data/qgs/template/postgis
+rm -rf data/qgs/template/big_projects/
 
 docker rmi $NAME
 docker build ${BASEDIR} -t $NAME
