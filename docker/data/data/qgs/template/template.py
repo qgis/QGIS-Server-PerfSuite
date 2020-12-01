@@ -33,9 +33,9 @@ def generate(outdir, datasource, perfsuite=False):
     else:
         if perfsuite:
             url = "postgres://postgres:@/data?host=/var/run/postgresql"
-            service = "data_perf"
+            service_name = "data_perf"
         else:
-            service = "perfsuite"
+            service_name = "perfsuite"
             path = service.find()
             with open(path) as f:
                 data = service.parse(f)
@@ -117,7 +117,7 @@ def generate(outdir, datasource, perfsuite=False):
                         pdf.to_postgis(name=layername, con=engine)
 
                         line = "      <datasource>service='{}' type={} table=\"{}\" (geometry)</datasource>\n".format(
-                            service, geom, layername
+                            service_name, geom, layername
                         )
 
                     n += 1
