@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="100%"
+   height="100%"
+   viewBox="-10 -10 20 20"
+   id="svg3047">
+  <title
+     id="title3051">R</title>
+  <defs
+     id="defs3057" />
+  <metadata
+     id="metadata3049">
+created by tobias.reber@bd.so.ch
+<rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title>R</dc:title>
+  </cc:Work>
+</rdf:RDF>
+</metadata>
+  <path
+     d="m 0,-0.01662475 20.016624,0 0,20.04890975 -20.016624,0 z"
+     transform="translate(-10,-10)"
+     id="rect5814"
+     style="fill:none;stroke:param(outline) #000000;stroke-width:param(outline-width) 2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+  <g
+     transform="matrix(1.0973878,0,0,1.0973878,-15.817662,-6.2288421)"
+     id="text3060"
+     style="font-size:20px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:param(fill) #000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold">
+    <path
+       d="m 13.194684,4.8508673 c 0.787752,8.1e-6 1.350902,-0.1464761 1.689453,-0.4394532 C 15.22918,4.1184542 15.401705,3.6366839 15.401715,2.9661016 15.401705,2.3020498 15.22918,1.8267899 14.884137,1.5403204 14.545586,1.2538738 13.982436,1.1106448 13.194684,1.1106329 l -1.582032,0 0,3.7402344 1.582032,0 m -1.582032,2.5976562 0,5.5175785 -3.7597653,0 0,-14.5800785 5.7421873,0 c 1.920564,1.46e-5 3.326812,0.3222799 4.21875,0.9667969 0.898425,0.64454422 1.347643,1.6634234 1.347656,3.0566406 -1.3e-5,0.9635513 -0.234387,1.7545661 -0.703125,2.3730469 -0.462251,0.6184971 -1.16212,1.0742259 -2.099609,1.3671875 0.514312,0.1171942 0.973296,0.384121 1.376953,0.8007812 0.410144,0.4101619 0.823555,1.0351613 1.240235,1.875 l 2.041015,4.1406254 -4.003906,0 -1.777344,-3.6230472 C 14.877617,8.6138925 14.513034,8.1158461 14.141949,7.8489141 13.777358,7.5819924 13.289077,7.448529 12.677105,7.4485235 l -1.064453,0"
+       id="path3065" />
+  </g>
+</svg>

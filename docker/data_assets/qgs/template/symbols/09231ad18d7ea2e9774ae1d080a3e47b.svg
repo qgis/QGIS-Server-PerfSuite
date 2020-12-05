@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="100%"
+   height="100%"
+   viewBox="-10 -10 20 20"
+   id="svg3047"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="kraftwerk.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1247"
+     inkscape:window-height="901"
+     id="namedview3082"
+     showgrid="false"
+     inkscape:zoom="22.344919"
+     inkscape:cx="14.499426"
+     inkscape:cy="16.261636"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3047" />
+  <title
+     id="title3051">Kraftwerk</title>
+  <defs
+     id="defs3057" />
+  <metadata
+     id="metadata3049">
+created by tobias.reber@bd.so.ch
+<rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title>Kraftwerk</dc:title>
+  </cc:Work>
+</rdf:RDF>
+</metadata>
+  <path
+     d="m 0,-0.01662475 20.016624,0 0,20.04890975 -20.016624,0 z"
+     transform="translate(-10,-10)"
+     id="rect5814"
+     style="fill:none;stroke:param(outline) #000000;stroke-width:param(outline-width) 2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+  <path
+     style="fill:param(fill) #000000;font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:125%;letter-spacing:0;word-spacing:0;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans Bold"
+     d="m 8.2786677,-7.9 c 0,0 -0.00123,0.028446 -6.9431154,1.3310606 0.1647895,0.044155 0.1635896,0.071575 2.7207503,1.5479589 l -4.0298689,6.4165857 0,-5.4193859 0,-3.3521974 -1.9982822,2.9052378 L -8,4.272908 l 1.8317588,0.8939192 4.0631739,-5.8942803 0,5.4752556 0,3.3521975 1.9649775,-2.9052377 6.0281511,-9.1596063 C 6.6771867,-3.5092406 7.5395195,-3.0205206 8.286,-2.5895383 8.2719091,-7.8808711 8.27867,-7.9 8.27867,-7.9 z"
+     id="path4040"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccccccccccccccc" />
+</svg>

@@ -1,4 +1,5 @@
 ansible/vagrant/.vagrant/
+data-volume/*
 venv
 playbook.retry
 scenarios/data

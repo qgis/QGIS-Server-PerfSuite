@@ -1,5 +1,0 @@
-geopandas
-pgtoolkit
-sqlalchemy
-geoalchemy2
-psycopg2-binary

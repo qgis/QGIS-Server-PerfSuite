@@ -1,0 +1,11 @@
+FROM debian:stretch
+MAINTAINER Paul Blottiere <blottiere.paul@gmail.com>
+RUN  export DEBIAN_FRONTEND=noninteractive
+ENV  DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update && apt-get upgrade -y && apt-get install -y qgis-server xvfb spawn-fcgi
+RUN ln -s /usr/lib/cgi-bin/qgis_mapserv.fcgi /usr/bin/qgis_mapserv.fcgi
+
+COPY ./assets/*.sh /
+COPY ./assets/pg_service.conf /root/.pg_service.conf
+
