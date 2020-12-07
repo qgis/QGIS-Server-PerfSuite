@@ -21,31 +21,31 @@
     <customproperties/>
     <layer-tree-group name="points" expanded="1" checked="Qt::Checked">
       <customproperties/>
-      <layer-tree-layer name="adress_ban" providerKey="postgres" id="adress_ban_e91c7b0b_e6a2_496a_8da3_a040735244a0" checked="Qt::Checked" expanded="0" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=Point table=&quot;ref&quot;.&quot;adress_ban&quot; (wkb_geometry) sql=">
+      <layer-tree-layer name="adress_ban" providerKey="postgres" id="adress_ban_e91c7b0b_e6a2_496a_8da3_a040735244a0" checked="Qt::Checked" expanded="0" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=Point table=&quot;ref&quot;.&quot;adress_ban&quot; (geom) sql=">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group name="lines" expanded="1" checked="Qt::Checked">
       <customproperties/>
-      <layer-tree-layer name="hydro_cours_eau.geoml93" providerKey="postgres" id="hydro_cours_eau_geoml93_4998015d_4ab7_4417_ba2e_4786fa342625" checked="Qt::Unchecked" expanded="1" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=LineString table=&quot;ref&quot;.&quot;hydro_cours_eau.geoml93&quot; (wkb_geometry) sql=">
+      <layer-tree-layer name="hydro_cours_eau_geoml93" providerKey="postgres" id="hydro_cours_eau_geoml93_4998015d_4ab7_4417_ba2e_4786fa342625" checked="Qt::Unchecked" expanded="1" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=LineString table=&quot;ref&quot;.&quot;hydro_cours_eau_geoml93&quot; (geom) sql=">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer name="hydro_segment" providerKey="postgres" id="hydro_segment_2cd53327_aa51_4a65_9841_4b7c7e2d10c6" checked="Qt::Checked" expanded="1" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiLineString table=&quot;ref&quot;.&quot;hydro_segment&quot; (wkb_geometry) sql=">
+      <layer-tree-layer name="hydro_segment" providerKey="postgres" id="hydro_segment_2cd53327_aa51_4a65_9841_4b7c7e2d10c6" checked="Qt::Checked" expanded="1" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiLineString table=&quot;ref&quot;.&quot;hydro_segment&quot; (geom) sql=">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group name="polygons" expanded="1" checked="Qt::Checked">
       <customproperties/>
-      <layer-tree-layer name="parcelles" providerKey="postgres" id="parcelles_cdda9a22_222c_4f39_b5bd_4d7befecbeaf" checked="Qt::Checked" expanded="1" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon table=&quot;ref&quot;.&quot;parcelles&quot; (wkb_geometry) sql=">
+      <layer-tree-layer name="parcelles" providerKey="postgres" id="parcelles_cdda9a22_222c_4f39_b5bd_4d7befecbeaf" checked="Qt::Checked" expanded="1" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon table=&quot;ref&quot;.&quot;parcelles&quot; (geom) sql=">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer name="vw_clc2006" providerKey="postgres" id="vw_clc2006_adcde5c8_e052_45a3_a8c7_cbe9d85c4fac" checked="Qt::Checked" expanded="0" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon table=&quot;ref&quot;.&quot;vw_clc2006&quot; (wkb_geometry) sql=">
+      <layer-tree-layer name="vw_clc2006" providerKey="postgres" id="vw_clc2006_adcde5c8_e052_45a3_a8c7_cbe9d85c4fac" checked="Qt::Checked" expanded="0" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon table=&quot;ref&quot;.&quot;vw_clc2006&quot; (geom) sql=">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer name="hydro_lake" providerKey="postgres" id="hydro_lake_ea324db7_40b1_4fcc_a7cd_52861f536e1e" checked="Qt::Checked" expanded="1" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon table=&quot;ref&quot;.&quot;hydro_lake&quot; (wkb_geometry) sql=">
+      <layer-tree-layer name="hydro_lake" providerKey="postgres" id="hydro_lake_ea324db7_40b1_4fcc_a7cd_52861f536e1e" checked="Qt::Checked" expanded="1" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon table=&quot;ref&quot;.&quot;hydro_lake&quot; (geom) sql=">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer name="landuse_corine_lc_2006" providerKey="postgres" id="landuse_corine_lc_2006_eeb3abbf_e1d0_47d3_8a3a_dc4c5318fb83" checked="Qt::Checked" expanded="0" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon table=&quot;ref&quot;.&quot;landuse_corine_lc_2006&quot; (wkb_geometry) sql=">
+      <layer-tree-layer name="landuse_corine_lc_2006" providerKey="postgres" id="landuse_corine_lc_2006_eeb3abbf_e1d0_47d3_8a3a_dc4c5318fb83" checked="Qt::Checked" expanded="0" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon table=&quot;ref&quot;.&quot;landuse_corine_lc_2006&quot; (geom) sql=">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
@@ -112,7 +112,7 @@
       </legendlayer>
     </legendgroup>
     <legendgroup name="lines" checked="Qt::Checked" open="true">
-      <legendlayer showFeatureCount="0" name="hydro_cours_eau.geoml93" checked="Qt::Unchecked" drawingOrder="-1" open="true">
+      <legendlayer showFeatureCount="0" name="hydro_cours_eau_geoml93" checked="Qt::Unchecked" drawingOrder="-1" open="true">
         <filegroup hidden="false" open="true">
           <legendlayerfile visible="0" isInOverview="0" layerid="hydro_cours_eau_geoml93_4998015d_4ab7_4417_ba2e_4786fa342625"/>
         </filegroup>
@@ -163,7 +163,7 @@
         <ymax>6314442.24767259042710066</ymax>
       </extent>
       <id>adress_ban_e91c7b0b_e6a2_496a_8da3_a040735244a0</id>
-      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=Point table="ref"."adress_ban" (wkb_geometry) sql=</datasource>
+      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=Point table="ref"."adress_ban" (geom) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -638,11 +638,11 @@ def my_form_open(dialog, layer, feature):
         <ymax>7113855</ymax>
       </extent>
       <id>hydro_cours_eau_geoml93_4998015d_4ab7_4417_ba2e_4786fa342625</id>
-      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=LineString table="ref"."hydro_cours_eau.geoml93" (wkb_geometry) sql=</datasource>
+      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=LineString table="ref"."hydro_cours_eau_geoml93" (geom) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>hydro_cours_eau.geoml93</layername>
+      <layername>hydro_cours_eau_geoml93</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
@@ -952,11 +952,11 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321970.5</ymax>
       </extent>
       <id>hydro_course_geomsimple_ef682e0d_f152_4d34_ade1_a2b6ebf3c66e</id>
-      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiLineString table="ref"."hydro_course.geomsimple" (wkb_geometry) sql=</datasource>
+      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiLineString table="ref"."hydro_course_geomsimple" (geom) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>hydro_course.geomsimple</layername>
+      <layername>hydro_course_geomsimple</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
@@ -1244,7 +1244,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321880</ymax>
       </extent>
       <id>hydro_lake_ea324db7_40b1_4fcc_a7cd_52861f536e1e</id>
-      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon table="ref"."hydro_lake" (wkb_geometry) sql=</datasource>
+      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon table="ref"."hydro_lake" (geom) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1565,7 +1565,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321972</ymax>
       </extent>
       <id>hydro_segment_2cd53327_aa51_4a65_9841_4b7c7e2d10c6</id>
-      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiLineString table="ref"."hydro_segment" (wkb_geometry) sql=</datasource>
+      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiLineString table="ref"."hydro_segment" (geom) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -2359,7 +2359,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321941.43466311041265726</ymax>
       </extent>
       <id>landuse_corine_lc_2006_eeb3abbf_e1d0_47d3_8a3a_dc4c5318fb83</id>
-      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon table="ref"."landuse_corine_lc_2006" (wkb_geometry) sql=</datasource>
+      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon table="ref"."landuse_corine_lc_2006" (geom) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -3444,7 +3444,7 @@ source : http://www.statistiques.developpement-durable.gouv.fr/donnees-ligne/li/
         <ymax>6452805.43400000035762787</ymax>
       </extent>
       <id>parcelles_cdda9a22_222c_4f39_b5bd_4d7befecbeaf</id>
-      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon table="ref"."parcelles" (wkb_geometry) sql=</datasource>
+      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon table="ref"."parcelles" (geom) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -3726,7 +3726,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321941.43466311041265726</ymax>
       </extent>
       <id>vw_clc2006_adcde5c8_e052_45a3_a8c7_cbe9d85c4fac</id>
-      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon table="ref"."vw_clc2006" (wkb_geometry) sql=</datasource>
+      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon table="ref"."vw_clc2006" (geom) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
