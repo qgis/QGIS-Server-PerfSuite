@@ -62,10 +62,14 @@ for gpkg in $(ls /data/gpkg/*.gpkg | sort); do
     fi
 done
 
-# Last command
+# Last SQL command
 psql -d data --command "CREATE OR REPLACE VIEW public.adress_ban_view AS select * FROM ref.adress_ban;"
 
-kill_postgres
 
+# Generate the large projects
+source /data_assets/large_projects/setup.sh
+
+
+kill_postgres
 
 popd
