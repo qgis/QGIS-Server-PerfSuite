@@ -28,11 +28,6 @@ for sql in $(ls /data_assets/sql/*.sql | sort); do
     psql data -f "$sql";
 done
 
-# Download GPKG data if needed:
-if [ ! -d "gpkg" ]; then
-    wget --reject="index.html*" --no-parent --cut-dirs=2 -nH -r http://37.187.164.233/qgis-server-perfsuite/data/gpkg
-fi
-
 # Make sure all generated/extracted assets are available in the /data shared volume
 # SHPs are already generated in the /data shared volume.
 cp -r /data_assets/gpkg /data
