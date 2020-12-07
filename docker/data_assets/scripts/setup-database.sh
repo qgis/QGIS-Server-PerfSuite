@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -v
-
 source /scripts/env-data.sh
 
 # test if DATADIR has content
