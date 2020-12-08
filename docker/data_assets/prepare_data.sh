@@ -32,6 +32,7 @@ done
 # SHPs are already generated in the /data shared volume.
 cp -r /data_assets/gpkg /data
 cp -r /data_assets/raster /data
+cp -r /data_assets/projects /data
 
 for d in qgs raster gpkg; do
     (ls /data/$d/*.bz2 2> /dev/null && bzip2 -d /data/$d/*.bz2 && rm -f /data/$d/*.bz2) || true
@@ -62,7 +63,7 @@ psql -d data --command "CREATE OR REPLACE VIEW public.adress_ban_view AS select 
 
 
 # Generate the large projects
-source /data_assets/large_projects/setup.sh
+source /data_assets/projects/large/setup.sh
 
 
 kill_postgres

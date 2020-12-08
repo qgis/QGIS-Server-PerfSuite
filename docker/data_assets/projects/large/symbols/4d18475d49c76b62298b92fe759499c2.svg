@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- manually created by Andreas Neumann  -->
+<!-- Kandelaber (Leitungskataster) für Elektrodarstellung im Leitungskataster -->
+<svg xmlns="http://www.w3.org/2000/svg" width="109.5pt" height="109.5pt" viewBox="0 0 109.5 109.5" xml:space="preserve">
+	<g stroke="rgb(255,0,0)" stroke-width="10">
+		<circle cx="54.75" cy="54.75" r="50" fill="white" />
+		<line x1="4.75" x2="104.75" y1="54.75" y2="54.75" transform="rotate(-45,54.75,54.75)" />
+		<line x1="4.75" x2="104.75" y1="54.75" y2="54.75" transform="rotate(45,54.75,54.75)" />
+	</g>
+</svg>

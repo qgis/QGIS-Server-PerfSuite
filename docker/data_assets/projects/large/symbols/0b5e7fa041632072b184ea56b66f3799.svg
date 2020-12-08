@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 595.3 841.9" enable-background="new 0 0 595.3 841.9" xml:space="preserve">
+<g id="Rahmen" display="none">
+	<g display="inline">
+		<rect x="203.5" y="267.4" fill="#FFFFFF" width="139.6" height="139.6"/>
+		<path d="M342.1,268.4v137.5H204.6V268.4H342.1 M344.2,266.3H202.5v141.7h141.7V266.3L344.2,266.3z"/>
+	</g>
+</g>
+<g id="Flaeche_weiss">
+	<g>
+		<rect x="202.5" y="266.3" fill="#FFFFFF" width="141.7" height="141.7"/>
+	</g>
+</g>
+<g id="Piktos">
+	<rect x="230.5" y="307.6" fill="#010101" width="9.9" height="54.5"/>
+	<rect x="255.7" y="308.3" fill="#010101" width="9.9" height="53.7"/>
+	<rect x="281" y="306.6" fill="#010101" width="9.9" height="66.3"/>
+	<rect x="306.6" y="306.9" fill="#010101" width="9.9" height="65.9"/>
+	<polygon fill="#010101" points="273.3,280.7 216.6,300.1 216.6,308.6 273.5,289.3 330,308.6 330,300.1 	"/>
+	<rect x="216.7" y="300.1" fill="#010101" width="113.3" height="8.5"/>
+	<path fill="#010101" d="M216.5,380c0,0,10.2-8.5,28.8-8.5c16.7,0,22.6,4.9,28,8.5c5.4,3.6,11.9,8.5,29.2,8.5
+		c17.4,0,27.3-9.4,27.3-9.4v10.1c0,0-8.8,8.2-27.3,8.2c-16.8,0-24.5-3.7-29.2-6.6c-4.4-2.6-13.7-10.1-27.8-10.1
+		c-18.8,0-29,8.4-29,8.4V380z"/>
+</g>
+</svg>
