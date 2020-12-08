@@ -13,7 +13,7 @@ fi
 
 # start servers
 cd $ROOT
-docker-compose up -d
+docker-compose -f ../docker-compose.yml up -d
 
 # get ip for containers
 DOCKER_IP_DATA=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' qgisserver-perfsuite-data)
@@ -36,11 +36,11 @@ do
 done
 
 # access shared directory a 1st time
-docker exec -it qgisserver-perfsuite-2.18 ls /data > /dev/null
-docker exec -it qgisserver-perfsuite-3.10 ls /data > /dev/null
-docker exec -it qgisserver-perfsuite-3.10-parallel-rendering ls /data > /dev/null
-docker exec -it qgisserver-perfsuite-3.14 ls /data > /dev/null
-docker exec -it qgisserver-perfsuite-3.14-parallel-rendering ls /data > /dev/null
+docker exec -it qgisserver-perfsuite-release-2_18 ls /data > /dev/null
+docker exec -it qgisserver-perfsuite-release-3_10 ls /data > /dev/null
+docker exec -it qgisserver-perfsuite-release-3_10-parallel-rendering ls /data > /dev/null
+docker exec -it qgisserver-perfsuite-release-3_14 ls /data > /dev/null
+docker exec -it qgisserver-perfsuite-release-3_14-parallel-rendering ls /data > /dev/null
 docker exec -it qgisserver-perfsuite-master ls /data > /dev/null
 docker exec -it qgisserver-perfsuite-master-parallel-rendering ls /data > /dev/null
 
