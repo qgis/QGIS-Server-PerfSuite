@@ -170,7 +170,7 @@ if [ -z "$EXTRA_CONF" ]; then
 fi
 
 if [ -z "${SHARED_PRELOAD_LIBRARIES}" ]; then
-    SHARED_PRELOAD_LIBRARIES='pg_cron'
+    SHARED_PRELOAD_LIBRARIES='pg_cron,pg_stat_statements'
 fi
 
 if [ -z "$PASSWORD_AUTHENTICATION" ]; then
