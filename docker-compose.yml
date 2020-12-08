@@ -13,8 +13,11 @@ services:
     depends_on:
       - qgis-release-2_18
       - qgis-release-3_10
+      - qgis-release-3_10-parallel-rendering
       - qgis-release-3_14
+      - qgis-release-3_14-parallel-rendering
       - qgis-master
+      - qgis-master-parallel-rendering
 
   qgis-release-2_18:
     container_name: qgisserver-perfsuite-release-2_18
@@ -78,7 +81,7 @@ services:
     environment:
       - QGIS_SERVER_PARALLEL_RENDERING=0
 
-  qgis-3.14-parallel-rendering:
+  qgis-release-3_14-parallel-rendering:
     container_name: qgisserver-perfsuite-release-3_14-parallel-rendering
     image: qgisserver-perfsuite:release-3_14
     build:
