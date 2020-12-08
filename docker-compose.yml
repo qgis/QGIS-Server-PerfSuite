@@ -45,6 +45,23 @@ services:
     environment:
       - QGIS_SERVER_PARALLEL_RENDERING=0
 
+  qgis-release-3_10-parallel-rendering:
+    container_name: qgisserver-perfsuite-release-3_10-parallel-rendering
+    image: qgisserver-perfsuite:release-3_10
+    build:
+      context: ./docker
+      args:
+        VERSION: release-3_10
+    command: /cmd.sh
+    networks:
+      - qgis
+      - data
+    volumes:
+      - ./data-volume:/data
+    environment:
+      - QGIS_SERVER_PARALLEL_RENDERING=1
+      - QGIS_SERVER_MAX_THREADS=4
+
   qgis-release-3_14:
     container_name: qgisserver-perfsuite-release-3_14
     image: qgisserver-perfsuite:release-3_14
@@ -61,6 +78,23 @@ services:
     environment:
       - QGIS_SERVER_PARALLEL_RENDERING=0
 
+  qgis-3.14-parallel-rendering:
+    container_name: qgisserver-perfsuite-release-3_14-parallel-rendering
+    image: qgisserver-perfsuite:release-3_14
+    build:
+      context: ./docker
+      args:
+        VERSION: release-3_14
+    command: /cmd.sh
+    networks:
+      - qgis
+      - data
+    volumes:
+      - ./data-volume:/data
+    environment:
+      - QGIS_SERVER_PARALLEL_RENDERING=1
+      - QGIS_SERVER_MAX_THREADS=4
+
   qgis-master:
     container_name: qgisserver-perfsuite-master
     image: qgisserver-perfsuite:master
@@ -76,6 +110,23 @@ services:
       - ./data-volume:/data
     environment:
       - QGIS_SERVER_PARALLEL_RENDERING=0
+
+  qgis-master-parallel-rendering:
+    container_name: qgisserver-perfsuite-master-parallel-rendering
+    image: qgisserver-perfsuite:master
+    build:
+      context: ./docker
+      args:
+        VERSION: latest
+    command: /cmd.sh
+    networks:
+      - qgis
+      - data
+    volumes:
+      - ./data-volume:/data
+    environment:
+      - QGIS_SERVER_PARALLEL_RENDERING=1
+      - QGIS_SERVER_MAX_THREADS=4
 
   data:
     container_name: qgisserver-perfsuite-data
