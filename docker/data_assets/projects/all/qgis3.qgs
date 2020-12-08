@@ -42,7 +42,7 @@
       </layer-tree-group>
       <layer-tree-group checked="Qt::Checked" expanded="1" name="spatialite">
         <customproperties/>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="adress_ban_2fb32943_3728_4c78_a0cb_01aad2a63999" name="adress_ban_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;adress_ban&quot; (geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="adress_ban_2fb32943_3728_4c78_a0cb_01aad2a63999" name="adress_ban_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;adress_ban&quot; (geom)">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
@@ -78,10 +78,10 @@
       </layer-tree-group>
       <layer-tree-group checked="Qt::Checked" expanded="1" name="spatialite">
         <customproperties/>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="hydro_segment_a020e433_0ba0_414d_9530_130e7a6e7c38" name="hydro_segment_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;hydro_segment&quot; (geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="hydro_segment_a020e433_0ba0_414d_9530_130e7a6e7c38" name="hydro_segment_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;hydro_segment&quot; (geom)">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="hydro_cours_eau_geoml93_83dc944f_290f_4a21_bd04_fbac014d5ad8" name="hydro_cours_eau_geoml93_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;hydro_cours_eau_geoml93&quot; (geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="hydro_cours_eau_geoml93_83dc944f_290f_4a21_bd04_fbac014d5ad8" name="hydro_cours_eau_geoml93_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;hydro_cours_eau_geoml93&quot; (geom)">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
@@ -135,16 +135,16 @@
       </layer-tree-group>
       <layer-tree-group checked="Qt::Checked" expanded="1" name="spatialite">
         <customproperties/>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="parcelles_9b950ed5_9037_4cb5_bd2b_be392dd211b6" name="parcelles_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;parcelles&quot; (geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="parcelles_9b950ed5_9037_4cb5_bd2b_be392dd211b6" name="parcelles_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;parcelles&quot; (geom)">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="vw_clc2006_6b95be56_67f7_49c0_99a4_7d069657a2bb" name="vw_clc2006_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;vw_clc2006&quot; (geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="vw_clc2006_6b95be56_67f7_49c0_99a4_7d069657a2bb" name="vw_clc2006_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;vw_clc2006&quot; (geom)">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="hydro_lake_518bb961_11fc_42ab_99bc_125900fb8e68" name="hydro_lake_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;hydro_lake&quot; (geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="hydro_lake_518bb961_11fc_42ab_99bc_125900fb8e68" name="hydro_lake_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;hydro_lake&quot; (geom)">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="landuse_corine_lc_2006_cb186793_5a59_4668_87d9_79f05a241988" name="landuse_corine_lc_2006_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;landuse_corine_lc_2006&quot; (geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="landuse_corine_lc_2006_cb186793_5a59_4668_87d9_79f05a241988" name="landuse_corine_lc_2006_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;landuse_corine_lc_2006&quot; (geom)">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
@@ -902,7 +902,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6314442.24767259135842323</ymax>
       </extent>
       <id>adress_ban_2fb32943_3728_4c78_a0cb_01aad2a63999</id>
-      <datasource>dbname='../../sqlite/data.sqlite' table="adress_ban" (geometry)</datasource>
+      <datasource>dbname='../../sqlite/data.sqlite' table="adress_ban" (geom)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -2918,7 +2918,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>7113855</ymax>
       </extent>
       <id>hydro_cours_eau_geoml93_83dc944f_290f_4a21_bd04_fbac014d5ad8</id>
-      <datasource>dbname='../../sqlite/data.sqlite' table="hydro_cours_eau_geoml93" (geometry)</datasource>
+      <datasource>dbname='../../sqlite/data.sqlite' table="hydro_cours_eau_geoml93" (geom)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -4361,7 +4361,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321880</ymax>
       </extent>
       <id>hydro_lake_518bb961_11fc_42ab_99bc_125900fb8e68</id>
-      <datasource>dbname='../../sqlite/data.sqlite' table="hydro_lake" (geometry)</datasource>
+      <datasource>dbname='../../sqlite/data.sqlite' table="hydro_lake" (geom)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -7235,7 +7235,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321972</ymax>
       </extent>
       <id>hydro_segment_a020e433_0ba0_414d_9530_130e7a6e7c38</id>
-      <datasource>dbname='../../sqlite/data.sqlite' table="hydro_segment" (geometry)</datasource>
+      <datasource>dbname='../../sqlite/data.sqlite' table="hydro_segment" (geom)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -11245,7 +11245,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321941.43466311041265726</ymax>
       </extent>
       <id>landuse_corine_lc_2006_cb186793_5a59_4668_87d9_79f05a241988</id>
-      <datasource>dbname='../../sqlite/data.sqlite' table="landuse_corine_lc_2006" (geometry)</datasource>
+      <datasource>dbname='../../sqlite/data.sqlite' table="landuse_corine_lc_2006" (geom)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -14068,7 +14068,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6452805.43400000035762787</ymax>
       </extent>
       <id>parcelles_9b950ed5_9037_4cb5_bd2b_be392dd211b6</id>
-      <datasource>dbname='../../sqlite/data.sqlite' table="parcelles" (geometry)</datasource>
+      <datasource>dbname='../../sqlite/data.sqlite' table="parcelles" (geom)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -15803,7 +15803,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321941.43466311041265726</ymax>
       </extent>
       <id>vw_clc2006_6b95be56_67f7_49c0_99a4_7d069657a2bb</id>
-      <datasource>dbname='../../sqlite/data.sqlite' table="vw_clc2006" (geometry)</datasource>
+      <datasource>dbname='../../sqlite/data.sqlite' table="vw_clc2006" (geom)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
