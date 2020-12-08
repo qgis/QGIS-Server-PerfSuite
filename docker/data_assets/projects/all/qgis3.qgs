@@ -24,25 +24,25 @@
       <customproperties/>
       <layer-tree-group checked="Qt::Checked" expanded="1" name="postgis">
         <customproperties/>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="0,0" providerKey="postgres" legend_exp="" id="adress_ban_e91c7b0b_e6a2_496a_8da3_a040735244a0" name="adress_ban_postgis" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=Point checkPrimaryKeyUnicity='1' table=&quot;ref&quot;.&quot;adress_ban&quot; (wkb_geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="0,0" providerKey="postgres" legend_exp="" id="adress_ban_e91c7b0b_e6a2_496a_8da3_a040735244a0" name="adress_ban_postgis" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=Point checkPrimaryKeyUnicity='1' table=&quot;ref&quot;.&quot;adress_ban&quot; (geom)">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
       <layer-tree-group checked="Qt::Checked" expanded="1" name="shp">
         <customproperties/>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="adress_ban_efea939a_d0d7_4794_97e4_88d670e3f3d1" name="adress_ban_shp" source="../../data/shp/adress_ban.shp">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="adress_ban_efea939a_d0d7_4794_97e4_88d670e3f3d1" name="adress_ban_shp" source="../../shp/adress_ban.shp">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
       <layer-tree-group checked="Qt::Checked" expanded="1" name="gpkg">
         <customproperties/>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="adress_ban_03a92b65_e53c_4ac3_9dd7_704d736794ea" name="adress_ban_gpkg" source="../../data/gpkg/adress_ban.gpkg|layername=adress_ban">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="adress_ban_03a92b65_e53c_4ac3_9dd7_704d736794ea" name="adress_ban_gpkg" source="../../gpkg/adress_ban.gpkg|layername=adress_ban">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
       <layer-tree-group checked="Qt::Checked" expanded="1" name="spatialite">
         <customproperties/>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="adress_ban_2fb32943_3728_4c78_a0cb_01aad2a63999" name="adress_ban_spatialite" source="dbname='../../data/sqlite/data.sqlite' table=&quot;adress_ban&quot; (geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="adress_ban_2fb32943_3728_4c78_a0cb_01aad2a63999" name="adress_ban_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;adress_ban&quot; (geometry)">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
@@ -51,37 +51,37 @@
       <customproperties/>
       <layer-tree-group checked="Qt::Checked" expanded="1" name="postgis">
         <customproperties/>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="0,0" providerKey="postgres" legend_exp="" id="hydro_segment_2cd53327_aa51_4a65_9841_4b7c7e2d10c6" name="hydro_segment_postgis" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiLineString checkPrimaryKeyUnicity='1' table=&quot;ref&quot;.&quot;hydro_segment&quot; (wkb_geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="0,0" providerKey="postgres" legend_exp="" id="hydro_segment_2cd53327_aa51_4a65_9841_4b7c7e2d10c6" name="hydro_segment_postgis" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiLineString checkPrimaryKeyUnicity='1' table=&quot;ref&quot;.&quot;hydro_segment&quot; (geom)">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="0,0" providerKey="postgres" legend_exp="" id="hydro_cours_eau_geoml93_4998015d_4ab7_4417_ba2e_4786fa342625" name="hydro_cours_eau.geoml93_postgis" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=LineString checkPrimaryKeyUnicity='1' table=&quot;ref&quot;.&quot;hydro_cours_eau.geoml93&quot; (wkb_geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="0,0" providerKey="postgres" legend_exp="" id="hydro_cours_eau_geoml93_4998015d_4ab7_4417_ba2e_4786fa342625" name="hydro_cours_eau_geoml93_postgis" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=LineString checkPrimaryKeyUnicity='1' table=&quot;ref&quot;.&quot;hydro_cours_eau_geoml93&quot; (geom)">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
       <layer-tree-group checked="Qt::Checked" expanded="1" name="shp">
         <customproperties/>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="hydro_segment_51e4e902_2b72_4b1b_9e2c_9ebcac7726b0" name="hydro_segment_shp" source="../../data/shp/hydro_segment.shp">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="hydro_segment_51e4e902_2b72_4b1b_9e2c_9ebcac7726b0" name="hydro_segment_shp" source="../../shp/hydro_segment.shp">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="hydro_cours_eau_geoml93_234c69e8_bda3_490d_bcd3_3fa4f435ec5a" name="hydro_cours_eau_geoml93_shp" source="../../data/shp/hydro_cours_eau_geoml93.shp">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="hydro_cours_eau_geoml93_234c69e8_bda3_490d_bcd3_3fa4f435ec5a" name="hydro_cours_eau_geoml93_shp" source="../../shp/hydro_cours_eau_geoml93.shp">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
       <layer-tree-group checked="Qt::Checked" expanded="1" name="gpkg">
         <customproperties/>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="hydro_segment_a9b7612b_3aea_4e7d_a0a9_bad7da875343" name="hydro_segment_gpkg" source="../../data/gpkg/hydro_segment.gpkg|layername=hydro_segment">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="hydro_segment_a9b7612b_3aea_4e7d_a0a9_bad7da875343" name="hydro_segment_gpkg" source="../../gpkg/hydro_segment.gpkg|layername=hydro_segment">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="hydro_cours_eau_geoml93_d76319b1_11bb_4c7d_b6f1_d57e1e005e37" name="hydro_cours_eau_geoml93_gpkg" source="../../data/gpkg/hydro_cours_eau_geoml93.gpkg|layername=hydro_cours_eau_geoml93">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="hydro_cours_eau_geoml93_d76319b1_11bb_4c7d_b6f1_d57e1e005e37" name="hydro_cours_eau_geoml93_gpkg" source="../../gpkg/hydro_cours_eau_geoml93.gpkg|layername=hydro_cours_eau_geoml93">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
       <layer-tree-group checked="Qt::Checked" expanded="1" name="spatialite">
         <customproperties/>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="hydro_segment_a020e433_0ba0_414d_9530_130e7a6e7c38" name="hydro_segment_spatialite" source="dbname='../../data/sqlite/data.sqlite' table=&quot;hydro_segment&quot; (geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="hydro_segment_a020e433_0ba0_414d_9530_130e7a6e7c38" name="hydro_segment_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;hydro_segment&quot; (geometry)">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="hydro_cours_eau_geoml93_83dc944f_290f_4a21_bd04_fbac014d5ad8" name="hydro_cours_eau_geoml93_spatialite" source="dbname='../../data/sqlite/data.sqlite' table=&quot;hydro_cours_eau_geoml93&quot; (geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="hydro_cours_eau_geoml93_83dc944f_290f_4a21_bd04_fbac014d5ad8" name="hydro_cours_eau_geoml93_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;hydro_cours_eau_geoml93&quot; (geometry)">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
@@ -90,61 +90,61 @@
       <customproperties/>
       <layer-tree-group checked="Qt::Checked" expanded="1" name="postgis">
         <customproperties/>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="0,0" providerKey="postgres" legend_exp="" id="parcelles_cdda9a22_222c_4f39_b5bd_4d7befecbeaf" name="parcelles_postgis" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon checkPrimaryKeyUnicity='1' table=&quot;ref&quot;.&quot;parcelles&quot; (wkb_geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="0,0" providerKey="postgres" legend_exp="" id="parcelles_cdda9a22_222c_4f39_b5bd_4d7befecbeaf" name="parcelles_postgis" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon checkPrimaryKeyUnicity='1' table=&quot;ref&quot;.&quot;parcelles&quot; (geom)">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="0,0" providerKey="postgres" legend_exp="" id="vw_clc2006_adcde5c8_e052_45a3_a8c7_cbe9d85c4fac" name="vw_clc2006_postgis" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon checkPrimaryKeyUnicity='1' table=&quot;ref&quot;.&quot;vw_clc2006&quot; (wkb_geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="0,0" providerKey="postgres" legend_exp="" id="vw_clc2006_adcde5c8_e052_45a3_a8c7_cbe9d85c4fac" name="vw_clc2006_postgis" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon checkPrimaryKeyUnicity='1' table=&quot;ref&quot;.&quot;vw_clc2006&quot; (geom)">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="0,0" providerKey="postgres" legend_exp="" id="hydro_lake_ea324db7_40b1_4fcc_a7cd_52861f536e1e" name="hydro_lake_postgis" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon checkPrimaryKeyUnicity='1' table=&quot;ref&quot;.&quot;hydro_lake&quot; (wkb_geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="0,0" providerKey="postgres" legend_exp="" id="hydro_lake_ea324db7_40b1_4fcc_a7cd_52861f536e1e" name="hydro_lake_postgis" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon checkPrimaryKeyUnicity='1' table=&quot;ref&quot;.&quot;hydro_lake&quot; (geom)">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="0,0" providerKey="postgres" legend_exp="" id="landuse_corine_lc_2006_eeb3abbf_e1d0_47d3_8a3a_dc4c5318fb83" name="landuse_corine_lc_2006_postgis" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon checkPrimaryKeyUnicity='1' table=&quot;ref&quot;.&quot;landuse_corine_lc_2006&quot; (wkb_geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="0,0" providerKey="postgres" legend_exp="" id="landuse_corine_lc_2006_eeb3abbf_e1d0_47d3_8a3a_dc4c5318fb83" name="landuse_corine_lc_2006_postgis" source="service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon checkPrimaryKeyUnicity='1' table=&quot;ref&quot;.&quot;landuse_corine_lc_2006&quot; (geom)">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
       <layer-tree-group checked="Qt::Checked" expanded="1" name="shp">
         <customproperties/>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="parcelles_79938969_8cd7_4472_8a17_0369e583e196" name="parcelles_shp" source="../../data/shp/parcelles.shp">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="parcelles_79938969_8cd7_4472_8a17_0369e583e196" name="parcelles_shp" source="../../shp/parcelles.shp">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="vw_clc2006_4355ed4b_dfc9_4abb_90d6_5a5086e8ad7d" name="vw_clc2006_shp" source="../../data/shp/vw_clc2006.shp">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="vw_clc2006_4355ed4b_dfc9_4abb_90d6_5a5086e8ad7d" name="vw_clc2006_shp" source="../../shp/vw_clc2006.shp">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="hydro_lake_785939a9_e678_4bd7_9a30_0df5327d2956" name="hydro_lake_shp" source="../../data/shp/hydro_lake.shp">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="hydro_lake_785939a9_e678_4bd7_9a30_0df5327d2956" name="hydro_lake_shp" source="../../shp/hydro_lake.shp">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="landuse_corine_lc_2006_34a9f87e_b0a0_41f0_a18c_a3fbcd102efd" name="landuse_corine_lc_2006_shp" source="../../data/shp/landuse_corine_lc_2006.shp">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="landuse_corine_lc_2006_34a9f87e_b0a0_41f0_a18c_a3fbcd102efd" name="landuse_corine_lc_2006_shp" source="../../shp/landuse_corine_lc_2006.shp">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
       <layer-tree-group checked="Qt::Checked" expanded="1" name="gpkg">
         <customproperties/>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="parcelles_624f0992_0737_4147_b328_dc64e633eb53" name="parcelles_gpkg" source="../../data/gpkg/parcelles.gpkg|layername=parcelles">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="parcelles_624f0992_0737_4147_b328_dc64e633eb53" name="parcelles_gpkg" source="../../gpkg/parcelles.gpkg|layername=parcelles">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="vw_clc2006_vm_clc2006_e8a3b18c_7f2e_404f_b1ae_c09ac392d798" name="vw_clc2006 vm_clc2006_gpkg" source="../../data/gpkg/vw_clc2006.gpkg|layername=vm_clc2006">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="vw_clc2006_vm_clc2006_e8a3b18c_7f2e_404f_b1ae_c09ac392d798" name="vw_clc2006 vm_clc2006_gpkg" source="../../gpkg/vw_clc2006.gpkg|layername=vm_clc2006">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="hydro_lake_516d5c5b_e37a_4b44_ac4d_2c5c0d22d78f" name="hydro_lake_gpkg" source="../../data/gpkg/hydro_lake.gpkg|layername=hydro_lake">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="hydro_lake_516d5c5b_e37a_4b44_ac4d_2c5c0d22d78f" name="hydro_lake_gpkg" source="../../gpkg/hydro_lake.gpkg|layername=hydro_lake">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="landuse_corine_lc_2006_0eb167a0_d514_4743_b753_51cccf7d1683" name="landuse_corine_lc_2006_gpkg" source="../../data/gpkg/landuse_corine_lc_2006.gpkg|layername=landuse_corine_lc_2006">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="ogr" legend_exp="" id="landuse_corine_lc_2006_0eb167a0_d514_4743_b753_51cccf7d1683" name="landuse_corine_lc_2006_gpkg" source="../../gpkg/landuse_corine_lc_2006.gpkg|layername=landuse_corine_lc_2006">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
       <layer-tree-group checked="Qt::Checked" expanded="1" name="spatialite">
         <customproperties/>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="parcelles_9b950ed5_9037_4cb5_bd2b_be392dd211b6" name="parcelles_spatialite" source="dbname='../../data/sqlite/data.sqlite' table=&quot;parcelles&quot; (geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="parcelles_9b950ed5_9037_4cb5_bd2b_be392dd211b6" name="parcelles_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;parcelles&quot; (geometry)">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="vw_clc2006_6b95be56_67f7_49c0_99a4_7d069657a2bb" name="vw_clc2006_spatialite" source="dbname='../../data/sqlite/data.sqlite' table=&quot;vw_clc2006&quot; (geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="vw_clc2006_6b95be56_67f7_49c0_99a4_7d069657a2bb" name="vw_clc2006_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;vw_clc2006&quot; (geometry)">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="hydro_lake_518bb961_11fc_42ab_99bc_125900fb8e68" name="hydro_lake_spatialite" source="dbname='../../data/sqlite/data.sqlite' table=&quot;hydro_lake&quot; (geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="1" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="hydro_lake_518bb961_11fc_42ab_99bc_125900fb8e68" name="hydro_lake_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;hydro_lake&quot; (geometry)">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="landuse_corine_lc_2006_cb186793_5a59_4668_87d9_79f05a241988" name="landuse_corine_lc_2006_spatialite" source="dbname='../../data/sqlite/data.sqlite' table=&quot;landuse_corine_lc_2006&quot; (geometry)">
+        <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" expanded="0" patch_size="-1,-1" providerKey="spatialite" legend_exp="" id="landuse_corine_lc_2006_cb186793_5a59_4668_87d9_79f05a241988" name="landuse_corine_lc_2006_spatialite" source="dbname='../../sqlite/data.sqlite' table=&quot;landuse_corine_lc_2006&quot; (geometry)">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
@@ -278,7 +278,7 @@
             <legendlayerfile visible="1" layerid="hydro_segment_2cd53327_aa51_4a65_9841_4b7c7e2d10c6" isInOverview="0"/>
           </filegroup>
         </legendlayer>
-        <legendlayer checked="Qt::Checked" showFeatureCount="0" name="hydro_cours_eau.geoml93_postgis" drawingOrder="-1" open="true">
+        <legendlayer checked="Qt::Checked" showFeatureCount="0" name="hydro_cours_eau_geoml93_postgis" drawingOrder="-1" open="true">
           <filegroup hidden="false" open="true">
             <legendlayerfile visible="1" layerid="hydro_cours_eau_geoml93_4998015d_4ab7_4417_ba2e_4786fa342625" isInOverview="0"/>
           </filegroup>
@@ -470,7 +470,7 @@
         <ymax>6314440</ymax>
       </extent>
       <id>adress_ban_03a92b65_e53c_4ac3_9dd7_704d736794ea</id>
-      <datasource>../../data/gpkg/adress_ban.gpkg|layername=adress_ban</datasource>
+      <datasource>../../gpkg/adress_ban.gpkg|layername=adress_ban</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -902,7 +902,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6314442.24767259135842323</ymax>
       </extent>
       <id>adress_ban_2fb32943_3728_4c78_a0cb_01aad2a63999</id>
-      <datasource>dbname='../../data/sqlite/data.sqlite' table="adress_ban" (geometry)</datasource>
+      <datasource>dbname='../../sqlite/data.sqlite' table="adress_ban" (geometry)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1334,7 +1334,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6314442.24767259042710066</ymax>
       </extent>
       <id>adress_ban_e91c7b0b_e6a2_496a_8da3_a040735244a0</id>
-      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=Point checkPrimaryKeyUnicity='1' table="ref"."adress_ban" (wkb_geometry)</datasource>
+      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=Point checkPrimaryKeyUnicity='1' table="ref"."adress_ban" (geom)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1783,7 +1783,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6314442.24767259135842323</ymax>
       </extent>
       <id>adress_ban_efea939a_d0d7_4794_97e4_88d670e3f3d1</id>
-      <datasource>../../data/shp/adress_ban.shp</datasource>
+      <datasource>../../shp/adress_ban.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -2204,7 +2204,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>7113855</ymax>
       </extent>
       <id>hydro_cours_eau_geoml93_234c69e8_bda3_490d_bcd3_3fa4f435ec5a</id>
-      <datasource>../../data/shp/hydro_cours_eau_geoml93.shp</datasource>
+      <datasource>../../shp/hydro_cours_eau_geoml93.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -2547,11 +2547,11 @@ def my_form_open(dialog, layer, feature):
         <ymax>7113855</ymax>
       </extent>
       <id>hydro_cours_eau_geoml93_4998015d_4ab7_4417_ba2e_4786fa342625</id>
-      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=LineString checkPrimaryKeyUnicity='1' table="ref"."hydro_cours_eau.geoml93" (wkb_geometry)</datasource>
+      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=LineString checkPrimaryKeyUnicity='1' table="ref"."hydro_cours_eau_geoml93" (geom)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>hydro_cours_eau.geoml93_postgis</layername>
+      <layername>hydro_cours_eau_geoml93_postgis</layername>
       <srs>
         <spatialrefsys>
           <wkt>PROJCRS["RGF93 / Lambert-93",BASEGEOGCRS["RGF93",DATUM["Reseau Geodesique Francais 1993",ELLIPSOID["GRS 1980",6378137,298.257222101,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4171]],CONVERSION["Lambert-93",METHOD["Lambert Conic Conformal (2SP)",ID["EPSG",9802]],PARAMETER["Latitude of false origin",46.5,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8821]],PARAMETER["Longitude of false origin",3,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8822]],PARAMETER["Latitude of 1st standard parallel",49,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8823]],PARAMETER["Latitude of 2nd standard parallel",44,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8824]],PARAMETER["Easting at false origin",700000,LENGTHUNIT["metre",1],ID["EPSG",8826]],PARAMETER["Northing at false origin",6600000,LENGTHUNIT["metre",1],ID["EPSG",8827]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["unknown"],AREA["France"],BBOX[41.15,-9.86,51.56,10.38]],ID["EPSG",2154]]</wkt>
@@ -2918,7 +2918,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>7113855</ymax>
       </extent>
       <id>hydro_cours_eau_geoml93_83dc944f_290f_4a21_bd04_fbac014d5ad8</id>
-      <datasource>dbname='../../data/sqlite/data.sqlite' table="hydro_cours_eau_geoml93" (geometry)</datasource>
+      <datasource>dbname='../../sqlite/data.sqlite' table="hydro_cours_eau_geoml93" (geometry)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -3272,7 +3272,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>7113850</ymax>
       </extent>
       <id>hydro_cours_eau_geoml93_d76319b1_11bb_4c7d_b6f1_d57e1e005e37</id>
-      <datasource>../../data/gpkg/hydro_cours_eau_geoml93.gpkg|layername=hydro_cours_eau_geoml93</datasource>
+      <datasource>../../gpkg/hydro_cours_eau_geoml93.gpkg|layername=hydro_cours_eau_geoml93</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -3626,11 +3626,11 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321970.5</ymax>
       </extent>
       <id>hydro_course_geomsimple_ef682e0d_f152_4d34_ade1_a2b6ebf3c66e</id>
-      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiLineString checkPrimaryKeyUnicity='1' table="ref"."hydro_course.geomsimple" (wkb_geometry)</datasource>
+      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiLineString checkPrimaryKeyUnicity='1' table="ref"."hydro_course_geomsimple" (geom)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>hydro_course.geomsimple</layername>
+      <layername>hydro_course_geomsimple</layername>
       <srs>
         <spatialrefsys>
           <wkt>PROJCRS["RGF93 / Lambert-93",BASEGEOGCRS["RGF93",DATUM["Reseau Geodesique Francais 1993",ELLIPSOID["GRS 1980",6378137,298.257222101,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4171]],CONVERSION["Lambert-93",METHOD["Lambert Conic Conformal (2SP)",ID["EPSG",9802]],PARAMETER["Latitude of false origin",46.5,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8821]],PARAMETER["Longitude of false origin",3,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8822]],PARAMETER["Latitude of 1st standard parallel",49,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8823]],PARAMETER["Latitude of 2nd standard parallel",44,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8824]],PARAMETER["Easting at false origin",700000,LENGTHUNIT["metre",1],ID["EPSG",8826]],PARAMETER["Northing at false origin",6600000,LENGTHUNIT["metre",1],ID["EPSG",8827]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["unknown"],AREA["France"],BBOX[41.15,-9.86,51.56,10.38]],ID["EPSG",2154]]</wkt>
@@ -4006,7 +4006,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321880</ymax>
       </extent>
       <id>hydro_lake_516d5c5b_e37a_4b44_ac4d_2c5c0d22d78f</id>
-      <datasource>../../data/gpkg/hydro_lake.gpkg|layername=hydro_lake</datasource>
+      <datasource>../../gpkg/hydro_lake.gpkg|layername=hydro_lake</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -4361,7 +4361,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321880</ymax>
       </extent>
       <id>hydro_lake_518bb961_11fc_42ab_99bc_125900fb8e68</id>
-      <datasource>dbname='../../data/sqlite/data.sqlite' table="hydro_lake" (geometry)</datasource>
+      <datasource>dbname='../../sqlite/data.sqlite' table="hydro_lake" (geometry)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -4716,7 +4716,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321880</ymax>
       </extent>
       <id>hydro_lake_785939a9_e678_4bd7_9a30_0df5327d2956</id>
-      <datasource>../../data/shp/hydro_lake.shp</datasource>
+      <datasource>../../shp/hydro_lake.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -5060,7 +5060,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321880</ymax>
       </extent>
       <id>hydro_lake_ea324db7_40b1_4fcc_a7cd_52861f536e1e</id>
-      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon checkPrimaryKeyUnicity='1' table="ref"."hydro_lake" (wkb_geometry)</datasource>
+      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon checkPrimaryKeyUnicity='1' table="ref"."hydro_lake" (geom)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -5432,7 +5432,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321972</ymax>
       </extent>
       <id>hydro_segment_2cd53327_aa51_4a65_9841_4b7c7e2d10c6</id>
-      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiLineString checkPrimaryKeyUnicity='1' table="ref"."hydro_segment" (wkb_geometry)</datasource>
+      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiLineString checkPrimaryKeyUnicity='1' table="ref"."hydro_segment" (geom)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -6361,7 +6361,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321972</ymax>
       </extent>
       <id>hydro_segment_51e4e902_2b72_4b1b_9e2c_9ebcac7726b0</id>
-      <datasource>../../data/shp/hydro_segment.shp</datasource>
+      <datasource>../../shp/hydro_segment.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -7235,7 +7235,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321972</ymax>
       </extent>
       <id>hydro_segment_a020e433_0ba0_414d_9530_130e7a6e7c38</id>
-      <datasource>dbname='../../data/sqlite/data.sqlite' table="hydro_segment" (geometry)</datasource>
+      <datasource>dbname='../../sqlite/data.sqlite' table="hydro_segment" (geometry)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -8147,7 +8147,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321970</ymax>
       </extent>
       <id>hydro_segment_a9b7612b_3aea_4e7d_a0a9_bad7da875343</id>
-      <datasource>../../data/gpkg/hydro_segment.gpkg|layername=hydro_segment</datasource>
+      <datasource>../../gpkg/hydro_segment.gpkg|layername=hydro_segment</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -9059,7 +9059,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321940</ymax>
       </extent>
       <id>landuse_corine_lc_2006_0eb167a0_d514_4743_b753_51cccf7d1683</id>
-      <datasource>../../data/gpkg/landuse_corine_lc_2006.gpkg|layername=landuse_corine_lc_2006</datasource>
+      <datasource>../../gpkg/landuse_corine_lc_2006.gpkg|layername=landuse_corine_lc_2006</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -10159,7 +10159,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321941.43466311041265726</ymax>
       </extent>
       <id>landuse_corine_lc_2006_34a9f87e_b0a0_41f0_a18c_a3fbcd102efd</id>
-      <datasource>../../data/shp/landuse_corine_lc_2006.shp</datasource>
+      <datasource>../../shp/landuse_corine_lc_2006.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -11245,7 +11245,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321941.43466311041265726</ymax>
       </extent>
       <id>landuse_corine_lc_2006_cb186793_5a59_4668_87d9_79f05a241988</id>
-      <datasource>dbname='../../data/sqlite/data.sqlite' table="landuse_corine_lc_2006" (geometry)</datasource>
+      <datasource>dbname='../../sqlite/data.sqlite' table="landuse_corine_lc_2006" (geometry)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -12345,7 +12345,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321941.43466311041265726</ymax>
       </extent>
       <id>landuse_corine_lc_2006_eeb3abbf_e1d0_47d3_8a3a_dc4c5318fb83</id>
-      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon checkPrimaryKeyUnicity='1' table="ref"."landuse_corine_lc_2006" (wkb_geometry)</datasource>
+      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon checkPrimaryKeyUnicity='1' table="ref"."landuse_corine_lc_2006" (geom)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -13447,7 +13447,7 @@ source : http://www.statistiques.developpement-durable.gouv.fr/donnees-ligne/li/
         <ymax>6452810</ymax>
       </extent>
       <id>parcelles_624f0992_0737_4147_b328_dc64e633eb53</id>
-      <datasource>../../data/gpkg/parcelles.gpkg|layername=parcelles</datasource>
+      <datasource>../../gpkg/parcelles.gpkg|layername=parcelles</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -13763,7 +13763,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6452805.43400000035762787</ymax>
       </extent>
       <id>parcelles_79938969_8cd7_4472_8a17_0369e583e196</id>
-      <datasource>../../data/shp/parcelles.shp</datasource>
+      <datasource>../../shp/parcelles.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -14068,7 +14068,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6452805.43400000035762787</ymax>
       </extent>
       <id>parcelles_9b950ed5_9037_4cb5_bd2b_be392dd211b6</id>
-      <datasource>dbname='../../data/sqlite/data.sqlite' table="parcelles" (geometry)</datasource>
+      <datasource>dbname='../../sqlite/data.sqlite' table="parcelles" (geometry)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -14384,7 +14384,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6452805.43400000035762787</ymax>
       </extent>
       <id>parcelles_cdda9a22_222c_4f39_b5bd_4d7befecbeaf</id>
-      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon checkPrimaryKeyUnicity='1' table="ref"."parcelles" (wkb_geometry)</datasource>
+      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon checkPrimaryKeyUnicity='1' table="ref"."parcelles" (geom)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -14717,7 +14717,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321941.43466311041265726</ymax>
       </extent>
       <id>vw_clc2006_4355ed4b_dfc9_4abb_90d6_5a5086e8ad7d</id>
-      <datasource>../../data/shp/vw_clc2006.shp</datasource>
+      <datasource>../../shp/vw_clc2006.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -15803,7 +15803,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321941.43466311041265726</ymax>
       </extent>
       <id>vw_clc2006_6b95be56_67f7_49c0_99a4_7d069657a2bb</id>
-      <datasource>dbname='../../data/sqlite/data.sqlite' table="vw_clc2006" (geometry)</datasource>
+      <datasource>dbname='../../sqlite/data.sqlite' table="vw_clc2006" (geometry)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -16903,7 +16903,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321941.43466311041265726</ymax>
       </extent>
       <id>vw_clc2006_adcde5c8_e052_45a3_a8c7_cbe9d85c4fac</id>
-      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon checkPrimaryKeyUnicity='1' table="ref"."vw_clc2006" (wkb_geometry)</datasource>
+      <datasource>service='data_perf' sslmode=disable key='fid' srid=2154 type=MultiPolygon checkPrimaryKeyUnicity='1' table="ref"."vw_clc2006" (geom)</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -18003,7 +18003,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6321940</ymax>
       </extent>
       <id>vw_clc2006_vm_clc2006_e8a3b18c_7f2e_404f_b1ae_c09ac392d798</id>
-      <datasource>../../data/gpkg/vw_clc2006.gpkg|layername=vm_clc2006</datasource>
+      <datasource>../../gpkg/vw_clc2006.gpkg|layername=vm_clc2006</datasource>
       <keywordList>
         <value></value>
       </keywordList>

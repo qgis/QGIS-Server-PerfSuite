@@ -77,7 +77,7 @@
         <ymax>6321972</ymax>
       </extent>
       <id>hydro_segment_2cd53327_aa51_4a65_9841_4b7c7e2d10c6</id>
-      <datasource>service='data_perf' sslmode=disable key='id_bdcarthage' srid=2154 type=MultiLineString table="ref"."hydro_segment" (wkb_geometry) sql=</datasource>
+      <datasource>service='data_perf' sslmode=disable key='id_bdcarthage' srid=2154 type=MultiLineString table="ref"."hydro_segment" (geom) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>

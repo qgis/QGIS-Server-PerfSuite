@@ -51,7 +51,7 @@
     </layer-tree-group>
     <layer-tree-group name="Raster" expanded="1" checked="Qt::Checked">
       <customproperties/>
-      <layer-tree-layer name="eu_dem_v11" providerKey="gdal" id="eu_dem_v11_f44aa340_cd1d_416f_a97e_c5979e311de9" checked="Qt::Checked" expanded="1" source="../../data/raster/eu_dem_v11_hillshade.tif">
+      <layer-tree-layer name="eu_dem_v11" providerKey="gdal" id="eu_dem_v11_f44aa340_cd1d_416f_a97e_c5979e311de9" checked="Qt::Checked" expanded="1" source="../../raster/eu_dem_v11_hillshade.tif">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
@@ -561,7 +561,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6323989.13709999993443489</ymax>
       </extent>
       <id>eu_dem_v11_f44aa340_cd1d_416f_a97e_c5979e311de9</id>
-      <datasource>../../data/raster/eu_dem_v11_hillshade.tif</datasource>
+      <datasource>../../raster/eu_dem_v11_hillshade.tif</datasource>
       <keywordList>
         <value></value>
       </keywordList>

@@ -23,6 +23,10 @@ if [ ! -d "/data/shp" ]; then
     mkdir -p /data/shp
 fi
 
+if [ ! -d "/data/sqlite" ]; then
+    mkdir -p /data/sqlite
+fi
+
 # Run SQL commands
 for sql in $(ls /data_assets/sql/*.sql | sort); do
     psql data -f "$sql";
@@ -56,6 +60,9 @@ for gpkg in $(ls /data/gpkg/*.gpkg | sort); do
     if [ ! -e "/data/shp/${TABLE_NAME}.shp" ]; then
         ogr2ogr -f 'ESRI Shapefile' "/data/shp/${TABLE_NAME}.shp" "/data/gpkg/${TABLE_NAME}.gpkg"
     fi
+
+    # SQLite
+    ogr2ogr -update -f SQLite -dsco SPATIALITE=yes /data/sqlite/data.sqlite /data/gpkg/${TABLE_NAME}.gpkg -nln ${ABLE_NAME}
 done
 
 # Last SQL command
