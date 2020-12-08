@@ -62,7 +62,11 @@ for gpkg in $(ls /data/gpkg/*.gpkg | sort); do
     fi
 
     # SQLite
-    ogr2ogr -update -f SQLite -dsco SPATIALITE=yes /data/sqlite/data.sqlite /data/gpkg/${TABLE_NAME}.gpkg -nln ${ABLE_NAME}
+    if [ ! -e "/data/sqlite/data.sqlite" ]; then
+        ogr2ogr -f SQLite -dsco SPATIALITE=yes /data/sqlite/data.sqlite /data/gpkg/${TABLE_NAME}.gpkg -nln ${TABLE_NAME}
+    else
+        ogr2ogr -update -f SQLite -dsco SPATIALITE=yes /data/sqlite/data.sqlite /data/gpkg/${TABLE_NAME}.gpkg -nln ${TABLE_NAME}
+    fi
 done
 
 # Last SQL command
