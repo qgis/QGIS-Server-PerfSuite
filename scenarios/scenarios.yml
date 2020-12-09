@@ -611,3 +611,60 @@ REQUESTS:
         PAYLOAD_LAYERS: adress_ban_gpkg
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
+  - NAME: getcapabilities_large_project_shp
+    TYPE: GetCapabilities
+    TITLE: "Large project with empty layers based on shapefiles"
+    DESCRIPTION: html/large_project_empty_layers.html
+    LOG: True
+    ITERATIONS: 5
+    HOSTS:
+      - NAME: "3.10"
+        HOST: http://localhost:8088/qgisserver_3_10
+        PAYLOAD_MAP: /data/projects/large/shp/shapefile.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "3.16"
+        HOST: http://localhost:8088/qgisserver_3_16
+        PAYLOAD_MAP: /data/projects/large/shp/shapefile.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "Master"
+        HOST: http://localhost:8088/qgisserver_master
+        PAYLOAD_MAP: /data/projects/large/shp/shapefile.qgs
+        PAYLOAD_VERSION: 1.3.0
+  - NAME: getcapabilities_large_project_gpkg
+    TYPE: GetCapabilities
+    TITLE: "Large project with empty layers based on geopackage"
+    DESCRIPTION: html/large_project_empty_layers.html
+    LOG: True
+    ITERATIONS: 5
+    HOSTS:
+      - NAME: "3.10"
+        HOST: http://localhost:8088/qgisserver_3_10
+        PAYLOAD_MAP: /data/projects/large/gpkg/geopackage.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "3.16"
+        HOST: http://localhost:8088/qgisserver_3_16
+        PAYLOAD_MAP: /data/projects/large/gpkg/geopackage.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "Master"
+        HOST: http://localhost:8088/qgisserver_master
+        PAYLOAD_MAP: /data/projects/large/gpkg/geopackage.qgs
+        PAYLOAD_VERSION: 1.3.0
+  - NAME: getcapabilities_large_project_postgis
+    TYPE: GetCapabilities
+    TITLE: "Large project with empty layers based on PostGIS"
+    DESCRIPTION: html/large_project_empty_layers.html
+    LOG: True
+    ITERATIONS: 5
+    HOSTS:
+      - NAME: "3.10"
+        HOST: http://localhost:8088/qgisserver_3_10
+        PAYLOAD_MAP: /data/projects/large/postgres/postgis.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "3.16"
+        HOST: http://localhost:8088/qgisserver_3_16
+        PAYLOAD_MAP: /data/projects/large/postgres/postgis.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "Master"
+        HOST: http://localhost:8088/qgisserver_master
+        PAYLOAD_MAP: /data/projects/large/postgres/postgis.qgs
+        PAYLOAD_VERSION: 1.3.0

@@ -39,8 +39,8 @@ done
 docker exec -it qgisserver-perfsuite-release-2_18 ls /data > /dev/null
 docker exec -it qgisserver-perfsuite-release-3_10 ls /data > /dev/null
 docker exec -it qgisserver-perfsuite-release-3_10-parallel-rendering ls /data > /dev/null
-docker exec -it qgisserver-perfsuite-release-3_14 ls /data > /dev/null
-docker exec -it qgisserver-perfsuite-release-3_14-parallel-rendering ls /data > /dev/null
+docker exec -it qgisserver-perfsuite-release-3_16 ls /data > /dev/null
+docker exec -it qgisserver-perfsuite-release-3_16-parallel-rendering ls /data > /dev/null
 docker exec -it qgisserver-perfsuite-master ls /data > /dev/null
 docker exec -it qgisserver-perfsuite-master-parallel-rendering ls /data > /dev/null
 
