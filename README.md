@@ -5,7 +5,7 @@ assessing the performance of [QGIS Server](https://github.com/qgis/QGIS).
 
 The repo includes:
 
-- Dockerfiles for building and executing QGIS Server 2.18, 3.10, 3.14 and Master
+- Dockerfiles for building and executing QGIS Server 2.18, 3.10, 3.16 and Master
 - A Dockerfile for PostGIS and test data
 - some tests to generate a HTML report with [Graffiti](https://github.com/pblottiere/graffiti)
 - everything needed for running your own test scenarios with you own QGIS Server version!
@@ -72,13 +72,13 @@ without adding/updating a QGIS Server instance, you may:
 
 If you just want to add a QGIS Server instance with some specific configuration
 based on environment variables, you can take a look at the `docker-compose.yml`
-file. For example, if you want to add a QGIS Server 3.14 instance with 8 cores
+file. For example, if you want to add a QGIS Server 3.16 instance with 8 cores
 to test the parallel rendering:
 
 ```
-  qgis-3.14-parallel-rendering-8-cores:
-    container_name: qgisserver-perfsuite-3.14-parallel-rendering-8-cores
-    image: qgisserver-perfsuite/3.14
+  qgis-3.16-parallel-rendering-8-cores:
+    container_name: qgisserver-perfsuite-3.16-parallel-rendering-8-cores
+    image: qgisserver-perfsuite/3.16
     volumes:
       - ./data:/data
     links:
