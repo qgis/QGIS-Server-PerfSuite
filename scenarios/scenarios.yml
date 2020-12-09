@@ -21,19 +21,19 @@ REQUESTS:
     HOSTS:
       - NAME: "2.18"
         HOST: http://localhost:8088/qgisserver_2_18
-        PAYLOAD_MAP: /data/qgs/postgres/qgis2.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis2.qgs
         PAYLOAD_VERSION: 1.3.0
       - NAME: "3.10"
         HOST: http://localhost:8088/qgisserver_3_10
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
       - NAME: "3.14"
         HOST: http://localhost:8088/qgisserver_3_14
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
       - NAME: "Master"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
   - NAME: getcapabilities_trust
     TYPE: GetCapabilities
@@ -45,31 +45,31 @@ REQUESTS:
     HOSTS:
       - NAME: "2.18"
         HOST: http://localhost:8088/qgisserver_2_18
-        PAYLOAD_MAP: /data/qgs/postgres/view.qgs
+        PAYLOAD_MAP: /data/projects/postgres/view.qgs
         PAYLOAD_VERSION: 1.3.0
       - NAME: "3.10"
         HOST: http://localhost:8088/qgisserver_3_10
-        PAYLOAD_MAP: /data/qgs/postgres/view.qgs
+        PAYLOAD_MAP: /data/projects/postgres/view.qgs
         PAYLOAD_VERSION: 1.3.0
       - NAME: "3.10 with trust"
         HOST: http://localhost:8088/qgisserver_3_10
-        PAYLOAD_MAP: /data/qgs/postgres/view_trust.qgs
+        PAYLOAD_MAP: /data/projects/postgres/view_trust.qgs
         PAYLOAD_VERSION: 1.3.0
       - NAME: "3.14"
         HOST: http://localhost:8088/qgisserver_3_14
-        PAYLOAD_MAP: /data/qgs/postgres/view.qgs
+        PAYLOAD_MAP: /data/projects/postgres/view.qgs
         PAYLOAD_VERSION: 1.3.0
       - NAME: "3.14 with trust"
         HOST: http://localhost:8088/qgisserver_3_14
-        PAYLOAD_MAP: /data/qgs/postgres/view_trust.qgs
+        PAYLOAD_MAP: /data/projects/postgres/view_trust.qgs
         PAYLOAD_VERSION: 1.3.0
       - NAME: "Master"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/postgres/view.qgs
+        PAYLOAD_MAP: /data/projects/postgres/view.qgs
         PAYLOAD_VERSION: 1.3.0
       - NAME: "Master with trust"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/postgres/view_trust.qgs
+        PAYLOAD_MAP: /data/projects/postgres/view_trust.qgs
         PAYLOAD_VERSION: 1.3.0
   - NAME: getmap_parallel_rendering
     TYPE: GetMap
@@ -81,72 +81,72 @@ REQUESTS:
     HOSTS:
       - NAME: "2.18 (1 core)"
         HOST: http://localhost:8088/qgisserver_2_18
-        PAYLOAD_MAP: /data/qgs/postgres/qgis2.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis2.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
+        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau_geoml93,parcelles
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "3.10 (1 core)"
         HOST: http://localhost:8088/qgisserver_3_10
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
+        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau_geoml93,parcelles
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "3.10 (4 cores)"
         HOST: http://localhost:8088/qgisserver_3_10_parallel_rendering
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
+        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau_geoml93,parcelles
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "3.14 (1 core)"
         HOST: http://localhost:8088/qgisserver_3_14
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
+        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau_geoml93,parcelles
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "3.14 (4 cores)"
         HOST: http://localhost:8088/qgisserver_3_14_parallel_rendering
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
+        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau_geoml93,parcelles
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "Master (1 core)"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
+        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau_geoml93,parcelles
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "Master (4 cores)"
         HOST: http://localhost:8088/qgisserver_master_parallel_rendering
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau.geoml93,parcelles
+        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau_geoml93,parcelles
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
   - NAME: getmap_all
@@ -159,7 +159,7 @@ REQUESTS:
     HOSTS:
       - NAME: "2.18"
         HOST: http://localhost:8088/qgisserver_2_18
-        PAYLOAD_MAP: /data/qgs/postgres/qgis2.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis2.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -169,7 +169,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.3,1.0,43.9,1.9
       - NAME: "3.10"
         HOST: http://localhost:8088/qgisserver_3_10
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -179,7 +179,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.3,1.0,43.9,1.9
       - NAME: "3.14"
         HOST: http://localhost:8088/qgisserver_3_14
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -189,7 +189,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.3,1.0,43.9,1.9
       - NAME: "Master"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -207,7 +207,7 @@ REQUESTS:
     HOSTS:
       - NAME: "2.18"
         HOST: http://localhost:8088/qgisserver_2_18
-        PAYLOAD_MAP: /data/qgs/postgres/qgis2.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis2.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -217,7 +217,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
       - NAME: "3.10"
         HOST: http://localhost:8088/qgisserver_3_10
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -227,7 +227,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
       - NAME: "3.14"
         HOST: http://localhost:8088/qgisserver_3_14
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -237,7 +237,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
       - NAME: "Master"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -255,7 +255,7 @@ REQUESTS:
     HOSTS:
       - NAME: "2.18"
         HOST: http://localhost:8088/qgisserver_2_18
-        PAYLOAD_MAP: /data/qgs/postgres/qgis2.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis2.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -265,7 +265,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.27,3.77,44.70,8.29
       - NAME: "3.10"
         HOST: http://localhost:8088/qgisserver_3_10
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -275,7 +275,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.27,3.77,44.70,8.29
       - NAME: "3.14"
         HOST: http://localhost:8088/qgisserver_3_14
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -285,7 +285,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.27,3.77,44.70,8.29
       - NAME: "Master"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -303,45 +303,45 @@ REQUESTS:
     HOSTS:
       - NAME: "2.18"
         HOST: http://localhost:8088/qgisserver_2_18
-        PAYLOAD_MAP: /data/qgs/postgres/qgis2.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis2.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: hydro_cours_eau.geoml93
+        PAYLOAD_LAYERS: hydro_cours_eau_geoml93
         PAYLOAD_FORMAT: png
         PAYLOAD_DPI: 96
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "3.10"
         HOST: http://localhost:8088/qgisserver_3_10
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: hydro_cours_eau.geoml93
+        PAYLOAD_LAYERS: hydro_cours_eau_geoml93
         PAYLOAD_FORMAT: png
         PAYLOAD_DPI: 96
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "3.14"
         HOST: http://localhost:8088/qgisserver_3_14
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: hydro_cours_eau.geoml93
+        PAYLOAD_LAYERS: hydro_cours_eau_geoml93
         PAYLOAD_FORMAT: png
         PAYLOAD_DPI: 96
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "Master"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: hydro_cours_eau.geoml93
+        PAYLOAD_LAYERS: hydro_cours_eau_geoml93
         PAYLOAD_FORMAT: png
         PAYLOAD_DPI: 96
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
@@ -355,7 +355,7 @@ REQUESTS:
     HOSTS:
       - NAME: "2.18 (default configuration)"
         HOST: http://localhost:8088/qgisserver_2_18
-        PAYLOAD_MAP: /data/qgs/postgres/lines_parallel_labelling.qgs
+        PAYLOAD_MAP: /data/projects/postgres/lines_parallel_labelling.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -365,7 +365,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
       - NAME: "3.10 (default configuration)"
         HOST: http://localhost:8088/qgisserver_3_10
-        PAYLOAD_MAP: /data/qgs/postgres/lines_parallel_labelling.qgs
+        PAYLOAD_MAP: /data/projects/postgres/lines_parallel_labelling.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -375,7 +375,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
       - NAME: "3.10 (8 candidates)"
         HOST: http://localhost:8088/qgisserver_3_10
-        PAYLOAD_MAP: /data/qgs/postgres/lines_parallel_labelling_8_candidates.qgs
+        PAYLOAD_MAP: /data/projects/postgres/lines_parallel_labelling_8_candidates.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -385,7 +385,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
       - NAME: "3.14 (default configuration)"
         HOST: http://localhost:8088/qgisserver_3_14
-        PAYLOAD_MAP: /data/qgs/postgres/lines_parallel_labelling.qgs
+        PAYLOAD_MAP: /data/projects/postgres/lines_parallel_labelling.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -395,7 +395,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
       - NAME: "3.14 (8 candidates)"
         HOST: http://localhost:8088/qgisserver_3_14
-        PAYLOAD_MAP: /data/qgs/postgres/lines_parallel_labelling_8_candidates.qgs
+        PAYLOAD_MAP: /data/projects/postgres/lines_parallel_labelling_8_candidates.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -405,7 +405,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
       - NAME: "Master (default configuration)"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/postgres/lines_parallel_labelling.qgs
+        PAYLOAD_MAP: /data/projects/postgres/lines_parallel_labelling.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -415,7 +415,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
       - NAME: "Master (8 candidates)"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/postgres/lines_parallel_labelling_8_candidates.qgs
+        PAYLOAD_MAP: /data/projects/postgres/lines_parallel_labelling_8_candidates.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -432,7 +432,7 @@ REQUESTS:
     HOSTS:
       - NAME: "2.18"
         HOST: http://localhost:8088/qgisserver_2_18
-        PAYLOAD_MAP: /data/qgs/postgres/qgis2.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis2.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -442,7 +442,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.3,1.0,43.9,1.9
       - NAME: "3.10"
         HOST: http://localhost:8088/qgisserver_3_10
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -452,7 +452,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.3,1.0,43.9,1.9
       - NAME: "3.14"
         HOST: http://localhost:8088/qgisserver_3_14
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -462,7 +462,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.3,1.0,43.9,1.9
       - NAME: "Master"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/postgres/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -479,7 +479,7 @@ REQUESTS:
     HOSTS:
       - NAME: "PostGIS"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/all/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/all/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -489,7 +489,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.27,3.77,44.70,8.29
       - NAME: "Spatialite"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/all/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/all/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -499,7 +499,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.27,3.77,44.70,8.29
       - NAME: "Shapefile"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/all/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/all/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -509,7 +509,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.27,3.77,44.70,8.29
       - NAME: "Geopackage"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/all/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/all/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -526,17 +526,17 @@ REQUESTS:
     HOSTS:
       - NAME: "PostGIS"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/all/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/all/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
         PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: hydro_cours_eau.geoml93_postgis
+        PAYLOAD_LAYERS: hydro_cours_eau_geoml93_postgis
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "Spatialite"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/all/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/all/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -546,7 +546,7 @@ REQUESTS:
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "Shapefile"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/all/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/all/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -556,7 +556,7 @@ REQUESTS:
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "Geopackage"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/all/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/all/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -573,7 +573,7 @@ REQUESTS:
     HOSTS:
       - NAME: "PostGIS"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/all/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/all/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -583,7 +583,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
       - NAME: "Spatialite"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/all/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/all/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -593,7 +593,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
       - NAME: "Shapefile"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/all/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/all/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400
@@ -603,7 +603,7 @@ REQUESTS:
         PAYLOAD_BBOX: 43.1567,0.685072,43.9446,2.06422
       - NAME: "Geopackage"
         HOST: http://localhost:8088/qgisserver_master
-        PAYLOAD_MAP: /data/qgs/all/qgis3.qgs
+        PAYLOAD_MAP: /data/projects/all/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
         PAYLOAD_HEIGHT: 400

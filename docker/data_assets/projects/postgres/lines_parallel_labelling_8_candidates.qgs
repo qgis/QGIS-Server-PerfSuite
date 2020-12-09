@@ -1,0 +1,885 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis version="3.1.0-Master" projectname="sample open data for perf testing">
+  <homePath path=""/>
+  <title>sample open data for perf testing</title>
+  <autotransaction active="0"/>
+  <evaluateDefaultValues active="0"/>
+  <trust active="0"/>
+  <projectCrs>
+    <spatialrefsys>
+      <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+      <srsid>145</srsid>
+      <srid>2154</srid>
+      <authid>EPSG:2154</authid>
+      <description>RGF93 / Lambert-93</description>
+      <projectionacronym>lcc</projectionacronym>
+      <ellipsoidacronym>GRS80</ellipsoidacronym>
+      <geographicflag>false</geographicflag>
+    </spatialrefsys>
+  </projectCrs>
+  <layer-tree-group>
+    <customproperties/>
+    <layer-tree-group expanded="1" name="lines" checked="Qt::Checked">
+      <customproperties/>
+      <layer-tree-layer id="hydro_segment_2cd53327_aa51_4a65_9841_4b7c7e2d10c6" providerKey="postgres" expanded="1" name="hydro_segment" checked="Qt::Checked" source="service='data_perf' sslmode=disable key='id_bdcarthage' srid=2154 type=MultiLineString table=&quot;ref&quot;.&quot;hydro_segment&quot; (geoml93) sql=">
+        <customproperties/>
+      </layer-tree-layer>
+    </layer-tree-group>
+    <custom-order enabled="0">
+      <item>hydro_segment_2cd53327_aa51_4a65_9841_4b7c7e2d10c6</item>
+    </custom-order>
+  </layer-tree-group>
+  <snapping-settings tolerance="0" enabled="1" type="2" unit="2" intersection-snapping="0" mode="3">
+    <individual-layer-settings>
+      <layer-setting id="hydro_segment_2cd53327_aa51_4a65_9841_4b7c7e2d10c6" tolerance="10" units="1" enabled="1" type="2"/>
+    </individual-layer-settings>
+  </snapping-settings>
+  <relations/>
+  <mapcanvas name="theMapCanvas" annotationsVisible="1">
+    <units>meters</units>
+    <extent>
+      <xmin>515344.77878152369521558</xmin>
+      <ymin>6231084.60815239883959293</ymin>
+      <xmax>637202.25248322612605989</xmax>
+      <ymax>6323990.11203672923147678</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+        <srsid>145</srsid>
+        <srid>2154</srid>
+        <authid>EPSG:2154</authid>
+        <description>RGF93 / Lambert-93</description>
+        <projectionacronym>lcc</projectionacronym>
+        <ellipsoidacronym>GRS80</ellipsoidacronym>
+        <geographicflag>false</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <legend updateDrawingOrder="true">
+    <legendgroup name="lines" checked="Qt::Checked" open="true">
+      <legendlayer checked="Qt::Checked" name="hydro_segment" showFeatureCount="0" open="true" drawingOrder="-1">
+        <filegroup hidden="false" open="true">
+          <legendlayerfile isInOverview="0" visible="1" layerid="hydro_segment_2cd53327_aa51_4a65_9841_4b7c7e2d10c6"/>
+        </filegroup>
+      </legendlayer>
+    </legendgroup>
+  </legend>
+  <mapViewDocks/>
+  <projectlayers>
+    <maplayer autoRefreshTime="0" autoRefreshEnabled="0" maxScale="0" minScale="0" refreshOnNotifyEnabled="0" readOnly="0" simplifyAlgorithm="0" labelsEnabled="1" type="vector" simplifyLocal="1" refreshOnNotifyMessage="" simplifyDrawingTol="1.2" simplifyMaxScale="1" geometry="Line" simplifyDrawingHints="3" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>516450.20000000001164153</xmin>
+        <ymin>6233457.5</ymin>
+        <xmax>632526.5</xmax>
+        <ymax>6321972</ymax>
+      </extent>
+      <id>hydro_segment_2cd53327_aa51_4a65_9841_4b7c7e2d10c6</id>
+      <datasource>service='data_perf' sslmode=disable key='id_bdcarthage' srid=2154 type=MultiLineString table="ref"."hydro_segment" (geom) sql=</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>hydro_segment</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>145</srsid>
+          <srid>2154</srid>
+          <authid>EPSG:2154</authid>
+          <description>RGF93 / Lambert-93</description>
+          <projectionacronym>lcc</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial crs="" miny="0" maxy="0" maxz="0" maxx="0" minz="0" dimensions="2" minx="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+      </resourceMetadata>
+      <provider encoding="UTF-8">postgres</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 forceraster="0" symbollevels="0" attr="CASE WHEN  &quot;code_cours_eau&quot; IS NULL THEN 'non_codif' ELSE milieu END " type="categorizedSymbol" enableorderby="0">
+        <categories>
+          <category render="true" symbol="0" label="Naturel" value="0"/>
+          <category render="true" symbol="1" label="Bras" value="1"/>
+          <category render="true" symbol="2" label="Canaux" value="2"/>
+          <category render="true" symbol="3" label="Littoral codifié" value="5"/>
+          <category render="true" symbol="4" label="" value="non_codif"/>
+        </categories>
+        <symbols>
+          <symbol clip_to_extent="1" alpha="1" name="0" type="line">
+            <layer enabled="1" pass="0" class="SimpleLine" locked="0">
+              <prop v="square" k="capstyle"/>
+              <prop v="5;2" k="customdash"/>
+              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
+              <prop v="MM" k="customdash_unit"/>
+              <prop v="0" k="draw_inside_polygon"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="123,167,255,255" k="line_color"/>
+              <prop v="solid" k="line_style"/>
+              <prop v="0.46" k="line_width"/>
+              <prop v="MM" k="line_width_unit"/>
+              <prop v="0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="0" k="use_custom_dash"/>
+              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" type="QString" value=""/>
+                  <Option name="properties"/>
+                  <Option name="type" type="QString" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol clip_to_extent="1" alpha="1" name="1" type="line">
+            <layer enabled="1" pass="0" class="SimpleLine" locked="0">
+              <prop v="round" k="capstyle"/>
+              <prop v="5;2" k="customdash"/>
+              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
+              <prop v="MM" k="customdash_unit"/>
+              <prop v="0" k="draw_inside_polygon"/>
+              <prop v="round" k="joinstyle"/>
+              <prop v="0,85,255,255" k="line_color"/>
+              <prop v="solid" k="line_style"/>
+              <prop v="0.06" k="line_width"/>
+              <prop v="MM" k="line_width_unit"/>
+              <prop v="0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="0" k="use_custom_dash"/>
+              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" type="QString" value=""/>
+                  <Option name="properties"/>
+                  <Option name="type" type="QString" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol clip_to_extent="1" alpha="0.811765" name="2" type="line">
+            <layer enabled="1" pass="0" class="SimpleLine" locked="0">
+              <prop v="round" k="capstyle"/>
+              <prop v="5;2" k="customdash"/>
+              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
+              <prop v="MM" k="customdash_unit"/>
+              <prop v="0" k="draw_inside_polygon"/>
+              <prop v="round" k="joinstyle"/>
+              <prop v="0,85,255,180" k="line_color"/>
+              <prop v="solid" k="line_style"/>
+              <prop v="0.46" k="line_width"/>
+              <prop v="MM" k="line_width_unit"/>
+              <prop v="0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="0" k="use_custom_dash"/>
+              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" type="QString" value=""/>
+                  <Option name="properties"/>
+                  <Option name="type" type="QString" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+            <layer enabled="1" pass="2" class="SimpleLine" locked="1">
+              <prop v="round" k="capstyle"/>
+              <prop v="5;2" k="customdash"/>
+              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
+              <prop v="MM" k="customdash_unit"/>
+              <prop v="0" k="draw_inside_polygon"/>
+              <prop v="round" k="joinstyle"/>
+              <prop v="255,255,255,255" k="line_color"/>
+              <prop v="dot" k="line_style"/>
+              <prop v="0.53" k="line_width"/>
+              <prop v="MM" k="line_width_unit"/>
+              <prop v="0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="0" k="use_custom_dash"/>
+              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" type="QString" value=""/>
+                  <Option name="properties"/>
+                  <Option name="type" type="QString" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol clip_to_extent="1" alpha="1" name="3" type="line">
+            <layer enabled="1" pass="0" class="SimpleLine" locked="0">
+              <prop v="square" k="capstyle"/>
+              <prop v="5;2" k="customdash"/>
+              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
+              <prop v="MM" k="customdash_unit"/>
+              <prop v="0" k="draw_inside_polygon"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="28,107,176,255" k="line_color"/>
+              <prop v="solid" k="line_style"/>
+              <prop v="0.26" k="line_width"/>
+              <prop v="MM" k="line_width_unit"/>
+              <prop v="0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="0" k="use_custom_dash"/>
+              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" type="QString" value=""/>
+                  <Option name="properties"/>
+                  <Option name="type" type="QString" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol clip_to_extent="1" alpha="0.156863" name="4" type="line">
+            <layer enabled="1" pass="2" class="SimpleLine" locked="1">
+              <prop v="round" k="capstyle"/>
+              <prop v="5;2" k="customdash"/>
+              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
+              <prop v="MM" k="customdash_unit"/>
+              <prop v="0" k="draw_inside_polygon"/>
+              <prop v="round" k="joinstyle"/>
+              <prop v="0,0,0,255" k="line_color"/>
+              <prop v="dash" k="line_style"/>
+              <prop v="0.33" k="line_width"/>
+              <prop v="MM" k="line_width_unit"/>
+              <prop v="0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="0" k="use_custom_dash"/>
+              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" type="QString" value=""/>
+                  <Option name="properties"/>
+                  <Option name="type" type="QString" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <source-symbol>
+          <symbol clip_to_extent="1" alpha="1" name="0" type="line">
+            <layer enabled="1" pass="0" class="SimpleLine" locked="0">
+              <prop v="square" k="capstyle"/>
+              <prop v="5;2" k="customdash"/>
+              <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
+              <prop v="MM" k="customdash_unit"/>
+              <prop v="0" k="draw_inside_polygon"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="175,129,156,255" k="line_color"/>
+              <prop v="solid" k="line_style"/>
+              <prop v="0.26" k="line_width"/>
+              <prop v="MM" k="line_width_unit"/>
+              <prop v="0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="0" k="use_custom_dash"/>
+              <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" type="QString" value=""/>
+                  <Option name="properties"/>
+                  <Option name="type" type="QString" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </source-symbol>
+        <colorramp name="[source]" type="gradient">
+          <prop v="247,251,255,255" k="color1"/>
+          <prop v="8,48,107,255" k="color2"/>
+          <prop v="0" k="discrete"/>
+          <prop v="gradient" k="rampType"/>
+          <prop v="0.13;222,235,247,255:0.26;198,219,239,255:0.39;158,202,225,255:0.52;107,174,214,255:0.65;66,146,198,255:0.78;33,113,181,255:0.9;8,81,156,255" k="stops"/>
+        </colorramp>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <labeling type="simple">
+        <settings>
+          <text-style fontStrikeout="0" multilineHeight="1" fontSizeMapUnitScale="3x:0,0,0,0,0,0" textColor="0,0,0,255" isExpression="0" fontItalic="0" previewBkgrdColor="#ffffff" fontUnderline="0" useSubstitutions="0" fontSize="9" textOpacity="1" fontWordSpacing="0" fontSizeUnit="Point" fontWeight="50" namedStyle="Normal" fontLetterSpacing="0" fontCapitals="0" blendMode="0" fontFamily="Sans Serif" fieldName="code_bassin">
+            <text-buffer bufferSize="1" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferOpacity="1" bufferJoinStyle="128" bufferColor="255,255,255,255" bufferSizeUnits="MM" bufferBlendMode="0" bufferDraw="0" bufferNoFill="0"/>
+            <background shapeRotationType="0" shapeBorderColor="128,128,128,255" shapeRadiiX="0" shapeFillColor="255,255,255,255" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeSizeUnit="MM" shapeOffsetUnit="MM" shapeSizeType="0" shapeType="0" shapeDraw="0" shapeJoinStyle="64" shapeBorderWidthUnit="MM" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeOffsetX="0" shapeRotation="0" shapeRadiiUnit="MM" shapeBlendMode="0" shapeSVGFile="" shapeSizeX="0" shapeSizeY="0" shapeRadiiY="0" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeOffsetY="0" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeBorderWidth="0" shapeOpacity="1"/>
+            <shadow shadowOffsetDist="1" shadowOffsetGlobal="1" shadowRadiusAlphaOnly="0" shadowOpacity="0.7" shadowRadius="1.5" shadowScale="100" shadowUnder="0" shadowColor="0,0,0,255" shadowOffsetUnit="MM" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowRadiusUnit="MM" shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowBlendMode="6" shadowOffsetAngle="135" shadowDraw="0"/>
+            <substitutions/>
+          </text-style>
+          <text-format addDirectionSymbol="0" formatNumbers="0" plussign="0" multilineAlign="4294967295" reverseDirectionSymbol="0" wrapChar="" leftDirectionSymbol="&lt;" placeDirectionSymbol="0" rightDirectionSymbol=">" decimals="3"/>
+          <placement repeatDistance="0" quadOffset="4" preserveRotation="1" centroidInside="0" xOffset="0" yOffset="0" offsetType="0" offsetUnits="MapUnit" distUnits="MM" distMapUnitScale="3x:0,0,0,0,0,0" rotationAngle="0" priority="5" repeatDistanceUnits="MM" fitInPolygonOnly="0" placement="2" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" centroidWhole="0" maxCurvedCharAngleOut="-25" placementFlags="10" maxCurvedCharAngleIn="25" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" dist="0" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0"/>
+          <rendering fontMinPixelSize="3" limitNumLabels="0" obstacleFactor="1" upsidedownLabels="0" obstacle="1" labelPerPart="0" maxNumLabels="2000" scaleVisibility="0" displayAll="0" drawLabels="1" fontMaxPixelSize="10000" obstacleType="0" scaleMin="1" scaleMax="10000000" mergeLines="0" fontLimitPixelSize="0" zIndex="0" minFeatureSize="0"/>
+          <dd_properties>
+            <Option type="Map">
+              <Option name="name" type="QString" value=""/>
+              <Option name="properties"/>
+              <Option name="type" type="QString" value="collection"/>
+            </Option>
+          </dd_properties>
+        </settings>
+      </labeling>
+      <customproperties>
+        <property key="dualview/previewExpressions" value="id_bdcarthage"/>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>6</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory minScaleDenominator="-2.14748e+9" enabled="0" sizeScale="3x:0,0,0,0,0,0" opacity="1" diagramOrientation="Up" width="15" backgroundColor="#ffffff" scaleDependency="Area" backgroundAlpha="255" labelPlacementMethod="XHeight" sizeType="MM" penWidth="0" barWidth="5" penColor="#000000" scaleBasedVisibility="0" lineSizeType="MM" lineSizeScale="3x:0,0,0,0,0,0" penAlpha="255" maxScaleDenominator="1e+8" rotationOffset="0" height="15" minimumSize="0">
+          <fontProperties style="" description="Sans Serif,9,-1,5,50,0,0,0,0,0"/>
+          <attribute label="" color="#000000" field=""/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings zIndex="0" linePlacementFlags="2" priority="0" dist="0" placement="2" obstacle="0" showAll="1">
+        <properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties" type="Map">
+              <Option name="positionX" type="Map">
+                <Option name="active" type="bool" value="true"/>
+                <Option name="field" type="QString" value="id_bdcarthage"/>
+                <Option name="type" type="int" value="2"/>
+              </Option>
+              <Option name="positionY" type="Map">
+                <Option name="active" type="bool" value="true"/>
+                <Option name="field" type="QString" value="id_bdcarthage"/>
+                <Option name="type" type="int" value="2"/>
+              </Option>
+              <Option name="show" type="Map">
+                <Option name="active" type="bool" value="true"/>
+                <Option name="field" type="QString" value="id_bdcarthage"/>
+                <Option name="type" type="int" value="2"/>
+              </Option>
+            </Option>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <fieldConfiguration>
+        <field name="id_bdcarthage">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="toponyme1">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="toponyme2">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="code_cours_eau">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="code_entite_surfacique">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="etat">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="largeur">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="nature">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="navigabilite">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="gabarit">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="position_sol">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="milieu">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="candidat1">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="candidat2">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="id_bdcarthage_noeud_initial">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="id_bdcarthage_noeud_final">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="fpkh">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="tpkh">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="code_bassin">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="code_zone">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="code_hydro_elem">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="QString" value="0"/>
+                <Option name="UseHtml" type="QString" value="0"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias name="" index="0" field="id_bdcarthage"/>
+        <alias name="" index="1" field="toponyme1"/>
+        <alias name="" index="2" field="toponyme2"/>
+        <alias name="" index="3" field="code_cours_eau"/>
+        <alias name="" index="4" field="code_entite_surfacique"/>
+        <alias name="" index="5" field="etat"/>
+        <alias name="" index="6" field="largeur"/>
+        <alias name="" index="7" field="nature"/>
+        <alias name="" index="8" field="navigabilite"/>
+        <alias name="" index="9" field="gabarit"/>
+        <alias name="" index="10" field="position_sol"/>
+        <alias name="" index="11" field="milieu"/>
+        <alias name="" index="12" field="candidat1"/>
+        <alias name="" index="13" field="candidat2"/>
+        <alias name="" index="14" field="id_bdcarthage_noeud_initial"/>
+        <alias name="" index="15" field="id_bdcarthage_noeud_final"/>
+        <alias name="" index="16" field="fpkh"/>
+        <alias name="" index="17" field="tpkh"/>
+        <alias name="" index="18" field="code_bassin"/>
+        <alias name="" index="19" field="code_zone"/>
+        <alias name="" index="20" field="code_hydro_elem"/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default expression="" applyOnUpdate="0" field="id_bdcarthage"/>
+        <default expression="" applyOnUpdate="0" field="toponyme1"/>
+        <default expression="" applyOnUpdate="0" field="toponyme2"/>
+        <default expression="" applyOnUpdate="0" field="code_cours_eau"/>
+        <default expression="" applyOnUpdate="0" field="code_entite_surfacique"/>
+        <default expression="" applyOnUpdate="0" field="etat"/>
+        <default expression="" applyOnUpdate="0" field="largeur"/>
+        <default expression="" applyOnUpdate="0" field="nature"/>
+        <default expression="" applyOnUpdate="0" field="navigabilite"/>
+        <default expression="" applyOnUpdate="0" field="gabarit"/>
+        <default expression="" applyOnUpdate="0" field="position_sol"/>
+        <default expression="" applyOnUpdate="0" field="milieu"/>
+        <default expression="" applyOnUpdate="0" field="candidat1"/>
+        <default expression="" applyOnUpdate="0" field="candidat2"/>
+        <default expression="" applyOnUpdate="0" field="id_bdcarthage_noeud_initial"/>
+        <default expression="" applyOnUpdate="0" field="id_bdcarthage_noeud_final"/>
+        <default expression="" applyOnUpdate="0" field="fpkh"/>
+        <default expression="" applyOnUpdate="0" field="tpkh"/>
+        <default expression="" applyOnUpdate="0" field="code_bassin"/>
+        <default expression="" applyOnUpdate="0" field="code_zone"/>
+        <default expression="" applyOnUpdate="0" field="code_hydro_elem"/>
+      </defaults>
+      <constraints>
+        <constraint constraints="3" notnull_strength="1" unique_strength="1" exp_strength="0" field="id_bdcarthage"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="toponyme1"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="toponyme2"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="code_cours_eau"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="code_entite_surfacique"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="etat"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="largeur"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="nature"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="navigabilite"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="gabarit"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="position_sol"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="milieu"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="candidat1"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="candidat2"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="id_bdcarthage_noeud_initial"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="id_bdcarthage_noeud_final"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="fpkh"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="tpkh"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="code_bassin"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="code_zone"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0" field="code_hydro_elem"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" field="id_bdcarthage" desc=""/>
+        <constraint exp="" field="toponyme1" desc=""/>
+        <constraint exp="" field="toponyme2" desc=""/>
+        <constraint exp="" field="code_cours_eau" desc=""/>
+        <constraint exp="" field="code_entite_surfacique" desc=""/>
+        <constraint exp="" field="etat" desc=""/>
+        <constraint exp="" field="largeur" desc=""/>
+        <constraint exp="" field="nature" desc=""/>
+        <constraint exp="" field="navigabilite" desc=""/>
+        <constraint exp="" field="gabarit" desc=""/>
+        <constraint exp="" field="position_sol" desc=""/>
+        <constraint exp="" field="milieu" desc=""/>
+        <constraint exp="" field="candidat1" desc=""/>
+        <constraint exp="" field="candidat2" desc=""/>
+        <constraint exp="" field="id_bdcarthage_noeud_initial" desc=""/>
+        <constraint exp="" field="id_bdcarthage_noeud_final" desc=""/>
+        <constraint exp="" field="fpkh" desc=""/>
+        <constraint exp="" field="tpkh" desc=""/>
+        <constraint exp="" field="code_bassin" desc=""/>
+        <constraint exp="" field="code_zone" desc=""/>
+        <constraint exp="" field="code_hydro_elem" desc=""/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{b3a36f84-04fb-4caf-ba3a-b013471c93f8}"/>
+        <actionsetting id="{b3a36f84-04fb-4caf-ba3a-b013471c93f8}" notificationMessage="" isEnabledOnlyWhenEditable="0" shortTitle="" action="" name="" type="0" icon="" capture="0">
+          <actionScope id="Canvas"/>
+          <actionScope id="Field"/>
+          <actionScope id="Feature"/>
+        </actionsetting>
+        <actionsetting id="{df28374f-4a25-40a8-bf7e-7e70ef0fe70e}" notificationMessage="" isEnabledOnlyWhenEditable="0" shortTitle="" action="from PyQt4.QtGui import QDesktopServices; from PyQt4.QtCore import QUrl; QDesktopServices.openUrl(QUrl(&quot;http://adour-garonne.eaufrance.fr/coursdeau/[%code_cours_eau%]&quot;))" name="Fiche cours d'eau SIE" type="1" icon="" capture="0">
+          <actionScope id="Canvas"/>
+          <actionScope id="Field"/>
+          <actionScope id="Feature"/>
+        </actionsetting>
+      </attributeactions>
+      <attributetableconfig sortOrder="0" actionWidgetStyle="dropDown" sortExpression="">
+        <columns>
+          <column hidden="0" name="id_bdcarthage" width="-1" type="field"/>
+          <column hidden="0" name="toponyme1" width="-1" type="field"/>
+          <column hidden="0" name="toponyme2" width="-1" type="field"/>
+          <column hidden="0" name="code_cours_eau" width="-1" type="field"/>
+          <column hidden="0" name="code_entite_surfacique" width="-1" type="field"/>
+          <column hidden="0" name="etat" width="-1" type="field"/>
+          <column hidden="0" name="largeur" width="-1" type="field"/>
+          <column hidden="0" name="nature" width="-1" type="field"/>
+          <column hidden="0" name="navigabilite" width="-1" type="field"/>
+          <column hidden="0" name="gabarit" width="-1" type="field"/>
+          <column hidden="0" name="position_sol" width="-1" type="field"/>
+          <column hidden="0" name="milieu" width="-1" type="field"/>
+          <column hidden="0" name="candidat1" width="-1" type="field"/>
+          <column hidden="0" name="candidat2" width="-1" type="field"/>
+          <column hidden="0" name="id_bdcarthage_noeud_initial" width="-1" type="field"/>
+          <column hidden="0" name="id_bdcarthage_noeud_final" width="-1" type="field"/>
+          <column hidden="0" name="fpkh" width="-1" type="field"/>
+          <column hidden="0" name="tpkh" width="-1" type="field"/>
+          <column hidden="0" name="code_bassin" width="-1" type="field"/>
+          <column hidden="0" name="code_zone" width="-1" type="field"/>
+          <column hidden="0" name="code_hydro_elem" width="-1" type="field"/>
+          <column hidden="1" width="-1" type="actions"/>
+        </columns>
+      </attributetableconfig>
+      <editform>R:/Espace_Correspondants_SIG/Astuces_Outils/QGIS_PLUGINS</editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath>.</editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable>
+        <field name="candidat1" editable="1"/>
+        <field name="candidat2" editable="1"/>
+        <field name="code_bassin" editable="1"/>
+        <field name="code_cours_eau" editable="1"/>
+        <field name="code_entite_surfacique" editable="1"/>
+        <field name="code_hydro_elem" editable="1"/>
+        <field name="code_zone" editable="1"/>
+        <field name="etat" editable="1"/>
+        <field name="fpkh" editable="1"/>
+        <field name="gabarit" editable="1"/>
+        <field name="id_bdcarthage" editable="1"/>
+        <field name="id_bdcarthage_noeud_final" editable="1"/>
+        <field name="id_bdcarthage_noeud_initial" editable="1"/>
+        <field name="largeur" editable="1"/>
+        <field name="milieu" editable="1"/>
+        <field name="nature" editable="1"/>
+        <field name="navigabilite" editable="1"/>
+        <field name="position_sol" editable="1"/>
+        <field name="toponyme1" editable="1"/>
+        <field name="toponyme2" editable="1"/>
+        <field name="tpkh" editable="1"/>
+      </editable>
+      <labelOnTop>
+        <field name="candidat1" labelOnTop="0"/>
+        <field name="candidat2" labelOnTop="0"/>
+        <field name="code_bassin" labelOnTop="0"/>
+        <field name="code_cours_eau" labelOnTop="0"/>
+        <field name="code_entite_surfacique" labelOnTop="0"/>
+        <field name="code_hydro_elem" labelOnTop="0"/>
+        <field name="code_zone" labelOnTop="0"/>
+        <field name="etat" labelOnTop="0"/>
+        <field name="fpkh" labelOnTop="0"/>
+        <field name="gabarit" labelOnTop="0"/>
+        <field name="id_bdcarthage" labelOnTop="0"/>
+        <field name="id_bdcarthage_noeud_final" labelOnTop="0"/>
+        <field name="id_bdcarthage_noeud_initial" labelOnTop="0"/>
+        <field name="largeur" labelOnTop="0"/>
+        <field name="milieu" labelOnTop="0"/>
+        <field name="nature" labelOnTop="0"/>
+        <field name="navigabilite" labelOnTop="0"/>
+        <field name="position_sol" labelOnTop="0"/>
+        <field name="toponyme1" labelOnTop="0"/>
+        <field name="toponyme2" labelOnTop="0"/>
+        <field name="tpkh" labelOnTop="0"/>
+      </labelOnTop>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression>id_bdcarthage</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+  </projectlayers>
+  <layerorder>
+    <layer id="hydro_segment_2cd53327_aa51_4a65_9841_4b7c7e2d10c6"/>
+  </layerorder>
+  <properties>
+    <Measurement>
+      <DistanceUnits type="QString"></DistanceUnits>
+      <AreaUnits type="QString"></AreaUnits>
+    </Measurement>
+    <SpatialRefSys>
+      <ProjectCRSProj4String type="QString">+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</ProjectCRSProj4String>
+      <ProjectCrs type="QString">EPSG:2154</ProjectCrs>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+      <ProjectCRSID type="int">145</ProjectCRSID>
+    </SpatialRefSys>
+    <PAL>
+      <CandidatesPolygon type="int">30</CandidatesPolygon>
+      <SearchMethod type="int">0</SearchMethod>
+      <DrawOutlineLabels type="bool">true</DrawOutlineLabels>
+      <ShowingCandidates type="bool">false</ShowingCandidates>
+      <ShowingAllLabels type="bool">false</ShowingAllLabels>
+      <CandidatesLine type="int">8</CandidatesLine>
+      <DrawRectOnly type="bool">false</DrawRectOnly>
+      <ShowingPartialsLabels type="bool">true</ShowingPartialsLabels>
+      <CandidatesPoint type="int">16</CandidatesPoint>
+    </PAL>
+    <Paths>
+      <Absolute type="bool">false</Absolute>
+    </Paths>
+    <Legend>
+      <filterByMap type="bool">false</filterByMap>
+    </Legend>
+    <PositionPrecision>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+      <Automatic type="bool">true</Automatic>
+    </PositionPrecision>
+  </properties>
+  <visibility-presets/>
+  <transformContext/>
+  <projectMetadata>
+    <identifier></identifier>
+    <parentidentifier></parentidentifier>
+    <language></language>
+    <type></type>
+    <title>sample open data for perf testing</title>
+    <abstract></abstract>
+    <links/>
+    <author></author>
+    <creation></creation>
+  </projectMetadata>
+  <Annotations/>
+  <Layouts/>
+</qgis>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="100%"
+   height="100%"
+   viewBox="-10 -10 20 20"
+   id="svg3047"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="gueterregulierung.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1115"
+     inkscape:window-height="796"
+     id="namedview6169"
+     showgrid="false"
+     inkscape:zoom="14.45"
+     inkscape:cx="10"
+     inkscape:cy="10"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3047" />
+  <title
+     id="title3051">Gueterregulierung</title>
+  <defs
+     id="defs3057" />
+  <metadata
+     id="metadata3049">
+created by tobias.reber@bd.so.ch
+<rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title>Gueterregulierung</dc:title>
+  </cc:Work>
+</rdf:RDF>
+</metadata>
+  <path
+     d="m 0,-0.01662475 20.016624,0 0,20.04890975 -20.016624,0 z"
+     transform="translate(-10,-10)"
+     id="rect5814"
+     style="fill:none;stroke:param(outline) #000000;stroke-width:param(outline-width) 2;stroke-miterlimit:4;stroke-opacity:1" />
+  <path
+     d="M 7.35,6.5539058 C 6.3583886,7.0359379 5.3289195,7.397461 4.2615897,7.6384765 3.1942344,7.879492 2.0924614,7.9999997 0.95626748,8 -1.61225,7.9999997 -3.647087,7.2838395 -5.1482493,5.8515171 -6.6494183,4.4123124 -7.4000011,2.4635301 -7.4,0.00516464 -7.4000011,-2.4807301 -6.6356462,-4.4363985 -5.1069328,-5.8618464 -3.5782261,-7.2872672 -1.4848576,-7.9999843 1.1731793,-8 c 1.0260164,1.57e-5 2.0072829,0.096422 2.9438025,0.2892188 0.9433806,0.1928278 1.8316849,0.4786033 2.6649159,0.8573273 l 0,3.1917366 C 5.9211224,-4.150623 5.0638053,-4.5155893 4.209944,-4.7566171 3.3629434,-4.9976202 2.5125123,-5.118128 1.6586485,-5.1181407 c -1.58380877,1.27e-5 -2.8060881,0.4441698 -3.6668418,1.3324725 -0.8538805,0.8814395 -1.2808175,2.1450492 -1.2808123,3.79083284 -5.2e-6,1.63202666 0.4131597,2.89219336 1.2394958,3.78050356 0.8263233,0.8883181 2.00040007,1.3324751 3.5222338,1.3324725 0.413155,2.6e-6 0.7953325,-0.024099 1.1465337,-0.072304 C 2.9773228,4.9907497 3.2975256,4.9081162 3.579867,4.7979349 l 0,-2.995481 -2.427346,0 0,-2.6649451 6.197479,0 0,7.4163977"
+     id="path3317"
+     inkscape:connector-curvature="0"
+     style="fill:param(fill) #000000" />
+</svg>

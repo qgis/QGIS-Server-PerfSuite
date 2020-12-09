@@ -1,0 +1,155 @@
+version: "3.8"
+
+services:
+  nginx:
+    container_name: qgisserver-perfsuite-nginx
+    image: nginx:1.13
+    ports:
+      - 8088:80
+    networks:
+      - qgis
+    volumes:
+      - ./profiling/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - qgis-release-2_18
+      - qgis-release-3_10
+      - qgis-release-3_10-parallel-rendering
+      - qgis-release-3_14
+      - qgis-release-3_14-parallel-rendering
+      - qgis-master
+      - qgis-master-parallel-rendering
+
+  qgis-release-2_18:
+    container_name: qgisserver-perfsuite-release-2_18
+    image: qgisserver-perfsuite:release-2_18
+    build:
+      dockerfile: Dockerfile.release-2_18
+      context: ./docker
+    command: /cmd.sh
+    networks:
+      - qgis
+      - data
+    volumes:
+      - ./data-volume:/data
+
+  qgis-release-3_10:
+    container_name: qgisserver-perfsuite-release-3_10
+    image: qgisserver-perfsuite:release-3_10
+    build:
+      context: ./docker
+      args:
+        VERSION: release-3_10
+    command: /cmd.sh
+    networks:
+      - qgis
+      - data
+    volumes:
+      - ./data-volume:/data
+    environment:
+      - QGIS_SERVER_PARALLEL_RENDERING=0
+
+  qgis-release-3_10-parallel-rendering:
+    container_name: qgisserver-perfsuite-release-3_10-parallel-rendering
+    image: qgisserver-perfsuite:release-3_10
+    build:
+      context: ./docker
+      args:
+        VERSION: release-3_10
+    command: /cmd.sh
+    networks:
+      - qgis
+      - data
+    volumes:
+      - ./data-volume:/data
+    environment:
+      - QGIS_SERVER_PARALLEL_RENDERING=1
+      - QGIS_SERVER_MAX_THREADS=4
+
+  qgis-release-3_14:
+    container_name: qgisserver-perfsuite-release-3_14
+    image: qgisserver-perfsuite:release-3_14
+    build:
+      context: ./docker
+      args:
+        VERSION: release-3_14
+    command: /cmd.sh
+    networks:
+      - qgis
+      - data
+    volumes:
+      - ./data-volume:/data
+    environment:
+      - QGIS_SERVER_PARALLEL_RENDERING=0
+
+  qgis-release-3_14-parallel-rendering:
+    container_name: qgisserver-perfsuite-release-3_14-parallel-rendering
+    image: qgisserver-perfsuite:release-3_14
+    build:
+      context: ./docker
+      args:
+        VERSION: release-3_14
+    command: /cmd.sh
+    networks:
+      - qgis
+      - data
+    volumes:
+      - ./data-volume:/data
+    environment:
+      - QGIS_SERVER_PARALLEL_RENDERING=1
+      - QGIS_SERVER_MAX_THREADS=4
+
+  qgis-master:
+    container_name: qgisserver-perfsuite-master
+    image: qgisserver-perfsuite:master
+    build:
+      context: ./docker
+      args:
+        VERSION: latest
+    command: /cmd.sh
+    networks:
+      - qgis
+      - data
+    volumes:
+      - ./data-volume:/data
+    environment:
+      - QGIS_SERVER_PARALLEL_RENDERING=0
+
+  qgis-master-parallel-rendering:
+    container_name: qgisserver-perfsuite-master-parallel-rendering
+    image: qgisserver-perfsuite:master
+    build:
+      context: ./docker
+      args:
+        VERSION: latest
+    command: /cmd.sh
+    networks:
+      - qgis
+      - data
+    volumes:
+      - ./data-volume:/data
+    environment:
+      - QGIS_SERVER_PARALLEL_RENDERING=1
+      - QGIS_SERVER_MAX_THREADS=4
+
+  data:
+    container_name: qgisserver-perfsuite-data
+    image: qgisserver-perfsuite:data
+    build:
+      dockerfile: Dockerfile.data
+      context: ./docker
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASS=root
+      - POSTGRES_DBNAME=data
+    ports:
+      - 55432:5432
+    networks:
+      - data
+    volumes:
+      - ./data-volume:/data
+      # Persist DB
+      - ./data-volume/postgresql:/var/lib/postgresql
+
+networks:
+  data:
+  qgis:

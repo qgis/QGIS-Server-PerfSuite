@@ -1,0 +1,10 @@
+# Perf Suite Data image
+
+FROM kartoza/postgis:11.5-2.8
+
+COPY data_assets /data_assets
+
+# Override buggy scripts
+COPY data_assets/scripts /scripts
+
+ENTRYPOINT /data_assets/entrypoint.sh

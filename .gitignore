@@ -1,8 +1,10 @@
 ansible/vagrant/.vagrant/
+data-volume/*
 venv
 playbook.retry
 scenarios/data
 scenarios/graffiti
+profiling/graffiti
 qgis4.sh
 docker/data/data/data/gpkg/adress_ban.gpkg
 docker/data/data/data/gpkg/adress_ban.gpkg-shm
@@ -32,3 +34,4 @@ docker/data/data/data/raster/eu_dem_v11_hillshade.tif
 docker/data/data/data/raster/eu_dem_v11_hillshade.tif.ovr
 docker/data/data/data/shp/
 docker/data/data/data/sqlite/
+docker/data/data/qgs/template/big_projects/

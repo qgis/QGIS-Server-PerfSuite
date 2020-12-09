@@ -13,7 +13,7 @@ fi
 
 # start servers
 cd $ROOT
-docker-compose up -d
+docker-compose -f ../docker-compose.yml up -d
 
 # get ip for containers
 DOCKER_IP_DATA=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' qgisserver-perfsuite-data)
@@ -23,10 +23,10 @@ var=0
 until PGPASSWORD=$PG_PASSWORD psql -h $DOCKER_IP_DATA -U $PG_USER -d $PG_DB -c '\q'
 do
   >&2 echo "Data container is unavailable - sleeping ($var)"
-  sleep 10
+  sleep 20
 
   var=`expr $var + 1`
-  if [ "$var" -eq "10" ]
+  if [ "$var" -eq "40" ]
   then
     cd $ROOT
     docker-compose stop
@@ -36,11 +36,11 @@ do
 done
 
 # access shared directory a 1st time
-docker exec -it qgisserver-perfsuite-2.18 ls /data > /dev/null
-docker exec -it qgisserver-perfsuite-3.10 ls /data > /dev/null
-docker exec -it qgisserver-perfsuite-3.10-parallel-rendering ls /data > /dev/null
-docker exec -it qgisserver-perfsuite-3.14 ls /data > /dev/null
-docker exec -it qgisserver-perfsuite-3.14-parallel-rendering ls /data > /dev/null
+docker exec -it qgisserver-perfsuite-release-2_18 ls /data > /dev/null
+docker exec -it qgisserver-perfsuite-release-3_10 ls /data > /dev/null
+docker exec -it qgisserver-perfsuite-release-3_10-parallel-rendering ls /data > /dev/null
+docker exec -it qgisserver-perfsuite-release-3_14 ls /data > /dev/null
+docker exec -it qgisserver-perfsuite-release-3_14-parallel-rendering ls /data > /dev/null
 docker exec -it qgisserver-perfsuite-master ls /data > /dev/null
 docker exec -it qgisserver-perfsuite-master-parallel-rendering ls /data > /dev/null
 
