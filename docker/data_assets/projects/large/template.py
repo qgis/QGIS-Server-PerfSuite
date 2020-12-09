@@ -122,7 +122,7 @@ def generate(outdir, datasource, perfsuite=False):
                         layername = "layer_{}".format(n)
                         pdf.to_postgis(name=layername, con=engine)
 
-                        line = "      <datasource>service='{}' type={} table=\"{}\" (geometry)</datasource>\n".format(
+                        line = "      <datasource>service='{}' srid=0 type={} table=\"{}\" (geometry)</datasource>\n".format(
                             service_name, geom, layername
                         )
 
