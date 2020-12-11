@@ -9,7 +9,7 @@ DB_PORT: 55432
 DB_NAME: data
 DB_USER: root
 DB_PASSWORD: root
-PRECISION: 1
+PRECISION: 2
 REQUESTS:
   - NAME: getcapabilities
     TYPE: GetCapabilities
