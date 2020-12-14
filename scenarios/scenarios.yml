@@ -17,7 +17,7 @@ REQUESTS:
     DESCRIPTION: html/getcapabilities.html
     LOG: True
     PROVIDER: POSTGRES
-    ITERATIONS: 10
+    ITERATIONS: 5
     HOSTS:
       - NAME: "2.18"
         HOST: http://localhost:8088/qgisserver_2_18
@@ -35,10 +35,10 @@ REQUESTS:
         HOST: http://localhost:8088/qgisserver_master
         PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
-  - NAME: getcapabilities_trust
+  - NAME: getcapabilities_views
     TYPE: GetCapabilities
-    TITLE: "Postgres view and trust option"
-    DESCRIPTION: html/getcapabilities_trust.html
+    TITLE: "PostgreSQL views"
+    DESCRIPTION: html/getcapabilities_views.html
     LOG: True
     PROVIDER: POSTGRES
     ITERATIONS: 5
@@ -51,23 +51,31 @@ REQUESTS:
         HOST: http://localhost:8088/qgisserver_3_10
         PAYLOAD_MAP: /data/projects/postgres/view.qgs
         PAYLOAD_VERSION: 1.3.0
-      - NAME: "3.10 with trust"
-        HOST: http://localhost:8088/qgisserver_3_10
-        PAYLOAD_MAP: /data/projects/postgres/view_trust.qgs
-        PAYLOAD_VERSION: 1.3.0
       - NAME: "3.16"
         HOST: http://localhost:8088/qgisserver_3_16
         PAYLOAD_MAP: /data/projects/postgres/view.qgs
-        PAYLOAD_VERSION: 1.3.0
-      - NAME: "3.16 with trust"
-        HOST: http://localhost:8088/qgisserver_3_16
-        PAYLOAD_MAP: /data/projects/postgres/view_trust.qgs
         PAYLOAD_VERSION: 1.3.0
       - NAME: "Master"
         HOST: http://localhost:8088/qgisserver_master
         PAYLOAD_MAP: /data/projects/postgres/view.qgs
         PAYLOAD_VERSION: 1.3.0
-      - NAME: "Master with trust"
+  - NAME: getcapabilities_views_trust
+    TYPE: GetCapabilities
+    TITLE: "PostgreSQL views: trust option"
+    DESCRIPTION: html/getcapabilities_views_trust.html
+    LOG: True
+    PROVIDER: POSTGRES
+    ITERATIONS: 5
+    HOSTS:
+      - NAME: "3.10"
+        HOST: http://localhost:8088/qgisserver_3_10
+        PAYLOAD_MAP: /data/projects/postgres/view_trust.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "3.16"
+        HOST: http://localhost:8088/qgisserver_3_16
+        PAYLOAD_MAP: /data/projects/postgres/view_trust.qgs
+        PAYLOAD_VERSION: 1.3.0
+      - NAME: "Master"
         HOST: http://localhost:8088/qgisserver_master
         PAYLOAD_MAP: /data/projects/postgres/view_trust.qgs
         PAYLOAD_VERSION: 1.3.0
