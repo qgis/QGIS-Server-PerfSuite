@@ -60,6 +60,9 @@ cd $ROOT/graffiti
 . venv/bin/activate
 ./graffiti.py --cfg $ROOT/scenarios.yml --style $ROOT/style.yml
 
+COMMIT=$(docker exec -i qgisserver-perfsuite-master sh -c 'cd /qgis_sources && git rev-parse HEAD')
+sed -i 's/\$COMMIT/'"$COMMIT"'/g' /tmp/graffiti/report.html
+
 # clear containers
 cd $ROOT
 docker-compose stop
