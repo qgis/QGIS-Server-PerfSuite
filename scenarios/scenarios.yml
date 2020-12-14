@@ -73,8 +73,8 @@ REQUESTS:
         PAYLOAD_VERSION: 1.3.0
   - NAME: getmap_parallel_rendering
     TYPE: GetMap
-    TITLE: "Parallel Rendering"
-    DESCRIPTION: html/getmap_parallel_rendering.html
+    TITLE: "Rasters and vectors"
+    DESCRIPTION: html/getmap_all.html
     LOG: True
     PROVIDER: POSTGRES
     ITERATIONS: 20
@@ -99,28 +99,8 @@ REQUESTS:
         PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau_geoml93,parcelles
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
-      - NAME: "3.10 (4 cores)"
-        HOST: http://localhost:8088/qgisserver_3_10_parallel_rendering
-        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
-        PAYLOAD_VERSION: 1.3.0
-        PAYLOAD_WIDTH: 400
-        PAYLOAD_HEIGHT: 400
-        PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau_geoml93,parcelles
-        PAYLOAD_FORMAT: png
-        PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "3.16 (1 core)"
         HOST: http://localhost:8088/qgisserver_3_16
-        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
-        PAYLOAD_VERSION: 1.3.0
-        PAYLOAD_WIDTH: 400
-        PAYLOAD_HEIGHT: 400
-        PAYLOAD_SRS: "EPSG:4326"
-        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau_geoml93,parcelles
-        PAYLOAD_FORMAT: png
-        PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
-      - NAME: "3.16 (4 cores)"
-        HOST: http://localhost:8088/qgisserver_3_16_parallel_rendering
         PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
         PAYLOAD_VERSION: 1.3.0
         PAYLOAD_WIDTH: 400
@@ -139,6 +119,34 @@ REQUESTS:
         PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau_geoml93,parcelles
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
+  - NAME: getmap_all_parallel_rendering
+    TYPE: GetMap
+    TITLE: "Rasters and vectors: parallel rendering"
+    DESCRIPTION: html/getmap_all_parallel_rendering.html
+    LOG: True
+    PROVIDER: POSTGRES
+    ITERATIONS: 20
+    HOSTS:
+      - NAME: "3.10 (4 cores)"
+        HOST: http://localhost:8088/qgisserver_3_10_parallel_rendering
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
+        PAYLOAD_VERSION: 1.3.0
+        PAYLOAD_WIDTH: 400
+        PAYLOAD_HEIGHT: 400
+        PAYLOAD_SRS: "EPSG:4326"
+        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau_geoml93,parcelles
+        PAYLOAD_FORMAT: png
+        PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
+      - NAME: "3.16 (4 cores)"
+        HOST: http://localhost:8088/qgisserver_3_16_parallel_rendering
+        PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
+        PAYLOAD_VERSION: 1.3.0
+        PAYLOAD_WIDTH: 400
+        PAYLOAD_HEIGHT: 400
+        PAYLOAD_SRS: "EPSG:4326"
+        PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau_geoml93,parcelles
+        PAYLOAD_FORMAT: png
+        PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
       - NAME: "Master (4 cores)"
         HOST: http://localhost:8088/qgisserver_master_parallel_rendering
         PAYLOAD_MAP: /data/projects/postgres/qgis3.qgs
@@ -149,10 +157,10 @@ REQUESTS:
         PAYLOAD_LAYERS: eu_dem_v11,hydro_segment,points,hydro_cours_eau_geoml93,parcelles
         PAYLOAD_FORMAT: png
         PAYLOAD_BBOX: 40.95,-7.10872,51.3797,12.2081
-  - NAME: getmap_all
+  - NAME: getmap_all_zoom
     TYPE: GetMap
-    TITLE: "Vector and raster"
-    DESCRIPTION: html/getmap_all.html
+    TITLE: "Rasters and vectors: zoom"
+    DESCRIPTION: html/getmap_all_zoom.html
     LOG: True
     PROVIDER: POSTGRES
     ITERATIONS: 20
