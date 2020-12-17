@@ -60,7 +60,7 @@ def generate(qgis2, outdir, datasource, perfsuite=False):
 
     template = "template.qgs"
     if qgis2:
-        template = "template_218.qgs"  
+        template = "template_218.qgs"
 
     with open(os.path.join(os.path.dirname(__file__), template), "r") as inp:
         with open(outfile, "w") as out:
@@ -124,7 +124,10 @@ def generate(qgis2, outdir, datasource, perfsuite=False):
                     elif datasource == Datasource.POSTGIS:
                         engine = create_engine(url)
                         layername = "layer_{}".format(n)
-                        pdf.to_postgis(name=layername, con=engine)
+                        try:
+                            pdf.to_postgis(name=layername, con=engine)
+                        except ValueError:
+                            pass
 
                         line = "      <datasource>service='{}' srid=0 type={} table=\"{}\" (geometry)</datasource>\n".format(
                             service_name, geom, layername

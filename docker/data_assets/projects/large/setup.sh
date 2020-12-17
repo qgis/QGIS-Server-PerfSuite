@@ -10,6 +10,8 @@ else
     mkdir -p /data/projects/large/gpkg
     mkdir /data/projects/large/shp
     mkdir /data/projects/large/postgres
+    mkdir /data/projects/large/shp_218
+    mkdir /data/projects/large/postgres_218
 fi
 
 apt update && apt install -y virtualenv python3-virtualenv
@@ -20,3 +22,5 @@ pip3 install -r /data_assets/projects/large/requirements.txt
 /data_assets/projects/large/template.py --shp /data/projects/large/shp
 /data_assets/projects/large/template.py --gpkg /data/projects/large/gpkg
 /data_assets/projects/large/template.py --postgis /data/projects/large/postgres --pf
+/data_assets/projects/large/template.py --shp /data/projects/large/shp_218 --qgis2
+/data_assets/projects/large/template.py --postgis /data/projects/large/postgres_218 --qgis2 --pf
