@@ -19,7 +19,7 @@ class Datasource(Enum):
     POSTGIS = 3
 
 
-def generate(outdir, datasource, perfsuite=False):
+def generate(qgis2, outdir, datasource, perfsuite=False):
     n = 0
 
     outfile = None
@@ -58,7 +58,11 @@ def generate(outdir, datasource, perfsuite=False):
     svgs = os.path.join(cwd, "symbols")
     copy_tree(svgs, os.path.join(outdir, "symbols"))
 
-    with open(os.path.join(os.path.dirname(__file__), "template.qgs"), "r") as inp:
+    template = "template.qgs"
+    if qgis2:
+        template = "template_218.qgs"
+
+    with open(os.path.join(os.path.dirname(__file__), template), "r") as inp:
         with open(outfile, "w") as out:
             for line in inp:
                 if "<projectlayers" in line:
@@ -120,7 +124,10 @@ def generate(outdir, datasource, perfsuite=False):
                     elif datasource == Datasource.POSTGIS:
                         engine = create_engine(url)
                         layername = "layer_{}".format(n)
-                        pdf.to_postgis(name=layername, con=engine)
+                        try:
+                            pdf.to_postgis(name=layername, con=engine)
+                        except ValueError:
+                            pass
 
                         line = "      <datasource>service='{}' srid=0 type={} table=\"{}\" (geometry)</datasource>\n".format(
                             service_name, geom, layername
@@ -150,16 +157,21 @@ if __name__ == "__main__":
         help="Store the PostGIS data in the perfsuite database.",
         action="store_true",
     )
+    parser.add_argument(
+        "--qgis2",
+        help="Use the QGIS 2 template.",
+        action="store_true",
+    )
     args = parser.parse_args()
 
     if args.shp:
         if not os.path.isdir(args.shp):
             print("Invalid input directory")
             sys.exit(1)
-        generate(args.shp, Datasource.SHP)
+        generate(args.qgis2, args.shp, Datasource.SHP)
 
     if args.gpkg:
-        generate(args.gpkg, Datasource.GPKG)
+        generate(args.qgis2, args.gpkg, Datasource.GPKG)
 
     if args.postgis:
-        generate(args.postgis, Datasource.POSTGIS, args.pf)
+        generate(args.qgis2, args.postgis, Datasource.POSTGIS, args.pf)
