@@ -33,7 +33,7 @@ def generate(qgis2, outdir, datasource, perfsuite=False):
             os.mkdir(datadir)
     else:
         if perfsuite:
-            url = "postgres://root:@/data?host=/var/run/postgresql"
+            url = "postgresql://root:@/data?host=/var/run/postgresql"
             service_name = "data_perf"
         else:
             service_name = "data_perf"
@@ -41,7 +41,7 @@ def generate(qgis2, outdir, datasource, perfsuite=False):
             with open(path) as f:
                 data = service.parse(f)
                 s = data[service_name]
-                url = "postgres://{}:{}@{}:{}/{}".format(
+                url = "postgresql://{}:{}@{}:{}/{}".format(
                     s.user, s.password, s.host, s.port, s.dbname
                 )
         outfile = os.path.join(outdir, "postgis.qgs")
